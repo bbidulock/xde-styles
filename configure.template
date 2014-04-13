@@ -98,8 +98,6 @@ xdemoddir='${libdir}/xde/modules'
 AC_SUBST([xdemoddir])
 
 AC_CONFIG_FILES([Makefile
-		 src/Makefile
-		 man/Makefile
 		 openbox/Makefile
 		 gtk/Makefile
 		 fvwm/start

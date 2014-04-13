@@ -1,9 +1,9 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = src man
+SUBDIRS =
 
-EXTRA_DIST = LICENSE README TODO ChangeLog xde-theme.pod
+EXTRA_DIST = LICENSE README TODO ChangeLog
 
 nobase_dist_share_DATA =
 nobase_nodist_share_DATA =
