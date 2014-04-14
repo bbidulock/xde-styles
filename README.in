@@ -1,10 +1,10 @@
-xde-styles -- read me first file.  2014-04-14
+@PACKAGE@ -- read me first file.  @DATE@
 
-xde-styles
+@PACKAGE@
 ==========
 
-Package xde-styles-1.1.52 was released under CCPL:cc-by-sa-3.0 license
-2014-04-14. 
+Package @PACKAGE@-@VERSION@ was released under CCPL:cc-by-sa-3.0 license
+@DATE@. 
 
 This is a set of styles for the XDE (X Desktop Environment) which
 provides a small and consistent set of window manager styles across a
@@ -15,11 +15,11 @@ supported window managers.
 Release
 -------
 
-This is the xde-styles-1.1.52 package, released 2014-04-14.  This release,
+This is the @PACKAGE@-@VERSION@ package, released @DATE@.  This release,
 and the latest version, can be obtained from the GitHub repository at
-(http://github.com/bbidulock/xde-styles), using a command such as:
+(http://github.com/bbidulock/@PACKAGE@), using a command such as:
 
-    $> git clone http://github.com/bbidulock/xde-styles.git
+    $> git clone http://github.com/bbidulock/@PACKAGE@.git
 
 Please see the `NEWS' file for release notes and history of user visible
 changes for the current version, and the `ChangeLog' file for a more
@@ -39,17 +39,17 @@ license).  Please see the license in the file `COPYING'.
 Quick Start:
 ------------
 
-The quickest and easiest way to get xde-styles up and running is to run
+The quickest and easiest way to get @PACKAGE@ up and running is to run
 the following commands:
 
-    $> git clone http://github.com/bbidulock/xde-styles.git
-    $> cd xde-styles
+    $> git clone http://github.com/bbidulock/@PACKAGE@.git
+    $> cd @PACKAGE@
     $> ./autogen.sh
     $> ./configure --prefix=/usr
     $> make V=0
     $> make DESTDIR="$pkgdir" install
 
-This will configure, compile and install xde-styles the quickest.  For
+This will configure, compile and install @PACKAGE@ the quickest.  For
 those who would like to spend the extra 15 seconds reading ./configure
 --help, some compile time options can be turned on and off before the
 build.

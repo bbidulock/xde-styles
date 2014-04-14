@@ -1,5 +1,6 @@
-xde-styles -- THANKS file.  2013-12-20
+@PACKAGE@ -- THANKS file.  @DATE@
 
 Thanks to endel (endel@tlen.pl) for providing the original
+style upon which these were based.
 
 # vim: set ft=asciidoc tw=72 nocin nosi fo+=tcqlorn:

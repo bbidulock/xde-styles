@@ -3,12 +3,41 @@ ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS =
 
-EXTRA_DIST = LICENSE README TODO ChangeLog
+EXTRA_DIST = INSTALL COPYING AUTHORS AUTHORS.in NEWS NEWS.in README README.in THANKS THANKS.in TODO TODO.in ChangeLog
+
+ChangeLog:
+	( \
+	  echo -e "# created with git log --stat=76 -M -C|fmt -sct -w80\n" ; \
+	  git log --stat=76 -M -C|fmt -sct -w80 ; \
+	)>$@
+
+AUTHORS.in:
+	( \
+	  echo "\@PACKAGE\@ -- authors file.  \@DATE\@" ; \
+	  echo "" ; \
+	  git log|grep '^Author:'|awk '{if(!authors[$$0]){print$$0;authors[$$0]=1;}}'|tac \
+	)>$@
+
+README: README.in
+	sed -r -e 's:\@PACKAGE\@:$(PACKAGE):g;s:\@VERSION\@:$(VERSION):g;s:\@DATE\@:$(DATE):g' $< >$@
+
+NEWS: NEWS.in
+	sed -r -e 's:\@PACKAGE\@:$(PACKAGE):g;s:\@VERSION\@:$(VERSION):g;s:\@DATE\@:$(DATE):g' $< >$@
+
+AUTHORS: AUTHORS.in
+	sed -r -e 's:\@PACKAGE\@:$(PACKAGE):g;s:\@VERSION\@:$(VERSION):g;s:\@DATE\@:$(DATE):g' $< >$@
+
+THANKS: THANKS.in
+	sed -r -e 's:\@PACKAGE\@:$(PACKAGE):g;s:\@VERSION\@:$(VERSION):g;s:\@DATE\@:$(DATE):g' $< >$@
+
+TODO: TODO.in
+	sed -r -e 's:\@PACKAGE\@:$(PACKAGE):g;s:\@VERSION\@:$(VERSION):g;s:\@DATE\@:$(DATE):g' $< >$@
 
 nobase_dist_share_DATA =
 nobase_nodist_share_DATA =
 nobase_dist_share_SCRIPTS =
 nobase_nodist_share_SCRIPTS =
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT =
 
 nobase_dist_share_DATA += \
 	waimea/styles/Squared-cadet/stylerc
@@ -497,7 +526,15 @@ SUBDIRS += gtk
 nobase_dist_share_SCRIPTS += \
 	jwm/setstyle
 
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
+	jwm/setstyle
+
 nobase_nodist_share_SCRIPTS += \
+	jwm/config \
+	jwm/getstyles \
+	jwm/start
+
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
 	jwm/config \
 	jwm/getstyles \
 	jwm/start
@@ -736,9 +773,17 @@ nobase_dist_share_DATA += \
 	pekwm/themes/Squared-blue/tab_separator.xpm \
 	pekwm/themes/Squared-blue/theme
 
+uninstall-twm:
+	@$(NORMAL_UNINSTALL)
+	rm -f $(DESTDIR)$(sharedir)/twm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/twm/styles/Default
+
 install-data-twm:
+	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/twm/styles
+	rm -f $(DESTDIR)$(sharedir)/twm/stylerc
 	$(LN_S) $(sharedir)/twm/styles/Default/stylerc $(DESTDIR)$(sharedir)/twm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/twm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/twm/styles/Default
 
 nobase_dist_share_DATA += \
@@ -753,7 +798,16 @@ nobase_dist_share_DATA += \
 nobase_dist_share_SCRIPTS += \
 	twm/setstyle
 
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
+	twm/setstyle
+
 nobase_nodist_share_SCRIPTS += \
+	twm/config \
+	twm/getstyles \
+	twm/rc.m4 \
+	twm/start
+
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
 	twm/config \
 	twm/getstyles \
 	twm/rc.m4 \
@@ -815,9 +869,17 @@ nobase_dist_share_DATA += \
 	twm/styles/Squared-grey/bitmaps/desk.xbm \
 	twm/styles/Squared-grey/bitmaps/iconify.xbm
 
+uninstall-ctwm:
+	@$(NORMAL_UNINSTALL)
+	rm -f $(DESTDIR)$(sharedir)/ctwm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/ctwm/styles/Default
+
 install-data-ctwm:
+	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/ctwm/styles
+	rm -f $(DESTDIR)$(sharedir)/ctwm/stylerc
 	$(LN_S) $(sharedir)/ctwm/styles/Default/stylerc $(DESTDIR)$(sharedir)/ctwm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/ctwm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/ctwm/styles/Default
 
 nobase_dist_share_DATA += \
@@ -832,7 +894,16 @@ nobase_dist_share_DATA += \
 nobase_dist_share_SCRIPTS += \
 	ctwm/setstyle
 
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
+	ctwm/setstyle
+
 nobase_nodist_share_SCRIPTS += \
+	ctwm/config \
+	ctwm/getstyles \
+	ctwm/rc.m4 \
+	ctwm/start
+
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
 	ctwm/config \
 	ctwm/getstyles \
 	ctwm/rc.m4 \
@@ -894,9 +965,17 @@ nobase_dist_share_DATA += \
 	ctwm/styles/Squared-grey/pixmaps/stuck_pressed.xpm \
 	ctwm/styles/Squared-grey/pixmaps/unshade_pressed.xpm
 
+uninstall-vtwm:
+	@$(NORMAL_UNINSTALL)
+	rm -f $(DESTDIR)$(sharedir)/vtwm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/vtwm/styles/Default
+
 install-data-vtwm:
+	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/vtwm/styles
+	rm -f $(DESTDIR)$(sharedir)/vtwm/stylerc
 	$(LN_S) $(sharedir)/vtwm/styles/Default/stylerc $(DESTDIR)$(sharedir)/vtwm/stylerc
+	rm -f $(DESTDIR)$(sharedir)/vtwm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/vtwm/styles/Default
 
 nobase_dist_share_DATA += \
@@ -911,7 +990,16 @@ nobase_dist_share_DATA += \
 nobase_dist_share_SCRIPTS += \
 	vtwm/setstyle
 
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
+	vtwm/setstyle
+
 nobase_nodist_share_SCRIPTS += \
+	vtwm/config \
+	vtwm/getstyles \
+	vtwm/rc.m4 \
+	vtwm/start
+
+AM_INSTALLCHECK_STD_OPTIONS_EXEMPT += \
 	vtwm/config \
 	vtwm/getstyles \
 	vtwm/rc.m4 \
@@ -975,5 +1063,8 @@ nobase_dist_share_DATA += \
 
 install-data-local: install-data-twm install-data-ctwm install-data-vtwm
 
-.PHONY: install-data-twm install-data-ctwm install-data-vtwm
+uninstall-local: uninstall-twm uninstall-ctwm uninstall-vtwm
+
+.PHONY: install-data-twm install-data-ctwm install-data-vtwm \
+	uninstall-twm uninstall-ctwm uninstall-vtwm
 

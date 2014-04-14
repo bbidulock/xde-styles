@@ -1,7 +1,20 @@
-xde-styles -- NEWS file.  2013-12-20
+@PACKAGE@ -- NEWS file.  @DATE@
 
 History of major user-visible changes:
 ======================================
+
+Release @PACKAGE@-@VERSION@ released @DATE@
+-------------------------------------------
+
+Countinuing with only non-architecture specific
+packages.
+
+Release xde-styles-1.1.52 released 2014-04-14
+---------------------------------------------
+
+Split @PACKAGE@ package from xde-theme.  That contains
+only the binary programs.  This is the initial development
+release of @PACKAGE@.
 
 Major changes for release 1.2
 -----------------------------

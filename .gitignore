@@ -28,7 +28,7 @@ configure.ac
 ChangeLog
 .deps/
 autoconf.h
-*.in
+autoconf.h.in
 *~
 xde-theme
 *.o
@@ -45,3 +45,11 @@ libtool
 *.la
 *.lo
 m4/
+AUTHORS
+NEWS
+THANKS
+TODO
+README
+*.tar.xz
+*.tar.gz
+*.tar.bz2
