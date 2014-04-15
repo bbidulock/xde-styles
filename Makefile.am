@@ -520,6 +520,24 @@ nobase_dist_share_DATA += \
 	WindowMaker/Themes/Squared-blue.themed/sbtbar.xpm \
 	WindowMaker/Themes/Squared-blue.themed/sbtile.xpm
 
+nobase_dist_share_DATA += \
+	WindowMaker/Pixmaps/scback.xpm \
+	WindowMaker/Pixmaps/scicon.xpm \
+	WindowMaker/Pixmaps/sctbar.xpm \
+	WindowMaker/Pixmaps/sctile.xpm \
+	WindowMaker/Pixmaps/yback.xpm \
+	WindowMaker/Pixmaps/yicon.xpm \
+	WindowMaker/Pixmaps/ytbar.xpm \
+	WindowMaker/Pixmaps/ytile.xpm \
+	WindowMaker/Pixmaps/sgback.xpm \
+	WindowMaker/Pixmaps/sgicon.xpm \
+	WindowMaker/Pixmaps/sgtbar.xpm \
+	WindowMaker/Pixmaps/sgtile.xpm \
+	WindowMaker/Pixmaps/bback.xpm \
+	WindowMaker/Pixmaps/bicon.xpm \
+	WindowMaker/Pixmaps/btbar.xpm \
+	WindowMaker/Pixmaps/btile.xpm
+
 
 SUBDIRS += gtk
 
