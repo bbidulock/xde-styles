@@ -394,7 +394,7 @@ divert(BUTTONS)dnl
 syscmd(`test -r "'TWM_CONFIG_HOME`/buttons"')dnl
 ifelse(sysval, 0,
 	`pushdef(`SINCLUDE',TWM_CONFIG_HOME`/buttons')',
-	`pushdef(`SINCLUDE',TWM_CONFIG_SDIR`/buttons''))dnl
+	`pushdef(`SINCLUDE',TWM_CONFIG_SDIR`/buttons')')dnl
 sinclude(SINCLUDE)dnl
 popdef(`SINCLUDE')dnl
 divert(-1)
