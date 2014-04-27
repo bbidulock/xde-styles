@@ -59,6 +59,10 @@ style "default"
 	{
 		{ "window-above.png", *, *, * }
 	}
+	stock["wnck-stock-arranged"] =
+	{
+		{ "window-tiled.png", *, *, * }
+	}
 	stock["wnck-stock-below"] =
 	{
 		{ "window-below.png", *, *, * }
@@ -119,6 +123,10 @@ style "default"
 	{
 		{ "window-normal.png", *, *, * }
 	}
+	stock["wnck-stock-notitlebar"] =
+	{
+		{ "window-notitlebar.png", *, *, * }
+	}
 	stock["wnck-stock-raise"] =
 	{
 		{ "window-raise.png", *, *, * }
@@ -162,6 +170,10 @@ style "default"
 	stock["wnck-stock-titlebar"] =
 	{
 		{ "window-titlebar.png", *, *, * }
+	}
+	stock["wnck-stock-unarranged"] =
+	{
+		{ "window-floating.png", *, *, * }
 	}
 	stock["wnck-stock-unmaximize-b"] =
 	{

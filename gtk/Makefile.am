@@ -6,6 +6,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-cadet/gtk-2.0/window-border.png \
 	themes/Squared-cadet/gtk-2.0/window-close.png \
 	themes/Squared-cadet/gtk-2.0/window-command.png \
+	themes/Squared-cadet/gtk-2.0/window-floating.png \
 	themes/Squared-cadet/gtk-2.0/window-focus.png \
 	themes/Squared-cadet/gtk-2.0/window-kill.png \
 	themes/Squared-cadet/gtk-2.0/window-lower.png \
@@ -17,6 +18,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-cadet/gtk-2.0/window-minimize.png \
 	themes/Squared-cadet/gtk-2.0/window-move.png \
 	themes/Squared-cadet/gtk-2.0/window-normal.png \
+	themes/Squared-cadet/gtk-2.0/window-notitlebar.png \
 	themes/Squared-cadet/gtk-2.0/window-raise.png \
 	themes/Squared-cadet/gtk-2.0/window-resize.png \
 	themes/Squared-cadet/gtk-2.0/window-sendto-d.png \
@@ -27,6 +29,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-cadet/gtk-2.0/window-shade.png \
 	themes/Squared-cadet/gtk-2.0/window-snap.png \
 	themes/Squared-cadet/gtk-2.0/window-stick.png \
+	themes/Squared-cadet/gtk-2.0/window-tiled.png \
 	themes/Squared-cadet/gtk-2.0/window-titlebar.png \
 	themes/Squared-cadet/gtk-2.0/window-unmaximize-b.png \
 	themes/Squared-cadet/gtk-2.0/window-unmaximize-h.png \
@@ -41,6 +44,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-grey/gtk-2.0/window-border.png \
 	themes/Squared-grey/gtk-2.0/window-close.png \
 	themes/Squared-grey/gtk-2.0/window-command.png \
+	themes/Squared-grey/gtk-2.0/window-floating.png \
 	themes/Squared-grey/gtk-2.0/window-focus.png \
 	themes/Squared-grey/gtk-2.0/window-kill.png \
 	themes/Squared-grey/gtk-2.0/window-lower.png \
@@ -52,6 +56,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-grey/gtk-2.0/window-minimize.png \
 	themes/Squared-grey/gtk-2.0/window-move.png \
 	themes/Squared-grey/gtk-2.0/window-normal.png \
+	themes/Squared-grey/gtk-2.0/window-notitlebar.png \
 	themes/Squared-grey/gtk-2.0/window-raise.png \
 	themes/Squared-grey/gtk-2.0/window-resize.png \
 	themes/Squared-grey/gtk-2.0/window-sendto-d.png \
@@ -62,6 +67,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-grey/gtk-2.0/window-shade.png \
 	themes/Squared-grey/gtk-2.0/window-snap.png \
 	themes/Squared-grey/gtk-2.0/window-stick.png \
+	themes/Squared-grey/gtk-2.0/window-tiled.png \
 	themes/Squared-grey/gtk-2.0/window-titlebar.png \
 	themes/Squared-grey/gtk-2.0/window-unmaximize-b.png \
 	themes/Squared-grey/gtk-2.0/window-unmaximize-h.png \
@@ -76,6 +82,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-green/gtk-2.0/window-border.png \
 	themes/Squared-green/gtk-2.0/window-close.png \
 	themes/Squared-green/gtk-2.0/window-command.png \
+	themes/Squared-green/gtk-2.0/window-floating.png \
 	themes/Squared-green/gtk-2.0/window-focus.png \
 	themes/Squared-green/gtk-2.0/window-kill.png \
 	themes/Squared-green/gtk-2.0/window-lower.png \
@@ -87,6 +94,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-green/gtk-2.0/window-minimize.png \
 	themes/Squared-green/gtk-2.0/window-move.png \
 	themes/Squared-green/gtk-2.0/window-normal.png \
+	themes/Squared-green/gtk-2.0/window-notitlebar.png \
 	themes/Squared-green/gtk-2.0/window-raise.png \
 	themes/Squared-green/gtk-2.0/window-resize.png \
 	themes/Squared-green/gtk-2.0/window-sendto-d.png \
@@ -97,6 +105,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-green/gtk-2.0/window-shade.png \
 	themes/Squared-green/gtk-2.0/window-snap.png \
 	themes/Squared-green/gtk-2.0/window-stick.png \
+	themes/Squared-green/gtk-2.0/window-tiled.png \
 	themes/Squared-green/gtk-2.0/window-titlebar.png \
 	themes/Squared-green/gtk-2.0/window-unmaximize-b.png \
 	themes/Squared-green/gtk-2.0/window-unmaximize-h.png \
@@ -111,6 +120,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-blue/gtk-2.0/window-border.png \
 	themes/Squared-blue/gtk-2.0/window-close.png \
 	themes/Squared-blue/gtk-2.0/window-command.png \
+	themes/Squared-blue/gtk-2.0/window-floating.png \
 	themes/Squared-blue/gtk-2.0/window-focus.png \
 	themes/Squared-blue/gtk-2.0/window-kill.png \
 	themes/Squared-blue/gtk-2.0/window-lower.png \
@@ -122,6 +132,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-blue/gtk-2.0/window-minimize.png \
 	themes/Squared-blue/gtk-2.0/window-move.png \
 	themes/Squared-blue/gtk-2.0/window-normal.png \
+	themes/Squared-blue/gtk-2.0/window-notitlebar.png \
 	themes/Squared-blue/gtk-2.0/window-raise.png \
 	themes/Squared-blue/gtk-2.0/window-resize.png \
 	themes/Squared-blue/gtk-2.0/window-sendto-d.png \
@@ -132,6 +143,7 @@ nobase_dist_data_DATA = \
 	themes/Squared-blue/gtk-2.0/window-shade.png \
 	themes/Squared-blue/gtk-2.0/window-snap.png \
 	themes/Squared-blue/gtk-2.0/window-stick.png \
+	themes/Squared-blue/gtk-2.0/window-tiled.png \
 	themes/Squared-blue/gtk-2.0/window-titlebar.png \
 	themes/Squared-blue/gtk-2.0/window-unmaximize-b.png \
 	themes/Squared-blue/gtk-2.0/window-unmaximize-h.png \
