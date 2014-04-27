@@ -55,6 +55,143 @@ style "default"
 	engine "mist"
  	{
 	}
+
+	stock["wnck-stock-above"] =
+	{
+		{ "window-above.png", *, *, * }
+	}
+	stock["wnck-stock-below"] =
+	{
+		{ "window-below.png", *, *, * }
+	}
+	stock["wnck-stock-border"] =
+	{
+		{ "window-border.png", *, *, * }
+	}
+	stock["wnck-stock-delete"] =
+	{
+		{ "window-close.png", *, *, * }
+	}
+	stock["wnck-stock-command"] =
+	{
+		{ "window-command.png", *, *, * }
+	}
+	stock["wnck-stock-focus"] =
+	{
+		{ "window-focus.png", *, *, * }
+	}
+	stock["wnck-stock-kill"] =
+	{
+		{ "window-kill.png", *, *, * }
+	}
+	stock["wnck-stock-lower"] =
+	{
+		{ "window-lower.png", *, *, * }
+	}
+	stock["wnck-stock-maximize-b"] =
+	{
+		{ "window-maximize-b.png", *, *, * }
+	}
+	stock["wnck-stock-maximize-h"] =
+	{
+		{ "window-maximize-h.png", *, *, * }
+	}
+	stock["wnck-stock-maximize-v"] =
+	{
+		{ "window-maximize-v.png", *, *, * }
+	}
+	stock["wnck-stock-maximize"] =
+	{
+		{ "window-maximize.png", *, *, * }
+	}
+	stock["wnck-stock-menu"] =
+	{
+		{ "window-menu.png", *, *, * }
+	}
+	stock["wnck-stock-minimize"] =
+	{
+		{ "window-minimize.png", *, *, * }
+	}
+	stock["wnck-stock-move"] =
+	{
+		{ "window-move.png", *, *, * }
+	}
+	stock["wnck-stock-normal"] =
+	{
+		{ "window-normal.png", *, *, * }
+	}
+	stock["wnck-stock-raise"] =
+	{
+		{ "window-raise.png", *, *, * }
+	}
+	stock["wnck-stock-resize"] =
+	{
+		{ "window-resize.png", *, *, * }
+	}
+	stock["wnck-stock-sendto-d"] =
+	{
+		{ "window-sendto-d.png", *, *, * }
+	}
+	stock["wnck-stock-sendto-l"] =
+	{
+		{ "window-sendto-l.png", *, *, * }
+	}
+	stock["wnck-stock-sendto-r"] =
+	{
+		{ "window-sendto-r.png", *, *, * }
+	}
+	stock["wnck-stock-sendto-u"] =
+	{
+		{ "window-sendto-u.png", *, *, * }
+	}
+	stock["wnck-stock-sendto"] =
+	{
+		{ "window-sendto.png", *, *, * }
+	}
+	stock["wnck-stock-shade"] =
+	{
+		{ "window-shade.png", *, *, * }
+	}
+	stock["wnck-stock-snap"] =
+	{
+		{ "window-snap.png", *, *, * }
+	}
+	stock["wnck-stock-stick"] =
+	{
+		{ "window-stick.png", *, *, * }
+	}
+	stock["wnck-stock-titlebar"] =
+	{
+		{ "window-titlebar.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximize-b"] =
+	{
+		{ "window-unmaximize-b.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximize-h"] =
+	{
+		{ "window-unmaximize-h.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximize-v"] =
+	{
+		{ "window-unmaximize-v.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximize"] =
+	{
+		{ "window-unmaximize.png", *, *, * }
+	}
+	stock["wnck-stock-unminimize"] =
+	{
+		{ "window-unminimize.png", *, *, * }
+	}
+	stock["wnck-stock-unshade"] =
+	{
+		{ "window-unshade.png", *, *, * }
+	}
+	stock["wnck-stock-unstick"] =
+	{
+		{ "window-unstick.png", *, *, * }
+	}
 }
 
 style "menuitem"
