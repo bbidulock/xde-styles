@@ -430,20 +430,20 @@ nobase_dist_share_DATA += \
 	icewm/themes/Squared-grey/taskbar/windows.xpm
 
 nobase_dist_share_DATA += \
-	icewm/themes/Squared-green/icons/app_16x16.xpm \
-	icewm/themes/Squared-green/icons/app_32x32.xpm \
-	icewm/themes/Squared-green/icons/file_16x16.xpm \
-	icewm/themes/Squared-green/icons/file_32x32.xpm \
-	icewm/themes/Squared-green/icons/file_48x48.xpm \
-	icewm/themes/Squared-green/icons/find_16x16.xpm \
-	icewm/themes/Squared-green/icons/find_32x32.xpm \
-	icewm/themes/Squared-green/icons/find_48x48.xpm \
-	icewm/themes/Squared-green/icons/folder_16x16.xpm \
-	icewm/themes/Squared-green/icons/folder_32x32.xpm \
-	icewm/themes/Squared-green/icons/folder_48x48.xpm \
-	icewm/themes/Squared-green/icons/run_16x16.xpm \
-	icewm/themes/Squared-green/icons/run_32x32.xpm \
-	icewm/themes/Squared-green/icons/run_48x48.xpm
+	icewm/themes/Squared-grey/icons/app_16x16.xpm \
+	icewm/themes/Squared-grey/icons/app_32x32.xpm \
+	icewm/themes/Squared-grey/icons/file_16x16.xpm \
+	icewm/themes/Squared-grey/icons/file_32x32.xpm \
+	icewm/themes/Squared-grey/icons/file_48x48.xpm \
+	icewm/themes/Squared-grey/icons/find_16x16.xpm \
+	icewm/themes/Squared-grey/icons/find_32x32.xpm \
+	icewm/themes/Squared-grey/icons/find_48x48.xpm \
+	icewm/themes/Squared-grey/icons/folder_16x16.xpm \
+	icewm/themes/Squared-grey/icons/folder_32x32.xpm \
+	icewm/themes/Squared-grey/icons/folder_48x48.xpm \
+	icewm/themes/Squared-grey/icons/run_16x16.xpm \
+	icewm/themes/Squared-grey/icons/run_32x32.xpm \
+	icewm/themes/Squared-grey/icons/run_48x48.xpm
 
 nobase_dist_share_DATA += \
 	icewm/themes/Squared-green/closeA.xpm \
