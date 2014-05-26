@@ -1,7 +1,7 @@
 
 AC_PREREQ(2.69)
-AC_INIT([xde-styles],[1.1.23],[http://github.com/bbidulock/xde-styles],[xde-styles])
-AC_REVISION([1.1.23])
+AC_INIT([xde-styles],[1.1.66],[http://github.com/bbidulock/xde-styles],[xde-styles])
+AC_REVISION([1.1.66])
 
 AC_CONFIG_SRCDIR([blackbox/styles/Squared-blue])
 AC_CONFIG_HEADERS([autoconf.h])

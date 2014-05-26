@@ -1,0 +1,77 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Font
+;
+;	Set font of the modules.
+
+font = [
+    titlebar = "-*-liberation sans-bold-r-normal-*-*-90-*-*-*-*-iso10646-1"
+    menu = "-*-liberation sans-medium-r-normal-*-*-100-*-*-*-*-iso10646-1"
+    task = "-*-liberation sans-medium-r-normal-*-*-90-*-*-*-*-iso10646-1"
+    tooltip = "-*-liberation sans-medium-r-normal-*-*-90-*-*-*-*-iso10646-1"
+    panel = "-*-liberation sans-bold-r-normal-*-*-90-*-*-*-*-iso10646-1"
+    clock = "-*-liberation sans-medium-r-normal-*-*-70-*-*-*-*-iso10646-1"
+    button = "-*-liberation sans-bold-r-normal-*-*-90-*-*-*-*-iso10646-1"
+    pager = "-*-liberation sans-medium-r-normal-*-*-70-*-*-*-*-iso10646-1"
+    fallback = "-*-liberation sans-medium-r-normal-*-*-90-*-*-*-*-iso10646-1"
+]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Color
+;
+;	Set color of the modules
+
+color = [
+    title-fg = "#9c9c9c"
+    title-bg1 = "#222222"
+    title-bg2 = "#222222"
+
+    title-active-fg = "#e0e0e0"
+    title-active-bg1 = "#161616"
+    title-active-bg2 = "#161616"
+
+    border-line = "#161616"
+    border-active-line = "#5369a3"
+    border-corner = "#161616"
+    border-active-corner = "#5369a3"
+
+    panel-fg = "#c0c0c0"
+    panel-bg = "#222222"
+
+    task-fg = "#c0c0c0"
+    task-bg1 = "#161616"
+    task-bg2 = "#161616"
+    task-active-fg = "#f0f0f0"
+    task-active-bg1 = "#5369a3"
+    task-active-bg2 = "#5369a3"
+
+    pager-fg = "#c0c0c0"
+    pager-bg = "#161616"
+    pager-active-fg = "#f0f0f0"
+    pager-active-bg = "#5369a3"
+    pager-outline = "#5369a3"
+    pager-text = "#c0c0c0"
+
+    menu-fg = "#c0c0c0"
+    menu-bg = "#222222"
+    menu-outline = "#000000"
+    menu-active-fg = "#f0f0f0"
+    menu-active-bg1 = "#5369a3"
+    menu-active-bg2 = "#5369a3"
+    menu-active-outline = "#161616"
+
+    tooltip-fg = "#f0f0f0"
+    tooltip-bg = "#000000"
+    tooltip-outline = "#5369a3"
+
+    button-fg = "#c0c0c0"
+    button-bg = "#222222"
+
+    clock-fg = "#c0c0c0"
+    clock-bg = "#161616"
+
+    netload-fg = "#c0c0c0"
+    netload-bg = "#161616"
+    netload-tx = "#5369a3"
+    netload-rx = "#8090a0"
+]
+

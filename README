@@ -1,10 +1,10 @@
-xde-styles -- read me first file.  2014-04-14
+xde-styles -- read me first file.  2014-05-26
 
 xde-styles
 ==========
 
-Package xde-styles-1.1.52 was released under CCPL:cc-by-sa-3.0 license
-2014-04-14. 
+Package xde-styles-1.1.66 was released under CCPL:cc-by-sa-3.0 license
+2014-05-26. 
 
 This is a set of styles for the XDE (X Desktop Environment) which
 provides a small and consistent set of window manager styles across a
@@ -15,7 +15,7 @@ supported window managers.
 Release
 -------
 
-This is the xde-styles-1.1.52 package, released 2014-04-14.  This release,
+This is the xde-styles-1.1.66 package, released 2014-05-26.  This release,
 and the latest version, can be obtained from the GitHub repository at
 (http://github.com/bbidulock/xde-styles), using a command such as:
 

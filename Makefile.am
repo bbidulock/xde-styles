@@ -40,6 +40,12 @@ nobase_nodist_share_SCRIPTS =
 AM_INSTALLCHECK_STD_OPTIONS_EXEMPT =
 
 nobase_dist_share_DATA += \
+	uwm/styles/Squared-cadet/style \
+	uwm/styles/Squared-blue/style \
+	uwm/styles/Squared-green/style \
+	uwm/styles/Squared-grey/style
+
+nobase_dist_share_DATA += \
 	waimea/styles/Squared-cadet/stylerc
 
 nobase_dist_share_DATA += \
