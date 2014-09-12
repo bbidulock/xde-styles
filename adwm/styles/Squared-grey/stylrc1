@@ -1,0 +1,142 @@
+Echinus*selected.font: Liberation Sans:size=9:medium
+Echinus*selected.drop: 1
+Echinus*selected.shadow: #394870
+Echinus*selected.border: #717171
+Echinus*selected.button: #0f0f0f
+Echinus*selected.bg: #e3e5eb
+Echinus*selected.fg: #f0f0f0
+
+Echinus*normal.font: Liberation Sans:size=9:medium
+Echinus*normal.drop: 1
+Echinus*normal.shadow: #373737
+Echinus*normal.border: #373737
+Echinus*normal.button: #313131
+Echinus*normal.bg: #c0c0c0
+Echinus*normal.fg: #212121
+
+Echinus*font: Liberation Sans:size=8:medium
+
+Echinus*border: 1
+Echinus*margin: 0
+Echinus*outline: 0
+Echinus*spacing: 1
+
+Echinus*title: 15
+
+!Echinus*button.iconify.pixmap: iconify.xpm
+!Echinus*button.maximize.pixmap: max.xpm
+!Echinus*button.close.pixmap: close.xpm
+
+Echinus*titlelayout: FASN  IMC
+
+Echinus*button.iconify.pixmap: style/min_focused.xpm
+Echinus*button.maximize.pixmap: style/max_focused.xpm
+Echinus*button.close.pixmap: style/close_focused.xpm
+
+Echinus*button.iconify.pixmap:					style/pixmaps/min.xpm
+Echinus*button.iconify.pressed.pixmap:				style/pixmaps/min_pressed.xpm
+Echinus*button.iconify.hovered.pixmap:				style/pixmaps/min_pressed.xpm
+Echinus*button.iconify.focused.pixmap:				style/pixmaps/min.xpm
+Echinus*button.iconify.unfocus.pixmap:				style/pixmaps/min_unfocus.xpm
+Echinus*button.iconify.disabled.hovered.pixmap:			style/pixmaps/min_unfocus.xpm
+Echinus*button.iconify.disabled.focused.pixmap:			style/pixmaps/min_unfocus.xpm
+Echinus*button.iconify.disabled.unfocus.pixmap:			style/pixmaps/min_unfocus.xpm
+
+Echinus*button.maximize.pixmap:					style/pixmaps/max.xpm
+Echinus*button.maximize.pressed.pixmap:				style/pixmaps/max_pressed.xpm
+Echinus*button.maximize.hovered.pixmap:				style/pixmaps/max_pressed.xpm
+Echinus*button.maximize.focused.pixmap:				style/pixmaps/max.xpm
+Echinus*button.maximize.unfocus.pixmap:				style/pixmaps/max_unfocus.xpm
+Echinus*button.maximize.disabled.hovered.pixmap:		style/pixmaps/max_unfocus.xpm
+Echinus*button.maximize.disabled.focused.pixmap:		style/pixmaps/max_unfocus.xpm
+Echinus*button.maximize.disabled.unfocus.pixmap:		style/pixmaps/max_unfocus.xpm
+
+Echinus*button.maximize.toggled.pixmap:				style/pixmaps/unmax.xpm
+Echinus*button.maximize.toggled.pressed.pixmap:			style/pixmaps/unmax_pressed.xpm
+Echinus*button.maximize.toggled.hovered.pixmap:			style/pixmaps/unmax_pressed.xpm
+Echinus*button.maximize.toggled.focused.pixmap:			style/pixmaps/unmax.xpm
+Echinus*button.maximize.toggled.unfocus.pixmap:			style/pixmaps/unmax_unfocus.xpm
+Echinus*button.maximize.toggled.disabled.hovered.pixmap:	style/pixmaps/unmax_unfocus.xpm
+Echinus*button.maximize.toggled.disabled.focused.pixmap:	style/pixmaps/unmax_unfocus.xpm
+Echinus*button.maximize.toggled.disabled.unfocus.pixmap:	style/pixmaps/unmax_unfocus.xpm
+
+Echinus*button.close.pixmap:					style/pixmaps/close.xpm
+Echinus*button.close.pressed.pixmap:				style/pixmaps/close_pressed.xpm
+Echinus*button.close.hovered.pixmap:				style/pixmaps/close_pressed.xpm
+Echinus*button.close.focused.pixmap:				style/pixmaps/close.xpm
+Echinus*button.close.unfocus.pixmap:				style/pixmaps/close_unfocus.xpm
+Echinus*button.close.disabled.hovered.pixmap:			style/pixmaps/close_unfocus.xpm
+Echinus*button.close.disabled.focused.pixmap:			style/pixmaps/close_unfocus.xpm
+Echinus*button.close.disabled.unfocus.pixmap:			style/pixmaps/close_unfocus.xpm
+
+Echinus*button.shade.pixmap:					style/pixmaps/shade.xpm
+Echinus*button.shade.pressed.pixmap:				style/pixmaps/shade_pressed.xpm
+Echinus*button.shade.hovered.pixmap:				style/pixmaps/shade_pressed.xpm
+Echinus*button.shade.focused.pixmap:				style/pixmaps/shade.xpm
+Echinus*button.shade.unfocus.pixmap:				style/pixmaps/shade_unfocus.xpm
+Echinus*button.shade.disabled.hovered.pixmap:			style/pixmaps/shade_unfocus.xpm
+Echinus*button.shade.disabled.focused.pixmap:			style/pixmaps/shade_unfocus.xpm
+Echinus*button.shade.disabled.unfocus.pixmap:			style/pixmaps/shade_unfocus.xpm
+
+Echinus*button.shade.toggled.pixmap:				style/pixmaps/unshade.xpm
+Echinus*button.shade.toggled.pressed.pixmap:			style/pixmaps/unshade_pressed.xpm
+Echinus*button.shade.toggled.hovered.pixmap:			style/pixmaps/unshade_pressed.xpm
+Echinus*button.shade.toggled.focused.pixmap:			style/pixmaps/unshade.xpm
+Echinus*button.shade.toggled.unfocus.pixmap:			style/pixmaps/unshade_unfocus.xpm
+Echinus*button.shade.toggled.disabled.hovered.pixmap:		style/pixmaps/unshade_unfocus.xpm
+Echinus*button.shade.toggled.disabled.focused.pixmap:		style/pixmaps/unshade_unfocus.xpm
+Echinus*button.shade.toggled.disabled.unfocus.pixmap:		style/pixmaps/unshade_unfocus.xpm
+
+Echinus*button.stick.pixmap:					style/pixmaps/stick.xpm
+Echinus*button.stick.pressed.pixmap:				style/pixmaps/stick_pressed.xpm
+Echinus*button.stick.hovered.pixmap:				style/pixmaps/stick_pressed.xpm
+Echinus*button.stick.focused.pixmap:				style/pixmaps/stick.xpm
+Echinus*button.stick.unfocus.pixmap:				style/pixmaps/stick_unfocus.xpm
+Echinus*button.stick.disabled.hovered.pixmap:			style/pixmaps/stick_unfocus.xpm
+Echinus*button.stick.disabled.focused.pixmap:			style/pixmaps/stick_unfocus.xpm
+Echinus*button.stick.disabled.unfocus.pixmap:			style/pixmaps/stick_unfocus.xpm
+
+Echinus*button.stick.toggled.pixmap:				style/pixmaps/stuck.xpm
+Echinus*button.stick.toggled.pressed.pixmap:			style/pixmaps/stuck_pressed.xpm
+Echinus*button.stick.toggled.hovered.pixmap:			style/pixmaps/stuck_pressed.xpm
+Echinus*button.stick.toggled.focused.pixmap:			style/pixmaps/stuck.xpm
+Echinus*button.stick.toggled.unfocus.pixmap:			style/pixmaps/stuck_unfocus.xpm
+Echinus*button.stick.toggled.disabled.hovered.pixmap:		style/pixmaps/stuck_unfocus.xpm
+Echinus*button.stick.toggled.disabled.focused.pixmap:		style/pixmaps/stuck_unfocus.xpm
+Echinus*button.stick.toggled.disabled.unfocus.pixmap:		style/pixmaps/stuck_unfocus.xpm
+
+Echinus*button.lhalf.pixmap:					style/pixmaps/lhalf.xpm
+Echinus*button.lhalf.pressed.pixmap:				style/pixmaps/lhalf_pressed.xpm
+Echinus*button.lhalf.hovered.pixmap:				style/pixmaps/lhalf_pressed.xpm
+Echinus*button.lhalf.focused.pixmap:				style/pixmaps/lhalf.xpm
+Echinus*button.lhalf.unfocus.pixmap:				style/pixmaps/lhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.hovered.pixmap:			style/pixmaps/lhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.focused.pixmap:			style/pixmaps/lhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.unfocus.pixmap:			style/pixmaps/lhalf_unfocus.xpm
+
+Echinus*button.lhalf.pixmap:					style/pixmaps/rhalf.xpm
+Echinus*button.lhalf.pressed.pixmap:				style/pixmaps/rhalf_pressed.xpm
+Echinus*button.lhalf.hovered.pixmap:				style/pixmaps/rhalf_pressed.xpm
+Echinus*button.lhalf.focused.pixmap:				style/pixmaps/rhalf.xpm
+Echinus*button.lhalf.unfocus.pixmap:				style/pixmaps/rhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.hovered.pixmap:			style/pixmaps/rhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.focused.pixmap:			style/pixmaps/rhalf_unfocus.xpm
+Echinus*button.lhalf.disabled.unfocus.pixmap:			style/pixmaps/rhalf_unfocus.xpm
+
+Echinus*button.float.pixmap:					style/pixmaps/float.xpm
+Echinus*button.float.pressed.pixmap:				style/pixmaps/float_pressed.xpm
+Echinus*button.float.hovered.pixmap:				style/pixmaps/float_pressed.xpm
+Echinus*button.float.focused.pixmap:				style/pixmaps/float.xpm
+Echinus*button.float.unfocus.pixmap:				style/pixmaps/float_unfocus.xpm
+Echinus*button.float.disabled.hovered.pixmap:			style/pixmaps/float_unfocus.xpm
+Echinus*button.float.disabled.focused.pixmap:			style/pixmaps/float_unfocus.xpm
+Echinus*button.float.disabled.unfocus.pixmap:			style/pixmaps/float_unfocus.xpm
+
+Echinus*button.float.toggled.pixmap:				style/pixmaps/tile.xpm
+Echinus*button.float.toggled.pressed.pixmap:			style/pixmaps/tile_pressed.xpm
+Echinus*button.float.toggled.hovered.pixmap:			style/pixmaps/tile_pressed.xpm
+Echinus*button.float.toggled.focused.pixmap:			style/pixmaps/tile.xpm
+Echinus*button.float.toggled.unfocus.pixmap:			style/pixmaps/tile_unfocus.xpm
+Echinus*button.float.toggled.disabled.hovered.pixmap:		style/pixmaps/tile_unfocus.xpm
+Echinus*button.float.toggled.disabled.focused.pixmap:		style/pixmaps/tile_unfocus.xpm
+Echinus*button.float.toggled.disabled.unfocus.pixmap:		style/pixmaps/tile_unfocus.xpm
