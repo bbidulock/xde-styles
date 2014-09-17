@@ -22,14 +22,14 @@ Adwm*movedown:		WS + bracketright = 0 5 0 0
 
 Adwm*resizedecx:	AS + a = 3 0 -6 0, W + minus = 3 0 -6 0
 Adwm*resizedecy:	AS + s = 0 3 0 -6, WS + minus = 0 3 0 -6
-Adwm*resizeincx:	AC + a : Left = -3 0 6 0, AC + a : Right -3 0 6 0, AS + d = -3 0 6 0, W + equal = -3 0 6 0
-Adwm*resizeincy:	AC + a : Down 0 -3 0 6, AC + a : Up = 0 -3 0 6, AS + w = 0 -3 0 6, WS + equal = 0 -3 0 6
+Adwm*resizeincx:	AC + a : Left = -3 0 6 0, AC + a : Right = -3 0 6 0, AS + d = -3 0 6 0, W + equal = -3 0 6 0
+Adwm*resizeincy:	AC + a : Down = 0 -3 0 6, AC + a : Up = 0 -3 0 6, AS + w = 0 -3 0 6, WS + equal = 0 -3 0 6
 
 Adwm*begmove:		A + F7, WS + m
 Adwm*begsize:		A + F8, AC + a : Return
 
 ! togglemonitor		- warp pointer to previous monitor
-Adwm*togglemonitor:	A + grave
+!Adwm*togglemonitor:	A + grave
 
 ! appendtag		- create another workspace
 ! rmlasttag		- remove last workspace
@@ -290,8 +290,8 @@ Adwm*focusurgent:	W + u
 ! client		- select client list order
 ! stack			- select client stacking order
 ! group			- select client same class tiled order
-Adwm*groupnext:		A + Above_Tab, A + F6, W + Above_Tab
-Adwm*groupprev:		AS + Above_Tab, AS + F6, WS + Above_Tab
+Adwm*groupnext:		A + grave, A + F6, W + grave
+Adwm*groupprev:		AS + grave, AS + F6, WS + grave
 ! tab			- select client tab order
 ! panel			- select panel tiled order
 Adwm*panelnext:		AC + Escape
