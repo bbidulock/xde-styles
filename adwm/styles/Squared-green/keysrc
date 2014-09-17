@@ -9,7 +9,7 @@ Adwm*modkey:		A
 ! zoom			- swap selected window to/from master
 Adwm*quit:		AC + p : End, AC + q, WS + q
 Adwm*restart:		AC + p : Next, AC + p : Prior = twm, AS + q, WC + r
-Adwm*killclient:	A + F4, A + F5, A + q, AC + a : q : f, AC + a : q : k, AC + a : q : q, AS + c, W + q, W + x, WS + c, WS + x
+Adwm*killclient:	A + F4, A + q, AC + a : q : f, AC + a : q : k, AC + a : q : q, AS + c, W + q, W + x, WS + c, WS + x
 Adwm*zoom:		A + Return, W + Return, WC + Return
 Adwm*reload:		AC + p : Delete
 Adwm*initscr:		WS + i
@@ -124,7 +124,7 @@ Adwm*toggledectiled:	A + d
 
 ! moveby		- move increment in direction
 ! moveto		- move to position in 3x3 grid
-Adwm*movetoSW:		AC + KP_1, AC + c : c, AC + c : m
+Adwm*movetoSW:		AC + KP_1, AC + c : z
 Adwm*movetoS:		AC + KP_2, AC + c : b, AC + c : x
 Adwm*movetoSE:		AC + KP_3, AC + c : c, AC + c : m
 Adwm*movetoW:		AC + KP_4, AC + c : a
