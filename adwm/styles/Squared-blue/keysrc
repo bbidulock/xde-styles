@@ -364,6 +364,7 @@ Adwm*button2:		W + v
 
 ! command		- command for button press on root window
 Adwm*command:		xdg-traymenu -p -b 1
+Adwm*menucommand:	xde-winmenu -p -b 1
 
 
 ! vim: set ft=xdefaults:
