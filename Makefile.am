@@ -58,6 +58,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-blue/pixmaps/float_hovered.xpm \
 	adwm/styles/Squared-blue/pixmaps/float_pressed.xpm \
 	adwm/styles/Squared-blue/pixmaps/float_unfocus.xpm \
+	adwm/styles/Squared-blue/pixmaps/lhalf_focused.xpm \
+	adwm/styles/Squared-blue/pixmaps/lhalf_hovered.xpm \
+	adwm/styles/Squared-blue/pixmaps/lhalf_pressed.xpm \
+	adwm/styles/Squared-blue/pixmaps/lhalf_unfocus.xpm \
 	adwm/styles/Squared-blue/pixmaps/max_focused.xpm \
 	adwm/styles/Squared-blue/pixmaps/max_hovered.xpm \
 	adwm/styles/Squared-blue/pixmaps/max_pressed.xpm \
@@ -70,6 +74,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-blue/pixmaps/min_hovered.xpm \
 	adwm/styles/Squared-blue/pixmaps/min_pressed.xpm \
 	adwm/styles/Squared-blue/pixmaps/min_unfocus.xpm \
+	adwm/styles/Squared-blue/pixmaps/rhalf_focused.xpm \
+	adwm/styles/Squared-blue/pixmaps/rhalf_hovered.xpm \
+	adwm/styles/Squared-blue/pixmaps/rhalf_pressed.xpm \
+	adwm/styles/Squared-blue/pixmaps/rhalf_unfocus.xpm \
 	adwm/styles/Squared-blue/pixmaps/shade_focused.xpm \
 	adwm/styles/Squared-blue/pixmaps/shade_hovered.xpm \
 	adwm/styles/Squared-blue/pixmaps/shade_pressed.xpm \
@@ -104,6 +112,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-cadet/pixmaps/float_hovered.xpm \
 	adwm/styles/Squared-cadet/pixmaps/float_pressed.xpm \
 	adwm/styles/Squared-cadet/pixmaps/float_unfocus.xpm \
+	adwm/styles/Squared-cadet/pixmaps/lhalf_focused.xpm \
+	adwm/styles/Squared-cadet/pixmaps/lhalf_hovered.xpm \
+	adwm/styles/Squared-cadet/pixmaps/lhalf_pressed.xpm \
+	adwm/styles/Squared-cadet/pixmaps/lhalf_unfocus.xpm \
 	adwm/styles/Squared-cadet/pixmaps/max_focused.xpm \
 	adwm/styles/Squared-cadet/pixmaps/max_hovered.xpm \
 	adwm/styles/Squared-cadet/pixmaps/max_pressed.xpm \
@@ -116,6 +128,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-cadet/pixmaps/min_hovered.xpm \
 	adwm/styles/Squared-cadet/pixmaps/min_pressed.xpm \
 	adwm/styles/Squared-cadet/pixmaps/min_unfocus.xpm \
+	adwm/styles/Squared-cadet/pixmaps/rhalf_focused.xpm \
+	adwm/styles/Squared-cadet/pixmaps/rhalf_hovered.xpm \
+	adwm/styles/Squared-cadet/pixmaps/rhalf_pressed.xpm \
+	adwm/styles/Squared-cadet/pixmaps/rhalf_unfocus.xpm \
 	adwm/styles/Squared-cadet/pixmaps/shade_focused.xpm \
 	adwm/styles/Squared-cadet/pixmaps/shade_hovered.xpm \
 	adwm/styles/Squared-cadet/pixmaps/shade_pressed.xpm \
@@ -150,6 +166,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-green/pixmaps/float_hovered.xpm \
 	adwm/styles/Squared-green/pixmaps/float_pressed.xpm \
 	adwm/styles/Squared-green/pixmaps/float_unfocus.xpm \
+	adwm/styles/Squared-green/pixmaps/lhalf_focused.xpm \
+	adwm/styles/Squared-green/pixmaps/lhalf_hovered.xpm \
+	adwm/styles/Squared-green/pixmaps/lhalf_pressed.xpm \
+	adwm/styles/Squared-green/pixmaps/lhalf_unfocus.xpm \
 	adwm/styles/Squared-green/pixmaps/max_focused.xpm \
 	adwm/styles/Squared-green/pixmaps/max_hovered.xpm \
 	adwm/styles/Squared-green/pixmaps/max_pressed.xpm \
@@ -162,6 +182,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-green/pixmaps/min_hovered.xpm \
 	adwm/styles/Squared-green/pixmaps/min_pressed.xpm \
 	adwm/styles/Squared-green/pixmaps/min_unfocus.xpm \
+	adwm/styles/Squared-green/pixmaps/rhalf_focused.xpm \
+	adwm/styles/Squared-green/pixmaps/rhalf_hovered.xpm \
+	adwm/styles/Squared-green/pixmaps/rhalf_pressed.xpm \
+	adwm/styles/Squared-green/pixmaps/rhalf_unfocus.xpm \
 	adwm/styles/Squared-green/pixmaps/shade_focused.xpm \
 	adwm/styles/Squared-green/pixmaps/shade_hovered.xpm \
 	adwm/styles/Squared-green/pixmaps/shade_pressed.xpm \
@@ -196,6 +220,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-grey/pixmaps/float_hovered.xpm \
 	adwm/styles/Squared-grey/pixmaps/float_pressed.xpm \
 	adwm/styles/Squared-grey/pixmaps/float_unfocus.xpm \
+	adwm/styles/Squared-grey/pixmaps/lhalf_focused.xpm \
+	adwm/styles/Squared-grey/pixmaps/lhalf_hovered.xpm \
+	adwm/styles/Squared-grey/pixmaps/lhalf_pressed.xpm \
+	adwm/styles/Squared-grey/pixmaps/lhalf_unfocus.xpm \
 	adwm/styles/Squared-grey/pixmaps/max_focused.xpm \
 	adwm/styles/Squared-grey/pixmaps/max_hovered.xpm \
 	adwm/styles/Squared-grey/pixmaps/max_pressed.xpm \
@@ -208,6 +236,10 @@ nobase_dist_share_DATA += \
 	adwm/styles/Squared-grey/pixmaps/min_hovered.xpm \
 	adwm/styles/Squared-grey/pixmaps/min_pressed.xpm \
 	adwm/styles/Squared-grey/pixmaps/min_unfocus.xpm \
+	adwm/styles/Squared-grey/pixmaps/rhalf_focused.xpm \
+	adwm/styles/Squared-grey/pixmaps/rhalf_hovered.xpm \
+	adwm/styles/Squared-grey/pixmaps/rhalf_pressed.xpm \
+	adwm/styles/Squared-grey/pixmaps/rhalf_unfocus.xpm \
 	adwm/styles/Squared-grey/pixmaps/shade_focused.xpm \
 	adwm/styles/Squared-grey/pixmaps/shade_hovered.xpm \
 	adwm/styles/Squared-grey/pixmaps/shade_pressed.xpm \
