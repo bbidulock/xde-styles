@@ -1,6 +1,6 @@
 Adwm*selected.font:					Liberation Sans:size=9:medium
 Adwm*selected.drop:					1
-Adwm*selected.shadow:					#394870
+Adwm*selected.shadow:					#f0f0f0
 Adwm*selected.border:					#f0f0f0
 Adwm*selected.button:					#0f0f0f
 Adwm*selected.bg:					#e3e5eb
