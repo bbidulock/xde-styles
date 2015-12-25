@@ -353,6 +353,8 @@ Adwm*spawn30:		WS + Delete = xde-xlock -l
 Adwm*spawn31:		WS + Return = uxterm
 Adwm*spawn32:		WS + s = scrot -s
 Adwm*spawn33:		WS + slash = xde-namews
+Adwm*spawn34:		XF86MonBrightnessUp = xbrightness +4096
+Adwm*spawn35:		XF86MonBrightnessDown = xbrightness -4096
 
 ! rule			- rules for window classes
 !Adwm*rule0:		Firefox.* web 0 1
