@@ -16,9 +16,13 @@ divert(BINDINGS)dnl
 `"F1"	    = m		: all		: f.exec "exec uxterm &"'
 `"F2"	    = m		: all		: f.exec "exec fbrun &"'
 
-`"XF86AudioRaiseVolume"	= : all		: f.exec "amixer sset Master,0 1+"'
-`"XF86AudioLowerVolume"	= : all		: f.exec "amixer sset Master,0 1-"'
-`"XF86AudioMut"		= : all		: f.exec "amixer sset Master,0 toggle"'
+`"XF86AudioRaiseVolume"		=	: all		: f.exec "amixer sset Master,0 1%+"'
+`"XF86AudioLowerVolume"		=	: all		: f.exec "amixer sset Master,0 1%-"'
+`"XF86AudioMute"		=	: all		: f.exec "amixer sset Master,0 toggle"'
+`"XF86MonBrightnessUp"		=	: all		: f.exec "xbrightness +4096"'
+`"XF86MonBrightnessDown"	=	: all		: f.exec "xbrightness -4096"'
+`"XF86MonBrightnessUp"		= c	: all		: f.exec "xbacklight -inc 5"'
+`"XF86MonBrightnessDown"	= c	: all		: f.exec "xbacklight -dec 5"'
 
 `"Up"	    = c | s	: window	: f.zoom'
 `"Right"    = c | s	: window	: f.horizoom'
