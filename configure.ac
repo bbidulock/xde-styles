@@ -1,14 +1,14 @@
 
 AC_PREREQ(2.69)
-AC_INIT([xde-styles],[1.1.66],[http://github.com/bbidulock/xde-styles],[xde-styles])
-AC_REVISION([1.1.66])
+AC_INIT([xde-styles],[1.1.85],[http://github.com/bbidulock/xde-styles],[xde-styles])
+AC_REVISION([1.1.85])
 
 AC_CONFIG_SRCDIR([blackbox/styles/Squared-blue])
 AC_CONFIG_HEADERS([autoconf.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([scripts])
 
-DATE=`date -uI`
+DATE='2016-01-29'
 AC_SUBST([DATE])
 
 AM_INIT_AUTOMAKE([gnits 1.14 dist-xz no-dist-gzip std-options -Wall color-tests silent-rules tar-pax])
