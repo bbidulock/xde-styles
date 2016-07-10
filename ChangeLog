@@ -1,5 +1,114 @@
 # created with git log --stat=76 -M -C|fmt -sct -w80
 
+commit afd5d5abafea980f43301e18321df28375b1822c
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 9 18:59:23 2016 -0600
+
+    simplify distribution
+
+ .gitignore                         |   79 +-
+ AUTHORS.in => AUTHORS              |    2 +-
+ ChangeLog                          | 5259 ++++++++++++++++++++++++++++++++
+ Makefile.am                        |   81 +-
+ NEWS.in => NEWS                    |    8 +-
+ README.in                          |  133 -
+ README.md.in                       |   22 +-
+ THANKS.in => THANKS                |    2 +-
+ TODO.in => TODO                    |    2 +-
+ autogen.sh                         |   55 +-
+ configure.template => configure.ac |    6 +-
+ configure.sh                       |    1 -
+ dist.sh                            |    9 +
+ gennews.sh                         |   34 +
+ rebuild.sh                         |    4 +-
+ 15 files changed, 5435 insertions(+), 262 deletions(-)
+
+commit 33d96c1927ffc908d4478b000ff7bc8f44eb5467
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 2 20:44:38 2016 -0600
+
+    xrdb uses backslash as ecape too!
+
+ adwm/styles/Squared-blue/keysrc  | 6 +++---
+ adwm/styles/Squared-cadet/keysrc | 6 +++---
+ adwm/styles/Squared-green/keysrc | 6 +++---
+ adwm/styles/Squared-grey/keysrc  | 6 +++---
+ 4 files changed, 12 insertions(+), 12 deletions(-)
+
+commit f3ae94ea874cf79a0d87a4421c009f16afab460e
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 2 20:09:05 2016 -0600
+
+    corrections to audio key bindings
+
+ adwm/styles/Squared-blue/keysrc  | 4 ++--
+ adwm/styles/Squared-cadet/keysrc | 4 ++--
+ adwm/styles/Squared-green/keysrc | 4 ++--
+ adwm/styles/Squared-grey/keysrc  | 4 ++--
+ ctwm/keys                        | 4 ++--
+ twm/keys                         | 4 ++--
+ vtwm/keys                        | 4 ++--
+ 7 files changed, 14 insertions(+), 14 deletions(-)
+
+commit 8778bb0c594d2e42f7dfb43d9ca77fa4202cf5e7
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Jul 2 05:31:04 2016 -0600
+
+    modify XF86 controls
+
+    - XF86MonBrighness{Up,Down} with control key controls
+      backlight on supporting devices instead of brightness
+
+    - commas in commands have to be escaped for ADWM
+
+ adwm/styles/Squared-blue/keysrc  | 20 +++++++++++---------
+ adwm/styles/Squared-cadet/keysrc | 20 +++++++++++---------
+ adwm/styles/Squared-green/keysrc | 20 +++++++++++---------
+ adwm/styles/Squared-grey/keysrc  | 20 +++++++++++---------
+ ctwm/keys                        | 10 +++++++---
+ twm/keys                         | 10 +++++++---
+ vtwm/keys                        | 10 +++++++---
+ 7 files changed, 65 insertions(+), 45 deletions(-)
+
+commit d51d6aadfef0807fae6ecf5e9af5ddee0029dd23
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Jun 27 13:56:55 2016 -0600
+
+    use xdg-launch in key bindings
+
+ adwm/styles/Squared-blue/keysrc  | 30 +++++++++++++++---------------
+ adwm/styles/Squared-cadet/keysrc | 30 +++++++++++++++---------------
+ adwm/styles/Squared-green/keysrc | 30 +++++++++++++++---------------
+ adwm/styles/Squared-grey/keysrc  | 30 +++++++++++++++---------------
+ 4 files changed, 60 insertions(+), 60 deletions(-)
+
+commit f552d19c8d0538f69c2633c6db906b13f9282bb0
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jun 16 20:30:28 2016 -0600
+
+    screen orientation keys for adwm
+
+ adwm/styles/Squared-blue/keysrc  | 9 +++++++++
+ adwm/styles/Squared-cadet/keysrc | 9 +++++++++
+ adwm/styles/Squared-green/keysrc | 9 +++++++++
+ adwm/styles/Squared-grey/keysrc  | 9 +++++++++
+ 4 files changed, 36 insertions(+)
+
+commit 99e56ba0ccbebe9fd1ecc60e3b976c89a0a38aa2
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun Feb 14 01:20:46 2016 -0700
+
+    minor updates to build system
+
+ Makefile.am  |  9 ++++++--
+ README       |  8 +++----
+ README.md    | 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md.in | 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ autogen.sh   | 19 ++++++++++------
+ configure.sh | 38 +++++++++++++++++++++++++++++++
+ rebuild.sh   |  9 ++++++++
+ 7 files changed, 206 insertions(+), 13 deletions(-)
+
 commit c212f2229fed3f157c1b3b15dc4700adba00d6d6
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Fri Jan 29 12:00:00 2016 -0700
@@ -2203,24 +2312,24 @@ Date:   Sat Dec 21 01:12:46 2013 -0700
 
     renamed some files
 
- vtwm/styles/Classic/lookrc => ctwm/styles/Classic/stylerc             | 0
- vtwm/styles/Squared-blue/lookrc => ctwm/styles/Squared-blue/stylerc   | 0
- vtwm/styles/Squared-cadet/lookrc => ctwm/styles/Squared-cadet/stylerc | 0
- vtwm/styles/Squared-green/lookrc => ctwm/styles/Squared-green/stylerc | 0
- vtwm/styles/Squared-grey/lookrc => ctwm/styles/Squared-grey/stylerc   | 0
- vtwm/styles/Squared/_lookrc => ctwm/styles/Squared/_stylerc           | 0
- twm/styles/Classic/{lookrc => stylerc}                                | 0
- twm/styles/Squared-blue/{lookrc => stylerc}                           | 0
- twm/styles/Squared-cadet/{lookrc => stylerc}                          | 0
- twm/styles/Squared-green/{lookrc => stylerc}                          | 0
- twm/styles/Squared-grey/{lookrc => stylerc}                           | 0
- twm/styles/Squared/{_lookrc => _stylerc}                              | 0
- ctwm/styles/Classic/lookrc => vtwm/styles/Classic/stylerc             | 0
- ctwm/styles/Squared-blue/lookrc => vtwm/styles/Squared-blue/stylerc   | 0
- ctwm/styles/Squared-cadet/lookrc => vtwm/styles/Squared-cadet/stylerc | 0
- ctwm/styles/Squared-green/lookrc => vtwm/styles/Squared-green/stylerc | 0
- ctwm/styles/Squared-grey/lookrc => vtwm/styles/Squared-grey/stylerc   | 0
- ctwm/styles/Squared/_lookrc => vtwm/styles/Squared/_stylerc           | 0
+ ctwm/styles/Classic/{lookrc => stylerc}       | 0
+ ctwm/styles/Squared-blue/{lookrc => stylerc}  | 0
+ ctwm/styles/Squared-cadet/{lookrc => stylerc} | 0
+ ctwm/styles/Squared-green/{lookrc => stylerc} | 0
+ ctwm/styles/Squared-grey/{lookrc => stylerc}  | 0
+ ctwm/styles/Squared/{_lookrc => _stylerc}     | 0
+ twm/styles/Classic/{lookrc => stylerc}        | 0
+ twm/styles/Squared-blue/{lookrc => stylerc}   | 0
+ twm/styles/Squared-cadet/{lookrc => stylerc}  | 0
+ twm/styles/Squared-green/{lookrc => stylerc}  | 0
+ twm/styles/Squared-grey/{lookrc => stylerc}   | 0
+ twm/styles/Squared/{_lookrc => _stylerc}      | 0
+ vtwm/styles/Classic/{lookrc => stylerc}       | 0
+ vtwm/styles/Squared-blue/{lookrc => stylerc}  | 0
+ vtwm/styles/Squared-cadet/{lookrc => stylerc} | 0
+ vtwm/styles/Squared-green/{lookrc => stylerc} | 0
+ vtwm/styles/Squared-grey/{lookrc => stylerc}  | 0
+ vtwm/styles/Squared/{_lookrc => _stylerc}     | 0
  18 files changed, 0 insertions(+), 0 deletions(-)
 
 commit 1f170784da0f392b4b1928e70370dcc8ecae45a1
@@ -2229,505 +2338,505 @@ Date:   Sat Dec 21 01:10:24 2013 -0700
 
     move directories
 
- {vtwm/looks => ctwm/styles}/Classic/lookrc                            | 0
- {vtwm/looks => ctwm/styles}/Default                                   | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/bullet.xbm      | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/close.xbm | 0
- .../styles/Squared-blue}/bitmaps/close_disabled.xbm                   | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/close_hover.xbm | 0
- .../styles/Squared-blue}/bitmaps/close_pressed.xbm                    | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/desk.xbm  | 0
- .../styles/Squared-blue}/bitmaps/desk_disabled.xbm                    | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/desk_hover.xbm  | 0
- .../styles/Squared-blue}/bitmaps/desk_pressed.xbm                     | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled.xbm                     | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled_hover.xbm               | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled_pressed.xbm             | 0
- .../styles/Squared-blue}/bitmaps/hilite_select.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/hilite_unselect.xbm                  | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/iconify.xbm     | 0
- .../styles/Squared-blue}/bitmaps/iconify_disabled.xbm                 | 0
- .../styles/Squared-blue}/bitmaps/iconify_hover.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/iconify_pressed.xbm                  | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/lhalf.xbm | 0
- .../styles/Squared-blue}/bitmaps/lhalf_unpressed.xbm                  | 0
- {vtwm/looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/max.xbm | 0
- .../styles/Squared-blue}/bitmaps/max_disabled.xbm                     | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/max_hover.xbm   | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/max_pressed.xbm | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/max_toggled.xbm | 0
- .../styles/Squared-blue}/bitmaps/max_toggled_hover.xbm                | 0
- .../styles/Squared-blue}/bitmaps/max_toggled_pressed.xbm              | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/menu.xbm  | 0
- .../styles/Squared-blue}/bitmaps/menu_pressed.xbm                     | 0
- {vtwm/looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/min.xbm | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/min_pressed.xbm | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/rhalf.xbm | 0
- .../styles/Squared-blue}/bitmaps/rhalf_unpressed.xbm                  | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/select.xbm      | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/shade.xbm | 0
- .../styles/Squared-blue}/bitmaps/shade_disabled.xbm                   | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/shade_hover.xbm | 0
- .../styles/Squared-blue}/bitmaps/shade_pressed.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled_hover.xbm              | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled_pressed.xbm            | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/stick.xbm | 0
- .../styles/Squared-blue}/bitmaps/stick_pressed.xbm                    | 0
- .../looks/Squared-grey => ctwm/styles/Squared-blue}/bitmaps/stuck.xbm | 0
- .../styles/Squared-blue}/bitmaps/stuck_pressed.xbm                    | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/unselect.xbm    | 0
- .../Squared-grey => ctwm/styles/Squared-blue}/bitmaps/unshade.xbm     | 0
- .../styles/Squared-blue}/bitmaps/unshade_pressed.xbm                  | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/bullet.xbm          | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/close.xbm           | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/close_disabled.xbm  | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/close_hover.xbm     | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/close_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/desk.xbm            | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/desk_disabled.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/desk_hover.xbm      | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/desk_pressed.xbm    | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/desk_toggled.xbm    | 0
- .../styles/Squared-blue/bitmaps1}/desk_toggled_hover.xbm              | 0
- .../styles/Squared-blue/bitmaps1}/desk_toggled_pressed.xbm            | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/iconify.xbm         | 0
- .../styles/Squared-blue/bitmaps1}/iconify_disabled.xbm                | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/iconify_hover.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/iconify_pressed.xbm | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/max.xbm             | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/max_disabled.xbm    | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/max_hover.xbm       | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/max_pressed.xbm     | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/max_toggled.xbm     | 0
- .../styles/Squared-blue/bitmaps1}/max_toggled_hover.xbm               | 0
- .../styles/Squared-blue/bitmaps1}/max_toggled_pressed.xbm             | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/shade.xbm           | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/shade_disabled.xbm  | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/shade_hover.xbm     | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/shade_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps1}/shade_toggled.xbm   | 0
- .../styles/Squared-blue/bitmaps1}/shade_toggled_hover.xbm             | 0
- .../styles/Squared-blue/bitmaps1}/shade_toggled_pressed.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/close_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/hilite_select.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/hilite_unselect.xbm | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/lhalf.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/lhalf_pressed.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/max.xbm             | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/max_pressed.xbm     | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/menu.xbm            | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/menu_pressed.xbm    | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/min.xbm             | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/min_pressed.xbm     | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/rhalf.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/rhalf_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/select.xbm          | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/shade.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/bitmaps2/shade_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/stick.xbm           | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/stick_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/stuck.xbm           | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/stuck_pressed.xbm   | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/unselect.xbm        | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/unshade.xbm         | 0
- .../bitmaps => ctwm/styles/Squared-blue/bitmaps2}/unshade_pressed.xbm | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/lookrc                       | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/close.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/close_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/close_unfocus.xpm    | 0
- .../styles/Squared-blue}/pixmaps/hilite_select.xpm                    | 0
- .../styles/Squared-blue}/pixmaps/hilite_unselect.xpm                  | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/lhalf.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/lhalf_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/lhalf_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/max.xpm              | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/max_pressed.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/max_unfocus.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/menu.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/menu_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/menu_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/min.xpm              | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/min_pressed.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/min_unfocus.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/rhalf.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/rhalf_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/rhalf_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/select.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/shade.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/shade_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/shade_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/stick.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/stick_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/stick_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/stuck.xpm            | 0
- .../styles/Squared-blue}/pixmaps/stuck_pressed.xpm                    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/stuck_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/toolbar_focused.xpm  | 0
- .../looks => ctwm/styles}/Squared-blue/pixmaps/toolbar_unfocused.xpm  | 0
- .../Squared-cadet => ctwm/styles/Squared-blue}/pixmaps/unselect.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/unshade.xpm          | 0
- .../styles/Squared-blue}/pixmaps/unshade_pressed.xpm                  | 0
- {vtwm/looks => ctwm/styles}/Squared-blue/pixmaps/unshade_unfocus.xpm  | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/bullet.xbm          | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/close.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/close_disabled.xbm  | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/close_hover.xbm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/close_pressed.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/desk.xbm            | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/desk_disabled.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/desk_hover.xbm      | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/desk_pressed.xbm    | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/desk_toggled.xbm    | 0
- .../styles}/Squared-cadet/bitmaps/desk_toggled_hover.xbm              | 0
- .../styles}/Squared-cadet/bitmaps/desk_toggled_pressed.xbm            | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/hilite_select.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/hilite_unselect.xbm | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/iconify.xbm         | 0
- .../looks => ctwm/styles}/Squared-cadet/bitmaps/iconify_disabled.xbm  | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/iconify_hover.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/iconify_pressed.xbm | 0
- .../Squared-green => ctwm/styles/Squared-cadet}/bitmaps/lhalf.xbm     | 0
- .../styles/Squared-cadet}/bitmaps/lhalf_unpressed.xbm                 | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/max.xbm             | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/max_disabled.xbm    | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/max_hover.xbm       | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/max_pressed.xbm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/max_toggled.xbm     | 0
- .../looks => ctwm/styles}/Squared-cadet/bitmaps/max_toggled_hover.xbm | 0
- .../styles}/Squared-cadet/bitmaps/max_toggled_pressed.xbm             | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/menu.xbm            | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/menu_pressed.xbm    | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/min.xbm             | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/min_pressed.xbm     | 0
- .../Squared-green => ctwm/styles/Squared-cadet}/bitmaps/rhalf.xbm     | 0
- .../styles/Squared-cadet}/bitmaps/rhalf_unpressed.xbm                 | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/select.xbm          | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/shade.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/shade_disabled.xbm  | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/shade_hover.xbm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/shade_pressed.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/shade_toggled.xbm   | 0
- .../styles}/Squared-cadet/bitmaps/shade_toggled_hover.xbm             | 0
- .../styles}/Squared-cadet/bitmaps/shade_toggled_pressed.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/stick.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/stick_pressed.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/stuck.xbm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/stuck_pressed.xbm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/unselect.xbm        | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/unshade.xbm         | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/bitmaps/unshade_pressed.xbm | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/lookrc                      | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/close.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/close_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/close_unfocus.xpm   | 0
- .../styles/Squared-cadet}/pixmaps/hilite_select.xpm                   | 0
- .../styles/Squared-cadet}/pixmaps/hilite_unselect.xpm                 | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/lhalf.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/lhalf_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/lhalf_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/max.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/max_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/max_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/menu.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/menu_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/menu_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/min.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/min_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/min_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/rhalf.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/rhalf_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/rhalf_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/select.xpm          | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/shade.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/shade_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/shade_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stick.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stick_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stick_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stuck.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stuck_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/stuck_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/toolbar_focused.xpm | 0
- .../looks => ctwm/styles}/Squared-cadet/pixmaps/toolbar_unfocused.xpm | 0
- .../Squared-blue => ctwm/styles/Squared-cadet}/pixmaps/unselect.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/unshade.xpm         | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/unshade_pressed.xpm | 0
- {vtwm/looks => ctwm/styles}/Squared-cadet/pixmaps/unshade_unfocus.xpm | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/bullet.xbm         | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/close.xbm          | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/close_disabled.xbm | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/close_hover.xbm    | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/close_pressed.xbm  | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/desk.xbm           | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/desk_disabled.xbm  | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/desk_hover.xbm     | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/desk_pressed.xbm   | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/desk_toggled.xbm   | 0
- .../styles/Squared-green/bitmaps}/desk_toggled_hover.xbm              | 0
- .../styles/Squared-green/bitmaps}/desk_toggled_pressed.xbm            | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/hilite_select.xbm  | 0
- .../styles/Squared-green/bitmaps}/hilite_unselect.xbm                 | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/iconify.xbm        | 0
- .../styles/Squared-green/bitmaps}/iconify_disabled.xbm                | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/iconify_hover.xbm  | 0
- .../styles/Squared-green/bitmaps}/iconify_pressed.xbm                 | 0
- .../Squared-cadet => ctwm/styles/Squared-green}/bitmaps/lhalf.xbm     | 0
- .../styles/Squared-green}/bitmaps/lhalf_unpressed.xbm                 | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/max.xbm            | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/max_disabled.xbm   | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/max_hover.xbm      | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/max_pressed.xbm    | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/max_toggled.xbm    | 0
- .../styles/Squared-green/bitmaps}/max_toggled_hover.xbm               | 0
- .../styles/Squared-green/bitmaps}/max_toggled_pressed.xbm             | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/menu.xbm           | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/menu_pressed.xbm   | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/min.xbm            | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/min_pressed.xbm    | 0
- .../Squared-cadet => ctwm/styles/Squared-green}/bitmaps/rhalf.xbm     | 0
- .../styles/Squared-green}/bitmaps/rhalf_unpressed.xbm                 | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/select.xbm         | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/shade.xbm          | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/shade_disabled.xbm | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/shade_hover.xbm    | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/shade_pressed.xbm  | 0
- .../bitmaps1 => ctwm/styles/Squared-green/bitmaps}/shade_toggled.xbm  | 0
- .../styles/Squared-green/bitmaps}/shade_toggled_hover.xbm             | 0
- .../styles/Squared-green/bitmaps}/shade_toggled_pressed.xbm           | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/stick.xbm          | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/stick_pressed.xbm  | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/stuck.xbm          | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/stuck_pressed.xbm  | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/unselect.xbm       | 0
- .../bitmaps2 => ctwm/styles/Squared-green/bitmaps}/unshade.xbm        | 0
- .../styles/Squared-green/bitmaps}/unshade_pressed.xbm                 | 0
- {vtwm/looks => ctwm/styles}/Squared-green/lookrc                      | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/close.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/close_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/close_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/hilite_select.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/hilite_unselect.xpm | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/lhalf.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/lhalf_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/lhalf_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/max.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/max_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/max_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/menu.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/menu_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/menu_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/min.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/min_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/min_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/rhalf.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/rhalf_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/rhalf_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/select.xpm          | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/shade.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/shade_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/shade_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stick.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stick_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stick_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stuck.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stuck_pressed.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/stuck_unfocus.xpm   | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/toolbar_focused.xpm | 0
- .../looks => ctwm/styles}/Squared-green/pixmaps/toolbar_unfocused.xpm | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/unselect.xpm        | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/unshade.xpm         | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/unshade_pressed.xpm | 0
- {vtwm/looks => ctwm/styles}/Squared-green/pixmaps/unshade_unfocus.xpm | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/bullet.xbm      | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/close.xbm | 0
- .../styles/Squared-grey}/bitmaps/close_disabled.xbm                   | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/close_hover.xbm | 0
- .../styles/Squared-grey}/bitmaps/close_pressed.xbm                    | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/desk.xbm  | 0
- .../styles/Squared-grey}/bitmaps/desk_disabled.xbm                    | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/desk_hover.xbm  | 0
- .../styles/Squared-grey}/bitmaps/desk_pressed.xbm                     | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled.xbm                     | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled_hover.xbm               | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled_pressed.xbm             | 0
- .../styles/Squared-grey}/bitmaps/hilite_select.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/hilite_unselect.xbm                  | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/iconify.xbm     | 0
- .../styles/Squared-grey}/bitmaps/iconify_disabled.xbm                 | 0
- .../styles/Squared-grey}/bitmaps/iconify_hover.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/iconify_pressed.xbm                  | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/lhalf.xbm | 0
- .../styles/Squared-grey}/bitmaps/lhalf_unpressed.xbm                  | 0
- {vtwm/looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/max.xbm | 0
- .../styles/Squared-grey}/bitmaps/max_disabled.xbm                     | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/max_hover.xbm   | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/max_pressed.xbm | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/max_toggled.xbm | 0
- .../styles/Squared-grey}/bitmaps/max_toggled_hover.xbm                | 0
- .../styles/Squared-grey}/bitmaps/max_toggled_pressed.xbm              | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/menu.xbm  | 0
- .../styles/Squared-grey}/bitmaps/menu_pressed.xbm                     | 0
- {vtwm/looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/min.xbm | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/min_pressed.xbm | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/rhalf.xbm | 0
- .../styles/Squared-grey}/bitmaps/rhalf_unpressed.xbm                  | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/select.xbm      | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/shade.xbm | 0
- .../styles/Squared-grey}/bitmaps/shade_disabled.xbm                   | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/shade_hover.xbm | 0
- .../styles/Squared-grey}/bitmaps/shade_pressed.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled_hover.xbm              | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled_pressed.xbm            | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/stick.xbm | 0
- .../styles/Squared-grey}/bitmaps/stick_pressed.xbm                    | 0
- .../looks/Squared-blue => ctwm/styles/Squared-grey}/bitmaps/stuck.xbm | 0
- .../styles/Squared-grey}/bitmaps/stuck_pressed.xbm                    | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/unselect.xbm    | 0
- .../Squared-blue => ctwm/styles/Squared-grey}/bitmaps/unshade.xbm     | 0
- .../styles/Squared-grey}/bitmaps/unshade_pressed.xbm                  | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/lookrc                       | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/close.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/close_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/close_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/hilite_select.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/hilite_unselect.xpm  | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/lhalf.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/lhalf_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/lhalf_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/max.xpm              | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/max_pressed.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/max_unfocus.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/menu.xpm             | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/menu_pressed.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/menu_unfocus.xpm     | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/min.xpm              | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/min_pressed.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/min_unfocus.xpm      | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/rhalf.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/rhalf_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/rhalf_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/select.xpm           | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/shade.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/shade_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/shade_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/stick.xpm            | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/stick_pressed.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/stick_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/stuck.xpm            | 0
- .../styles/Squared-grey}/pixmaps/stuck_pressed.xpm                    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/stuck_unfocus.xpm    | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/toolbar_focused.xpm  | 0
- .../looks => ctwm/styles}/Squared-grey/pixmaps/toolbar_unfocused.xpm  | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/unselect.xpm         | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/unshade.xpm          | 0
- .../styles/Squared-grey}/pixmaps/unshade_pressed.xpm                  | 0
- {vtwm/looks => ctwm/styles}/Squared-grey/pixmaps/unshade_unfocus.xpm  | 0
- {vtwm/looks => ctwm/styles}/Squared/_lookrc                           | 0
+ ctwm/{looks => styles}/Classic/lookrc                                 | 0
+ ctwm/{looks => styles}/Default                                        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/bullet.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/close.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/close_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/close_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/close_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk.xbm                  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_disabled.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_hover.xbm            | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_hover.xbm    | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_pressed.xbm  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/hilite_select.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/hilite_unselect.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/iconify.xbm               | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/iconify_disabled.xbm      | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/iconify_hover.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/iconify_pressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/lhalf.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/lhalf_unpressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max.xbm                   | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_disabled.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_hover.xbm             | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_pressed.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_toggled.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_toggled_hover.xbm     | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/max_toggled_pressed.xbm   | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/menu.xbm                  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/menu_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/min.xbm                   | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/min_pressed.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/rhalf.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/rhalf_unpressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/select.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_hover.xbm   | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/stick.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/stick_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/stuck.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/stuck_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/unselect.xbm              | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/unshade.xbm               | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps/unshade_pressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/bullet.xbm               | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/close.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/close_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/close_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/close_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_hover.xbm   | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/iconify.xbm              | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/iconify_disabled.xbm     | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/iconify_hover.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/iconify_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max.xbm                  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_disabled.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_hover.xbm            | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_hover.xbm    | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_pressed.xbm  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-blue/bitmaps1/shade_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/close_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/hilite_select.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/hilite_unselect.xbm      | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/lhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/lhalf_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/max.xbm                  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/max_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/menu.xbm                 | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/menu_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/min.xbm                  | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/min_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/rhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/rhalf_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/select.xbm               | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/shade.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/shade_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/stick.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/stick_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/stuck.xbm                | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/stuck_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/unselect.xbm             | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/unshade.xbm              | 0
+ ctwm/{looks => styles}/Squared-blue/bitmaps2/unshade_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-blue/lookrc                            | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/close.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/close_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/close_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/hilite_select.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/hilite_unselect.xpm       | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/lhalf.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/lhalf_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/lhalf_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/max.xpm                   | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/max_pressed.xpm           | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/max_unfocus.xpm           | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/menu.xpm                  | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/menu_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/menu_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/min.xpm                   | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/min_pressed.xpm           | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/min_unfocus.xpm           | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/rhalf.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/rhalf_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/rhalf_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/select.xpm                | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/shade.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/shade_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/shade_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stick.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stick_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stick_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stuck.xpm                 | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stuck_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/stuck_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/toolbar_focused.xpm       | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/toolbar_unfocused.xpm     | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/unselect.xpm              | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/unshade.xpm               | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/unshade_pressed.xpm       | 0
+ ctwm/{looks => styles}/Squared-blue/pixmaps/unshade_unfocus.xpm       | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/bullet.xbm               | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/close.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/close_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/close_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/close_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk.xbm                 | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled.xbm         | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled_hover.xbm   | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/hilite_select.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/hilite_unselect.xbm      | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/iconify.xbm              | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/iconify_disabled.xbm     | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/iconify_hover.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/iconify_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/lhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/lhalf_unpressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max.xbm                  | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_disabled.xbm         | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_hover.xbm            | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled.xbm          | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled_hover.xbm    | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled_pressed.xbm  | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/menu.xbm                 | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/menu_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/min.xbm                  | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/min_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/rhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/rhalf_unpressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/select.xbm               | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade_toggled.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-cadet/bitmaps/shade_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/stick.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/stick_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/stuck.xbm                | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/stuck_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/unselect.xbm             | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/unshade.xbm              | 0
+ ctwm/{looks => styles}/Squared-cadet/bitmaps/unshade_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-cadet/lookrc                           | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/close.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/close_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/close_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/hilite_select.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/hilite_unselect.xpm      | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/lhalf.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/lhalf_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/lhalf_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/max.xpm                  | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/max_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/max_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/menu.xpm                 | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/menu_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/menu_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/min.xpm                  | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/min_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/min_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/rhalf.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/rhalf_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/rhalf_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/select.xpm               | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/shade.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/shade_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/shade_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stick.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stick_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stick_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stuck.xpm                | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stuck_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/stuck_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/toolbar_focused.xpm      | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/toolbar_unfocused.xpm    | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/unselect.xpm             | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/unshade.xpm              | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/unshade_pressed.xpm      | 0
+ ctwm/{looks => styles}/Squared-cadet/pixmaps/unshade_unfocus.xpm      | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/bullet.xbm               | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/close.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/close_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/close_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/close_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk.xbm                 | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_toggled.xbm         | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_toggled_hover.xbm   | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/desk_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/hilite_select.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/hilite_unselect.xbm      | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/iconify.xbm              | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/iconify_disabled.xbm     | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/iconify_hover.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/iconify_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/lhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/lhalf_unpressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max.xbm                  | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_disabled.xbm         | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_hover.xbm            | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_toggled.xbm          | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_toggled_hover.xbm    | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/max_toggled_pressed.xbm  | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/menu.xbm                 | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/menu_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/min.xbm                  | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/min_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/rhalf.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/rhalf_unpressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/select.xbm               | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade_disabled.xbm       | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade_hover.xbm          | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade_toggled.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-green/bitmaps/shade_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/stick.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/stick_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/stuck.xbm                | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/stuck_pressed.xbm        | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/unselect.xbm             | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/unshade.xbm              | 0
+ ctwm/{looks => styles}/Squared-green/bitmaps/unshade_pressed.xbm      | 0
+ ctwm/{looks => styles}/Squared-green/lookrc                           | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/close.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/close_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/close_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/hilite_select.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/hilite_unselect.xpm      | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/lhalf.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/lhalf_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/lhalf_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/max.xpm                  | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/max_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/max_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/menu.xpm                 | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/menu_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/menu_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/min.xpm                  | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/min_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/min_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/rhalf.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/rhalf_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/rhalf_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/select.xpm               | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/shade.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/shade_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/shade_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stick.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stick_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stick_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stuck.xpm                | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stuck_pressed.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/stuck_unfocus.xpm        | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/toolbar_focused.xpm      | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/toolbar_unfocused.xpm    | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/unselect.xpm             | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/unshade.xpm              | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/unshade_pressed.xpm      | 0
+ ctwm/{looks => styles}/Squared-green/pixmaps/unshade_unfocus.xpm      | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/bullet.xbm                | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/close.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/close_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/close_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/close_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk.xbm                  | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_disabled.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_hover.xbm            | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled.xbm          | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_hover.xbm    | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_pressed.xbm  | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/hilite_select.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/hilite_unselect.xbm       | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/iconify.xbm               | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/iconify_disabled.xbm      | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/iconify_hover.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/iconify_pressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/lhalf.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/lhalf_unpressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max.xbm                   | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_disabled.xbm          | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_hover.xbm             | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_pressed.xbm           | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_toggled.xbm           | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_toggled_hover.xbm     | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/max_toggled_pressed.xbm   | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/menu.xbm                  | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/menu_pressed.xbm          | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/min.xbm                   | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/min_pressed.xbm           | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/rhalf.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/rhalf_unpressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/select.xbm                | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_disabled.xbm        | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_hover.xbm           | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_hover.xbm   | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_pressed.xbm | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/stick.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/stick_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/stuck.xbm                 | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/stuck_pressed.xbm         | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/unselect.xbm              | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/unshade.xbm               | 0
+ ctwm/{looks => styles}/Squared-grey/bitmaps/unshade_pressed.xbm       | 0
+ ctwm/{looks => styles}/Squared-grey/lookrc                            | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/close.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/close_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/close_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/hilite_select.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/hilite_unselect.xpm       | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/lhalf.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/lhalf_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/lhalf_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/max.xpm                   | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/max_pressed.xpm           | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/max_unfocus.xpm           | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/menu.xpm                  | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/menu_pressed.xpm          | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/menu_unfocus.xpm          | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/min.xpm                   | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/min_pressed.xpm           | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/min_unfocus.xpm           | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/rhalf.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/rhalf_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/rhalf_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/select.xpm                | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/shade.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/shade_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/shade_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stick.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stick_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stick_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stuck.xpm                 | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stuck_pressed.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/stuck_unfocus.xpm         | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/toolbar_focused.xpm       | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/toolbar_unfocused.xpm     | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/unselect.xpm              | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/unshade.xpm               | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/unshade_pressed.xpm       | 0
+ ctwm/{looks => styles}/Squared-grey/pixmaps/unshade_unfocus.xpm       | 0
+ ctwm/{looks => styles}/Squared/_lookrc                                | 0
  twm/{looks => styles}/Classic/lookrc                                  | 0
  twm/{looks => styles}/Default                                         | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/bullet.xbm    | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/close.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/close_disabled.xbm   | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/close_hover.xbm      | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/close_pressed.xbm    | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/desk.xbm      | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/desk_disabled.xbm    | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/desk_hover.xbm       | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/desk_pressed.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/desk_toggled.xbm     | 0
- .../Squared-blue}/bitmaps/desk_toggled_hover.xbm                      | 0
- .../Squared-blue}/bitmaps/desk_toggled_pressed.xbm                    | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/hilite_select.xbm    | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/hilite_unselect.xbm  | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/iconify.xbm   | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/iconify_disabled.xbm | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/iconify_hover.xbm    | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/iconify_pressed.xbm  | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/lhalf.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/lhalf_unpressed.xbm  | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/max.xbm       | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/max_disabled.xbm     | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/max_hover.xbm | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/max_pressed.xbm      | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/max_toggled.xbm      | 0
- .../Squared-blue}/bitmaps/max_toggled_hover.xbm                       | 0
- .../Squared-blue}/bitmaps/max_toggled_pressed.xbm                     | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/menu.xbm      | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/menu_pressed.xbm     | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/min.xbm       | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/min_pressed.xbm      | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/rhalf.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/rhalf_unpressed.xbm  | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/select.xbm    | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/shade.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/shade_disabled.xbm   | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/shade_hover.xbm      | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/shade_pressed.xbm    | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/shade_toggled.xbm    | 0
- .../Squared-blue}/bitmaps/shade_toggled_hover.xbm                     | 0
- .../Squared-blue}/bitmaps/shade_toggled_pressed.xbm                   | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/stick.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/stick_pressed.xbm    | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/stuck.xbm     | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/stuck_pressed.xbm    | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/unselect.xbm  | 0
- twm/{looks/Squared-grey => styles/Squared-blue}/bitmaps/unshade.xbm   | 0
- .../Squared-grey => styles/Squared-blue}/bitmaps/unshade_pressed.xbm  | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps1}/bullet.xbm | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps1}/close.xbm  | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/close_disabled.xbm       | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/close_hover.xbm          | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/close_pressed.xbm        | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps1}/desk.xbm   | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_disabled.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_hover.xbm           | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_pressed.xbm         | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_toggled.xbm         | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_toggled_hover.xbm   | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/desk_toggled_pressed.xbm | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/iconify.xbm              | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/iconify_disabled.xbm     | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/iconify_hover.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/iconify_pressed.xbm      | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps1}/max.xbm    | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_disabled.xbm         | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_hover.xbm            | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_pressed.xbm          | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_toggled.xbm          | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_toggled_hover.xbm    | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/max_toggled_pressed.xbm  | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps1}/shade.xbm  | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/shade_disabled.xbm       | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/shade_hover.xbm          | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/shade_pressed.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/shade_toggled.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps1}/shade_toggled_hover.xbm  | 0
- .../Squared-blue/bitmaps1}/shade_toggled_pressed.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/bullet.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/close.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/close_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/close_hover.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/close_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk.xbm                   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_disabled.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_hover.xbm             | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_toggled.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_hover.xbm     | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_pressed.xbm   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/hilite_select.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/hilite_unselect.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/iconify.xbm                | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/iconify_disabled.xbm       | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/iconify_hover.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/iconify_pressed.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/lhalf.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/lhalf_unpressed.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max.xbm                    | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_disabled.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_hover.xbm              | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_pressed.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_toggled.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_toggled_hover.xbm      | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/max_toggled_pressed.xbm    | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/menu.xbm                   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/menu_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/min.xbm                    | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/min_pressed.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/rhalf.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/rhalf_unpressed.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/select.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_hover.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_toggled.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_hover.xbm    | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_pressed.xbm  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/stick.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/stick_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/stuck.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/stuck_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/unselect.xbm               | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/unshade.xbm                | 0
+ twm/{looks => styles}/Squared-blue/bitmaps/unshade_pressed.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/bullet.xbm                | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/close.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/close_disabled.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/close_hover.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/close_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_hover.xbm            | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_hover.xbm    | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_pressed.xbm  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/iconify.xbm               | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/iconify_disabled.xbm      | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/iconify_hover.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/iconify_pressed.xbm       | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max.xbm                   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_disabled.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_hover.xbm             | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_toggled.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_hover.xbm     | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_pressed.xbm   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_disabled.xbm        | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_hover.xbm           | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled_hover.xbm   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled_pressed.xbm | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/close_pressed.xbm         | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/hilite_select.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/hilite_unselect.xbm      | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/hilite_select.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/hilite_unselect.xbm       | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/lhalf.xbm                 | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/lhalf_pressed.xbm         | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/max.xbm                   | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/max_pressed.xbm           | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps2}/menu.xbm   | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/menu_pressed.xbm         | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps2}/min.xbm    | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/min_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/menu.xbm                  | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/menu_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/min.xbm                   | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/min_pressed.xbm           | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/rhalf.xbm                 | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/rhalf_pressed.xbm         | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps2}/select.xbm | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/select.xbm                | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/shade.xbm                 | 0
  twm/{looks => styles}/Squared-blue/bitmaps2/shade_pressed.xbm         | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps2}/stick.xbm  | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/stick_pressed.xbm        | 0
- .../Squared-green/bitmaps => styles/Squared-blue/bitmaps2}/stuck.xbm  | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/stuck_pressed.xbm        | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/unselect.xbm             | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/unshade.xbm              | 0
- .../bitmaps => styles/Squared-blue/bitmaps2}/unshade_pressed.xbm      | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/stick.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/stick_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/stuck.xbm                 | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/stuck_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/unselect.xbm              | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/unshade.xbm               | 0
+ twm/{looks => styles}/Squared-blue/bitmaps2/unshade_pressed.xbm       | 0
  twm/{looks => styles}/Squared-blue/lookrc                             | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/bullet.xbm                | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/close.xbm                 | 0
@@ -2747,8 +2856,8 @@ Date:   Sat Dec 21 01:10:24 2013 -0700
  twm/{looks => styles}/Squared-cadet/bitmaps/iconify_disabled.xbm      | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/iconify_hover.xbm         | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/iconify_pressed.xbm       | 0
- twm/{looks/Squared-green => styles/Squared-cadet}/bitmaps/lhalf.xbm   | 0
- .../Squared-cadet}/bitmaps/lhalf_unpressed.xbm                        | 0
+ twm/{looks => styles}/Squared-cadet/bitmaps/lhalf.xbm                 | 0
+ twm/{looks => styles}/Squared-cadet/bitmaps/lhalf_unpressed.xbm       | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/max.xbm                   | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/max_disabled.xbm          | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/max_hover.xbm             | 0
@@ -2760,8 +2869,8 @@ Date:   Sat Dec 21 01:10:24 2013 -0700
  twm/{looks => styles}/Squared-cadet/bitmaps/menu_pressed.xbm          | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/min.xbm                   | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/min_pressed.xbm           | 0
- twm/{looks/Squared-green => styles/Squared-cadet}/bitmaps/rhalf.xbm   | 0
- .../Squared-cadet}/bitmaps/rhalf_unpressed.xbm                        | 0
+ twm/{looks => styles}/Squared-cadet/bitmaps/rhalf.xbm                 | 0
+ twm/{looks => styles}/Squared-cadet/bitmaps/rhalf_unpressed.xbm       | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/select.xbm                | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/shade.xbm                 | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/shade_disabled.xbm        | 0
@@ -2778,501 +2887,501 @@ Date:   Sat Dec 21 01:10:24 2013 -0700
  twm/{looks => styles}/Squared-cadet/bitmaps/unshade.xbm               | 0
  twm/{looks => styles}/Squared-cadet/bitmaps/unshade_pressed.xbm       | 0
  twm/{looks => styles}/Squared-cadet/lookrc                            | 0
- .../Squared-blue/bitmaps1 => styles/Squared-green/bitmaps}/bullet.xbm | 0
- .../Squared-blue/bitmaps1 => styles/Squared-green/bitmaps}/close.xbm  | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/close_disabled.xbm      | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/close_hover.xbm         | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/close_pressed.xbm       | 0
- .../Squared-blue/bitmaps1 => styles/Squared-green/bitmaps}/desk.xbm   | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/desk_disabled.xbm       | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/desk_hover.xbm          | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/desk_pressed.xbm        | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/desk_toggled.xbm        | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/desk_toggled_hover.xbm  | 0
- .../Squared-green/bitmaps}/desk_toggled_pressed.xbm                   | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/hilite_select.xbm       | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/hilite_unselect.xbm     | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/iconify.xbm             | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/iconify_disabled.xbm    | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/iconify_hover.xbm       | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/iconify_pressed.xbm     | 0
- twm/{looks/Squared-cadet => styles/Squared-green}/bitmaps/lhalf.xbm   | 0
- .../Squared-green}/bitmaps/lhalf_unpressed.xbm                        | 0
- .../Squared-blue/bitmaps1 => styles/Squared-green/bitmaps}/max.xbm    | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_disabled.xbm        | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_hover.xbm           | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_pressed.xbm         | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_toggled.xbm         | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_toggled_hover.xbm   | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/max_toggled_pressed.xbm | 0
- .../Squared-blue/bitmaps2 => styles/Squared-green/bitmaps}/menu.xbm   | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/menu_pressed.xbm        | 0
- .../Squared-blue/bitmaps2 => styles/Squared-green/bitmaps}/min.xbm    | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/min_pressed.xbm         | 0
- twm/{looks/Squared-cadet => styles/Squared-green}/bitmaps/rhalf.xbm   | 0
- .../Squared-green}/bitmaps/rhalf_unpressed.xbm                        | 0
- .../Squared-blue/bitmaps2 => styles/Squared-green/bitmaps}/select.xbm | 0
- .../Squared-blue/bitmaps1 => styles/Squared-green/bitmaps}/shade.xbm  | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/shade_disabled.xbm      | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/shade_hover.xbm         | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/shade_pressed.xbm       | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/shade_toggled.xbm       | 0
- .../bitmaps1 => styles/Squared-green/bitmaps}/shade_toggled_hover.xbm | 0
- .../Squared-green/bitmaps}/shade_toggled_pressed.xbm                  | 0
- .../Squared-blue/bitmaps2 => styles/Squared-green/bitmaps}/stick.xbm  | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/stick_pressed.xbm       | 0
- .../Squared-blue/bitmaps2 => styles/Squared-green/bitmaps}/stuck.xbm  | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/stuck_pressed.xbm       | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/unselect.xbm            | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/unshade.xbm             | 0
- .../bitmaps2 => styles/Squared-green/bitmaps}/unshade_pressed.xbm     | 0
+ twm/{looks => styles}/Squared-green/bitmaps/bullet.xbm                | 0
+ twm/{looks => styles}/Squared-green/bitmaps/close.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/close_disabled.xbm        | 0
+ twm/{looks => styles}/Squared-green/bitmaps/close_hover.xbm           | 0
+ twm/{looks => styles}/Squared-green/bitmaps/close_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk.xbm                  | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_hover.xbm            | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_toggled.xbm          | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_toggled_hover.xbm    | 0
+ twm/{looks => styles}/Squared-green/bitmaps/desk_toggled_pressed.xbm  | 0
+ twm/{looks => styles}/Squared-green/bitmaps/hilite_select.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/hilite_unselect.xbm       | 0
+ twm/{looks => styles}/Squared-green/bitmaps/iconify.xbm               | 0
+ twm/{looks => styles}/Squared-green/bitmaps/iconify_disabled.xbm      | 0
+ twm/{looks => styles}/Squared-green/bitmaps/iconify_hover.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/iconify_pressed.xbm       | 0
+ twm/{looks => styles}/Squared-green/bitmaps/lhalf.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/lhalf_unpressed.xbm       | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max.xbm                   | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_disabled.xbm          | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_hover.xbm             | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_toggled.xbm           | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_toggled_hover.xbm     | 0
+ twm/{looks => styles}/Squared-green/bitmaps/max_toggled_pressed.xbm   | 0
+ twm/{looks => styles}/Squared-green/bitmaps/menu.xbm                  | 0
+ twm/{looks => styles}/Squared-green/bitmaps/menu_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-green/bitmaps/min.xbm                   | 0
+ twm/{looks => styles}/Squared-green/bitmaps/min_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-green/bitmaps/rhalf.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/rhalf_unpressed.xbm       | 0
+ twm/{looks => styles}/Squared-green/bitmaps/select.xbm                | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_disabled.xbm        | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_hover.xbm           | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_toggled.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_toggled_hover.xbm   | 0
+ twm/{looks => styles}/Squared-green/bitmaps/shade_toggled_pressed.xbm | 0
+ twm/{looks => styles}/Squared-green/bitmaps/stick.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/stick_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/stuck.xbm                 | 0
+ twm/{looks => styles}/Squared-green/bitmaps/stuck_pressed.xbm         | 0
+ twm/{looks => styles}/Squared-green/bitmaps/unselect.xbm              | 0
+ twm/{looks => styles}/Squared-green/bitmaps/unshade.xbm               | 0
+ twm/{looks => styles}/Squared-green/bitmaps/unshade_pressed.xbm       | 0
  twm/{looks => styles}/Squared-green/lookrc                            | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/bullet.xbm    | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/close.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/close_disabled.xbm   | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/close_hover.xbm      | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/close_pressed.xbm    | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/desk.xbm      | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/desk_disabled.xbm    | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/desk_hover.xbm       | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/desk_pressed.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/desk_toggled.xbm     | 0
- .../Squared-grey}/bitmaps/desk_toggled_hover.xbm                      | 0
- .../Squared-grey}/bitmaps/desk_toggled_pressed.xbm                    | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/hilite_select.xbm    | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/hilite_unselect.xbm  | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/iconify.xbm   | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/iconify_disabled.xbm | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/iconify_hover.xbm    | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/iconify_pressed.xbm  | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/lhalf.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/lhalf_unpressed.xbm  | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/max.xbm       | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/max_disabled.xbm     | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/max_hover.xbm | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/max_pressed.xbm      | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/max_toggled.xbm      | 0
- .../Squared-grey}/bitmaps/max_toggled_hover.xbm                       | 0
- .../Squared-grey}/bitmaps/max_toggled_pressed.xbm                     | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/menu.xbm      | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/menu_pressed.xbm     | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/min.xbm       | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/min_pressed.xbm      | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/rhalf.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/rhalf_unpressed.xbm  | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/select.xbm    | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/shade.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/shade_disabled.xbm   | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/shade_hover.xbm      | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/shade_pressed.xbm    | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/shade_toggled.xbm    | 0
- .../Squared-grey}/bitmaps/shade_toggled_hover.xbm                     | 0
- .../Squared-grey}/bitmaps/shade_toggled_pressed.xbm                   | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/stick.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/stick_pressed.xbm    | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/stuck.xbm     | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/stuck_pressed.xbm    | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/unselect.xbm  | 0
- twm/{looks/Squared-blue => styles/Squared-grey}/bitmaps/unshade.xbm   | 0
- .../Squared-blue => styles/Squared-grey}/bitmaps/unshade_pressed.xbm  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/bullet.xbm                 | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/close.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/close_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/close_hover.xbm            | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/close_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk.xbm                   | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_disabled.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_hover.xbm             | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_toggled.xbm           | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_hover.xbm     | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_pressed.xbm   | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/hilite_select.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/hilite_unselect.xbm        | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/iconify.xbm                | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/iconify_disabled.xbm       | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/iconify_hover.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/iconify_pressed.xbm        | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/lhalf.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/lhalf_unpressed.xbm        | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max.xbm                    | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_disabled.xbm           | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_hover.xbm              | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_pressed.xbm            | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_toggled.xbm            | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_toggled_hover.xbm      | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/max_toggled_pressed.xbm    | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/menu.xbm                   | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/menu_pressed.xbm           | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/min.xbm                    | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/min_pressed.xbm            | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/rhalf.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/rhalf_unpressed.xbm        | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/select.xbm                 | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_disabled.xbm         | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_hover.xbm            | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_toggled.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_hover.xbm    | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_pressed.xbm  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/stick.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/stick_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/stuck.xbm                  | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/stuck_pressed.xbm          | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/unselect.xbm               | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/unshade.xbm                | 0
+ twm/{looks => styles}/Squared-grey/bitmaps/unshade_pressed.xbm        | 0
  twm/{looks => styles}/Squared-grey/lookrc                             | 0
  twm/{looks => styles}/Squared/_lookrc                                 | 0
- {ctwm/looks => vtwm/styles}/Classic/lookrc                            | 0
- {ctwm/looks => vtwm/styles}/Default                                   | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/bullet.xbm      | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/close.xbm | 0
- .../styles/Squared-blue}/bitmaps/close_disabled.xbm                   | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/close_hover.xbm | 0
- .../styles/Squared-blue}/bitmaps/close_pressed.xbm                    | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/desk.xbm  | 0
- .../styles/Squared-blue}/bitmaps/desk_disabled.xbm                    | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/desk_hover.xbm  | 0
- .../styles/Squared-blue}/bitmaps/desk_pressed.xbm                     | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled.xbm                     | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled_hover.xbm               | 0
- .../styles/Squared-blue}/bitmaps/desk_toggled_pressed.xbm             | 0
- .../styles/Squared-blue}/bitmaps/hilite_select.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/hilite_unselect.xbm                  | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/iconify.xbm     | 0
- .../styles/Squared-blue}/bitmaps/iconify_disabled.xbm                 | 0
- .../styles/Squared-blue}/bitmaps/iconify_hover.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/iconify_pressed.xbm                  | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/lhalf.xbm | 0
- .../styles/Squared-blue}/bitmaps/lhalf_unpressed.xbm                  | 0
- {ctwm/looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/max.xbm | 0
- .../styles/Squared-blue}/bitmaps/max_disabled.xbm                     | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/max_hover.xbm   | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/max_pressed.xbm | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/max_toggled.xbm | 0
- .../styles/Squared-blue}/bitmaps/max_toggled_hover.xbm                | 0
- .../styles/Squared-blue}/bitmaps/max_toggled_pressed.xbm              | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/menu.xbm  | 0
- .../styles/Squared-blue}/bitmaps/menu_pressed.xbm                     | 0
- {ctwm/looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/min.xbm | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/min_pressed.xbm | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/rhalf.xbm | 0
- .../styles/Squared-blue}/bitmaps/rhalf_unpressed.xbm                  | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/select.xbm      | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/shade.xbm | 0
- .../styles/Squared-blue}/bitmaps/shade_disabled.xbm                   | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/shade_hover.xbm | 0
- .../styles/Squared-blue}/bitmaps/shade_pressed.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled.xbm                    | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled_hover.xbm              | 0
- .../styles/Squared-blue}/bitmaps/shade_toggled_pressed.xbm            | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/stick.xbm | 0
- .../styles/Squared-blue}/bitmaps/stick_pressed.xbm                    | 0
- .../looks/Squared-grey => vtwm/styles/Squared-blue}/bitmaps/stuck.xbm | 0
- .../styles/Squared-blue}/bitmaps/stuck_pressed.xbm                    | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/unselect.xbm    | 0
- .../Squared-grey => vtwm/styles/Squared-blue}/bitmaps/unshade.xbm     | 0
- .../styles/Squared-blue}/bitmaps/unshade_pressed.xbm                  | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/bullet.xbm          | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/close.xbm           | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/close_disabled.xbm  | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/close_hover.xbm     | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/close_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/desk.xbm            | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/desk_disabled.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/desk_hover.xbm      | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/desk_pressed.xbm    | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/desk_toggled.xbm    | 0
- .../styles/Squared-blue/bitmaps1}/desk_toggled_hover.xbm              | 0
- .../styles/Squared-blue/bitmaps1}/desk_toggled_pressed.xbm            | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/iconify.xbm         | 0
- .../styles/Squared-blue/bitmaps1}/iconify_disabled.xbm                | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/iconify_hover.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/iconify_pressed.xbm | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/max.xbm             | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/max_disabled.xbm    | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/max_hover.xbm       | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/max_pressed.xbm     | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/max_toggled.xbm     | 0
- .../styles/Squared-blue/bitmaps1}/max_toggled_hover.xbm               | 0
- .../styles/Squared-blue/bitmaps1}/max_toggled_pressed.xbm             | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/shade.xbm           | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/shade_disabled.xbm  | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/shade_hover.xbm     | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/shade_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps1}/shade_toggled.xbm   | 0
- .../styles/Squared-blue/bitmaps1}/shade_toggled_hover.xbm             | 0
- .../styles/Squared-blue/bitmaps1}/shade_toggled_pressed.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/close_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/hilite_select.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/hilite_unselect.xbm | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/lhalf.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/lhalf_pressed.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/max.xbm             | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/max_pressed.xbm     | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/menu.xbm            | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/menu_pressed.xbm    | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/min.xbm             | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/min_pressed.xbm     | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/rhalf.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/rhalf_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/select.xbm          | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/shade.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/bitmaps2/shade_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/stick.xbm           | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/stick_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/stuck.xbm           | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/stuck_pressed.xbm   | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/unselect.xbm        | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/unshade.xbm         | 0
- .../bitmaps => vtwm/styles/Squared-blue/bitmaps2}/unshade_pressed.xbm | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/lookrc                       | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/close.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/close_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/close_unfocus.xpm    | 0
- .../styles/Squared-blue}/pixmaps/hilite_select.xpm                    | 0
- .../styles/Squared-blue}/pixmaps/hilite_unselect.xpm                  | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/lhalf.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/lhalf_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/lhalf_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/max.xpm              | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/max_pressed.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/max_unfocus.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/menu.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/menu_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/menu_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/min.xpm              | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/min_pressed.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/min_unfocus.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/rhalf.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/rhalf_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/rhalf_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/select.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/shade.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/shade_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/shade_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/stick.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/stick_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/stick_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/stuck.xpm            | 0
- .../styles/Squared-blue}/pixmaps/stuck_pressed.xpm                    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/stuck_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/toolbar_focused.xpm  | 0
- .../looks => vtwm/styles}/Squared-blue/pixmaps/toolbar_unfocused.xpm  | 0
- .../Squared-cadet => vtwm/styles/Squared-blue}/pixmaps/unselect.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/unshade.xpm          | 0
- .../styles/Squared-blue}/pixmaps/unshade_pressed.xpm                  | 0
- {ctwm/looks => vtwm/styles}/Squared-blue/pixmaps/unshade_unfocus.xpm  | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/bullet.xbm          | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/close.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/close_disabled.xbm  | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/close_hover.xbm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/close_pressed.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/desk.xbm            | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/desk_disabled.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/desk_hover.xbm      | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/desk_pressed.xbm    | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/desk_toggled.xbm    | 0
- .../styles}/Squared-cadet/bitmaps/desk_toggled_hover.xbm              | 0
- .../styles}/Squared-cadet/bitmaps/desk_toggled_pressed.xbm            | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/hilite_select.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/hilite_unselect.xbm | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/iconify.xbm         | 0
- .../looks => vtwm/styles}/Squared-cadet/bitmaps/iconify_disabled.xbm  | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/iconify_hover.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/iconify_pressed.xbm | 0
- .../Squared-green => vtwm/styles/Squared-cadet}/bitmaps/lhalf.xbm     | 0
- .../styles/Squared-cadet}/bitmaps/lhalf_unpressed.xbm                 | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/max.xbm             | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/max_disabled.xbm    | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/max_hover.xbm       | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/max_pressed.xbm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/max_toggled.xbm     | 0
- .../looks => vtwm/styles}/Squared-cadet/bitmaps/max_toggled_hover.xbm | 0
- .../styles}/Squared-cadet/bitmaps/max_toggled_pressed.xbm             | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/menu.xbm            | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/menu_pressed.xbm    | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/min.xbm             | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/min_pressed.xbm     | 0
- .../Squared-green => vtwm/styles/Squared-cadet}/bitmaps/rhalf.xbm     | 0
- .../styles/Squared-cadet}/bitmaps/rhalf_unpressed.xbm                 | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/select.xbm          | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/shade.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/shade_disabled.xbm  | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/shade_hover.xbm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/shade_pressed.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/shade_toggled.xbm   | 0
- .../styles}/Squared-cadet/bitmaps/shade_toggled_hover.xbm             | 0
- .../styles}/Squared-cadet/bitmaps/shade_toggled_pressed.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/stick.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/stick_pressed.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/stuck.xbm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/stuck_pressed.xbm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/unselect.xbm        | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/unshade.xbm         | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/bitmaps/unshade_pressed.xbm | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/lookrc                      | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/close.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/close_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/close_unfocus.xpm   | 0
- .../styles/Squared-cadet}/pixmaps/hilite_select.xpm                   | 0
- .../styles/Squared-cadet}/pixmaps/hilite_unselect.xpm                 | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/lhalf.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/lhalf_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/lhalf_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/max.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/max_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/max_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/menu.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/menu_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/menu_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/min.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/min_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/min_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/rhalf.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/rhalf_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/rhalf_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/select.xpm          | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/shade.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/shade_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/shade_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stick.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stick_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stick_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stuck.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stuck_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/stuck_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/toolbar_focused.xpm | 0
- .../looks => vtwm/styles}/Squared-cadet/pixmaps/toolbar_unfocused.xpm | 0
- .../Squared-blue => vtwm/styles/Squared-cadet}/pixmaps/unselect.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/unshade.xpm         | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/unshade_pressed.xpm | 0
- {ctwm/looks => vtwm/styles}/Squared-cadet/pixmaps/unshade_unfocus.xpm | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/bullet.xbm         | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/close.xbm          | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/close_disabled.xbm | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/close_hover.xbm    | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/close_pressed.xbm  | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/desk.xbm           | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/desk_disabled.xbm  | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/desk_hover.xbm     | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/desk_pressed.xbm   | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/desk_toggled.xbm   | 0
- .../styles/Squared-green/bitmaps}/desk_toggled_hover.xbm              | 0
- .../styles/Squared-green/bitmaps}/desk_toggled_pressed.xbm            | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/hilite_select.xbm  | 0
- .../styles/Squared-green/bitmaps}/hilite_unselect.xbm                 | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/iconify.xbm        | 0
- .../styles/Squared-green/bitmaps}/iconify_disabled.xbm                | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/iconify_hover.xbm  | 0
- .../styles/Squared-green/bitmaps}/iconify_pressed.xbm                 | 0
- .../Squared-cadet => vtwm/styles/Squared-green}/bitmaps/lhalf.xbm     | 0
- .../styles/Squared-green}/bitmaps/lhalf_unpressed.xbm                 | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/max.xbm            | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/max_disabled.xbm   | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/max_hover.xbm      | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/max_pressed.xbm    | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/max_toggled.xbm    | 0
- .../styles/Squared-green/bitmaps}/max_toggled_hover.xbm               | 0
- .../styles/Squared-green/bitmaps}/max_toggled_pressed.xbm             | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/menu.xbm           | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/menu_pressed.xbm   | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/min.xbm            | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/min_pressed.xbm    | 0
- .../Squared-cadet => vtwm/styles/Squared-green}/bitmaps/rhalf.xbm     | 0
- .../styles/Squared-green}/bitmaps/rhalf_unpressed.xbm                 | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/select.xbm         | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/shade.xbm          | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/shade_disabled.xbm | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/shade_hover.xbm    | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/shade_pressed.xbm  | 0
- .../bitmaps1 => vtwm/styles/Squared-green/bitmaps}/shade_toggled.xbm  | 0
- .../styles/Squared-green/bitmaps}/shade_toggled_hover.xbm             | 0
- .../styles/Squared-green/bitmaps}/shade_toggled_pressed.xbm           | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/stick.xbm          | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/stick_pressed.xbm  | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/stuck.xbm          | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/stuck_pressed.xbm  | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/unselect.xbm       | 0
- .../bitmaps2 => vtwm/styles/Squared-green/bitmaps}/unshade.xbm        | 0
- .../styles/Squared-green/bitmaps}/unshade_pressed.xbm                 | 0
- {ctwm/looks => vtwm/styles}/Squared-green/lookrc                      | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/close.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/close_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/close_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/hilite_select.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/hilite_unselect.xpm | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/lhalf.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/lhalf_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/lhalf_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/max.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/max_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/max_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/menu.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/menu_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/menu_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/min.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/min_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/min_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/rhalf.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/rhalf_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/rhalf_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/select.xpm          | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/shade.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/shade_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/shade_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stick.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stick_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stick_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stuck.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stuck_pressed.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/stuck_unfocus.xpm   | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/toolbar_focused.xpm | 0
- .../looks => vtwm/styles}/Squared-green/pixmaps/toolbar_unfocused.xpm | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/unselect.xpm        | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/unshade.xpm         | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/unshade_pressed.xpm | 0
- {ctwm/looks => vtwm/styles}/Squared-green/pixmaps/unshade_unfocus.xpm | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/bullet.xbm      | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/close.xbm | 0
- .../styles/Squared-grey}/bitmaps/close_disabled.xbm                   | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/close_hover.xbm | 0
- .../styles/Squared-grey}/bitmaps/close_pressed.xbm                    | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/desk.xbm  | 0
- .../styles/Squared-grey}/bitmaps/desk_disabled.xbm                    | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/desk_hover.xbm  | 0
- .../styles/Squared-grey}/bitmaps/desk_pressed.xbm                     | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled.xbm                     | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled_hover.xbm               | 0
- .../styles/Squared-grey}/bitmaps/desk_toggled_pressed.xbm             | 0
- .../styles/Squared-grey}/bitmaps/hilite_select.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/hilite_unselect.xbm                  | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/iconify.xbm     | 0
- .../styles/Squared-grey}/bitmaps/iconify_disabled.xbm                 | 0
- .../styles/Squared-grey}/bitmaps/iconify_hover.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/iconify_pressed.xbm                  | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/lhalf.xbm | 0
- .../styles/Squared-grey}/bitmaps/lhalf_unpressed.xbm                  | 0
- {ctwm/looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/max.xbm | 0
- .../styles/Squared-grey}/bitmaps/max_disabled.xbm                     | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/max_hover.xbm   | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/max_pressed.xbm | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/max_toggled.xbm | 0
- .../styles/Squared-grey}/bitmaps/max_toggled_hover.xbm                | 0
- .../styles/Squared-grey}/bitmaps/max_toggled_pressed.xbm              | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/menu.xbm  | 0
- .../styles/Squared-grey}/bitmaps/menu_pressed.xbm                     | 0
- {ctwm/looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/min.xbm | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/min_pressed.xbm | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/rhalf.xbm | 0
- .../styles/Squared-grey}/bitmaps/rhalf_unpressed.xbm                  | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/select.xbm      | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/shade.xbm | 0
- .../styles/Squared-grey}/bitmaps/shade_disabled.xbm                   | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/shade_hover.xbm | 0
- .../styles/Squared-grey}/bitmaps/shade_pressed.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled.xbm                    | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled_hover.xbm              | 0
- .../styles/Squared-grey}/bitmaps/shade_toggled_pressed.xbm            | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/stick.xbm | 0
- .../styles/Squared-grey}/bitmaps/stick_pressed.xbm                    | 0
- .../looks/Squared-blue => vtwm/styles/Squared-grey}/bitmaps/stuck.xbm | 0
- .../styles/Squared-grey}/bitmaps/stuck_pressed.xbm                    | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/unselect.xbm    | 0
- .../Squared-blue => vtwm/styles/Squared-grey}/bitmaps/unshade.xbm     | 0
- .../styles/Squared-grey}/bitmaps/unshade_pressed.xbm                  | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/lookrc                       | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/close.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/close_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/close_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/hilite_select.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/hilite_unselect.xpm  | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/lhalf.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/lhalf_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/lhalf_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/max.xpm              | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/max_pressed.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/max_unfocus.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/menu.xpm             | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/menu_pressed.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/menu_unfocus.xpm     | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/min.xpm              | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/min_pressed.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/min_unfocus.xpm      | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/rhalf.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/rhalf_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/rhalf_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/select.xpm           | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/shade.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/shade_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/shade_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/stick.xpm            | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/stick_pressed.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/stick_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/stuck.xpm            | 0
- .../styles/Squared-grey}/pixmaps/stuck_pressed.xpm                    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/stuck_unfocus.xpm    | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/toolbar_focused.xpm  | 0
- .../looks => vtwm/styles}/Squared-grey/pixmaps/toolbar_unfocused.xpm  | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/unselect.xpm         | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/unshade.xpm          | 0
- .../styles/Squared-grey}/pixmaps/unshade_pressed.xpm                  | 0
- {ctwm/looks => vtwm/styles}/Squared-grey/pixmaps/unshade_unfocus.xpm  | 0
- {ctwm/looks => vtwm/styles}/Squared/_lookrc                           | 0
+ vtwm/{looks => styles}/Classic/lookrc                                 | 0
+ vtwm/{looks => styles}/Default                                        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/bullet.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/close.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/close_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/close_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/close_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk.xbm                  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_disabled.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_hover.xbm            | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_hover.xbm    | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/desk_toggled_pressed.xbm  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/hilite_select.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/hilite_unselect.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/iconify.xbm               | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/iconify_disabled.xbm      | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/iconify_hover.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/iconify_pressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/lhalf.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/lhalf_unpressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max.xbm                   | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_disabled.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_hover.xbm             | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_pressed.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_toggled.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_toggled_hover.xbm     | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/max_toggled_pressed.xbm   | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/menu.xbm                  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/menu_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/min.xbm                   | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/min_pressed.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/rhalf.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/rhalf_unpressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/select.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_hover.xbm   | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/shade_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/stick.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/stick_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/stuck.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/stuck_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/unselect.xbm              | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/unshade.xbm               | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps/unshade_pressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/bullet.xbm               | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/close.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/close_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/close_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/close_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_hover.xbm   | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/desk_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/iconify.xbm              | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/iconify_disabled.xbm     | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/iconify_hover.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/iconify_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max.xbm                  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_disabled.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_hover.xbm            | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_hover.xbm    | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/max_toggled_pressed.xbm  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps1/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-blue/bitmaps1/shade_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/close_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/hilite_select.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/hilite_unselect.xbm      | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/lhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/lhalf_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/max.xbm                  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/max_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/menu.xbm                 | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/menu_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/min.xbm                  | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/min_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/rhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/rhalf_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/select.xbm               | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/shade.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/shade_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/stick.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/stick_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/stuck.xbm                | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/stuck_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/unselect.xbm             | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/unshade.xbm              | 0
+ vtwm/{looks => styles}/Squared-blue/bitmaps2/unshade_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-blue/lookrc                            | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/close.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/close_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/close_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/hilite_select.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/hilite_unselect.xpm       | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/lhalf.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/lhalf_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/lhalf_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/max.xpm                   | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/max_pressed.xpm           | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/max_unfocus.xpm           | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/menu.xpm                  | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/menu_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/menu_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/min.xpm                   | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/min_pressed.xpm           | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/min_unfocus.xpm           | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/rhalf.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/rhalf_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/rhalf_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/select.xpm                | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/shade.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/shade_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/shade_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stick.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stick_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stick_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stuck.xpm                 | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stuck_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/stuck_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/toolbar_focused.xpm       | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/toolbar_unfocused.xpm     | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/unselect.xpm              | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/unshade.xpm               | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/unshade_pressed.xpm       | 0
+ vtwm/{looks => styles}/Squared-blue/pixmaps/unshade_unfocus.xpm       | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/bullet.xbm               | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/close.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/close_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/close_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/close_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk.xbm                 | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled.xbm         | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled_hover.xbm   | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/desk_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/hilite_select.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/hilite_unselect.xbm      | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/iconify.xbm              | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/iconify_disabled.xbm     | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/iconify_hover.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/iconify_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/lhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/lhalf_unpressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max.xbm                  | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_disabled.xbm         | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_hover.xbm            | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled.xbm          | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled_hover.xbm    | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/max_toggled_pressed.xbm  | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/menu.xbm                 | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/menu_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/min.xbm                  | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/min_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/rhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/rhalf_unpressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/select.xbm               | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade_toggled.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-cadet/bitmaps/shade_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/stick.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/stick_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/stuck.xbm                | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/stuck_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/unselect.xbm             | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/unshade.xbm              | 0
+ vtwm/{looks => styles}/Squared-cadet/bitmaps/unshade_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-cadet/lookrc                           | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/close.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/close_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/close_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/hilite_select.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/hilite_unselect.xpm      | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/lhalf.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/lhalf_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/lhalf_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/max.xpm                  | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/max_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/max_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/menu.xpm                 | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/menu_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/menu_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/min.xpm                  | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/min_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/min_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/rhalf.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/rhalf_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/rhalf_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/select.xpm               | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/shade.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/shade_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/shade_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stick.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stick_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stick_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stuck.xpm                | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stuck_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/stuck_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/toolbar_focused.xpm      | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/toolbar_unfocused.xpm    | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/unselect.xpm             | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/unshade.xpm              | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/unshade_pressed.xpm      | 0
+ vtwm/{looks => styles}/Squared-cadet/pixmaps/unshade_unfocus.xpm      | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/bullet.xbm               | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/close.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/close_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/close_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/close_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk.xbm                 | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_toggled.xbm         | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_toggled_hover.xbm   | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/desk_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/hilite_select.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/hilite_unselect.xbm      | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/iconify.xbm              | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/iconify_disabled.xbm     | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/iconify_hover.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/iconify_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/lhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/lhalf_unpressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max.xbm                  | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_disabled.xbm         | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_hover.xbm            | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_toggled.xbm          | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_toggled_hover.xbm    | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/max_toggled_pressed.xbm  | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/menu.xbm                 | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/menu_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/min.xbm                  | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/min_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/rhalf.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/rhalf_unpressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/select.xbm               | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade_disabled.xbm       | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade_hover.xbm          | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade_toggled.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/shade_toggled_hover.xbm  | 0
+ .../{looks => styles}/Squared-green/bitmaps/shade_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/stick.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/stick_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/stuck.xbm                | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/stuck_pressed.xbm        | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/unselect.xbm             | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/unshade.xbm              | 0
+ vtwm/{looks => styles}/Squared-green/bitmaps/unshade_pressed.xbm      | 0
+ vtwm/{looks => styles}/Squared-green/lookrc                           | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/close.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/close_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/close_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/hilite_select.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/hilite_unselect.xpm      | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/lhalf.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/lhalf_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/lhalf_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/max.xpm                  | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/max_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/max_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/menu.xpm                 | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/menu_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/menu_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/min.xpm                  | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/min_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/min_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/rhalf.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/rhalf_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/rhalf_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/select.xpm               | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/shade.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/shade_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/shade_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stick.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stick_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stick_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stuck.xpm                | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stuck_pressed.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/stuck_unfocus.xpm        | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/toolbar_focused.xpm      | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/toolbar_unfocused.xpm    | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/unselect.xpm             | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/unshade.xpm              | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/unshade_pressed.xpm      | 0
+ vtwm/{looks => styles}/Squared-green/pixmaps/unshade_unfocus.xpm      | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/bullet.xbm                | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/close.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/close_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/close_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/close_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk.xbm                  | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_disabled.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_hover.xbm            | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled.xbm          | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_hover.xbm    | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/desk_toggled_pressed.xbm  | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/hilite_select.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/hilite_unselect.xbm       | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/iconify.xbm               | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/iconify_disabled.xbm      | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/iconify_hover.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/iconify_pressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/lhalf.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/lhalf_unpressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max.xbm                   | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_disabled.xbm          | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_hover.xbm             | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_pressed.xbm           | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_toggled.xbm           | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_toggled_hover.xbm     | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/max_toggled_pressed.xbm   | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/menu.xbm                  | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/menu_pressed.xbm          | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/min.xbm                   | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/min_pressed.xbm           | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/rhalf.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/rhalf_unpressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/select.xbm                | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_disabled.xbm        | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_hover.xbm           | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_hover.xbm   | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/shade_toggled_pressed.xbm | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/stick.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/stick_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/stuck.xbm                 | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/stuck_pressed.xbm         | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/unselect.xbm              | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/unshade.xbm               | 0
+ vtwm/{looks => styles}/Squared-grey/bitmaps/unshade_pressed.xbm       | 0
+ vtwm/{looks => styles}/Squared-grey/lookrc                            | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/close.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/close_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/close_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/hilite_select.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/hilite_unselect.xpm       | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/lhalf.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/lhalf_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/lhalf_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/max.xpm                   | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/max_pressed.xpm           | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/max_unfocus.xpm           | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/menu.xpm                  | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/menu_pressed.xpm          | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/menu_unfocus.xpm          | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/min.xpm                   | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/min_pressed.xpm           | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/min_unfocus.xpm           | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/rhalf.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/rhalf_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/rhalf_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/select.xpm                | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/shade.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/shade_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/shade_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stick.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stick_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stick_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stuck.xpm                 | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stuck_pressed.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/stuck_unfocus.xpm         | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/toolbar_focused.xpm       | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/toolbar_unfocused.xpm     | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/unselect.xpm              | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/unshade.xpm               | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/unshade_pressed.xpm       | 0
+ vtwm/{looks => styles}/Squared-grey/pixmaps/unshade_unfocus.xpm       | 0
+ vtwm/{looks => styles}/Squared/_lookrc                                | 0
  1044 files changed, 0 insertions(+), 0 deletions(-)
 
 commit 3965677b806beb1d36625a61cd8eac02547b410d
