@@ -1,5 +1,5 @@
 /* XPM */
-static char * lhalf_unfocus_xpm[] = {
+static char * rback_unfocus_xpm[] = {
 "16 12 4 1",
 " 	c None",
 ".	c #383838",

@@ -1,5 +1,5 @@
 /* XPM */
-static char * lhalf_xpm[] = {
+static char * lhalf_focused_xpm[] = {
 "16 12 4 1",
 " 	c None",
 ".	c #F3F3F3",
