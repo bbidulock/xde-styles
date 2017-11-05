@@ -6,6 +6,14 @@ Adwm*selected.button:					#f0f0f0
 Adwm*selected.bg:					#171717
 Adwm*selected.fg:					#ffffff
 
+Adwm*focused.font:					Liberation Sans:size=9:medium
+Adwm*focused.drop:					1
+Adwm*focused.shadow:					#617953
+Adwm*focused.border:					#617953
+Adwm*focused.button:					#f0f0f0
+Adwm*focused.bg:					#171717
+Adwm*focused.fg:					#ffffff
+
 Adwm*normal.font:					Liberation Sans:size=9:medium
 Adwm*normal.drop:					1
 Adwm*normal.shadow:					#373737
