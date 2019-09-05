@@ -1,4 +1,245 @@
-# created with git log --stat=76 -M -C -300|fmt -sct -w80
+# created with git log --stat=76 -M -C -500|fmt -sct -w80
+
+commit 515a18e76359cb3c8a1d86c57f529e55b36485bb
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 14:22:20 2019 -0600
+
+    add license file to repo
+
+ .gitignore | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 60f78ab2a0189800a03d82955033d20992bc2125
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 14:21:50 2019 -0600
+
+    ignore release notes products
+
+ .gitignore | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit af9053fba41c068f2771b8fd284d8b62dd21e127
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:18:54 2019 -0600
+
+    build release notes with dist
+
+ dist.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 67b9ac52c06dd44b813579d5a9e932078a893553
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:18:25 2019 -0600
+
+    we have better defaults now
+
+ configure.sh | 4 ----
+ 1 file changed, 4 deletions(-)
+
+commit d006e90f211cd9c866b2045f4144b53fadd92257
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:18:03 2019 -0600
+
+    better defaults and lzip compression
+
+ configure.ac | 24 +++++++++++++++---------
+ 1 file changed, 15 insertions(+), 9 deletions(-)
+
+commit 957c255ce65bc3964468a7ee2b05dd1c9b2c7b9b
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:17:14 2019 -0600
+
+    put filename last in sed command
+
+ autogen.sh | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 435566a972d97e837c92225b659d83031eb11983
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:16:55 2019 -0600
+
+    build release notes and lzip compression
+
+ Makefile.am | 35 +++++++++++++++++++++++++----------
+ 1 file changed, 25 insertions(+), 10 deletions(-)
+
+commit 5bdd5258cd3cdac2e1585317747b743233025719
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Sep 5 10:16:00 2019 -0600
+
+    add release notes
+
+ RELEASE.md | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 9a6a4c95ca403bf149135e7a3d5c12785112ac53
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Aug 31 01:50:12 2019 -0600
+
+    generate NEWS better
+
+ gennews.sh | 26 +++++++++++++++++++++-----
+ 1 file changed, 21 insertions(+), 5 deletions(-)
+
+commit a488194b06fa4b83f998da15ab8387ff2e81f378
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Jun 17 22:55:34 2019 -0600
+
+    update for gettext 0.20.1
+
+ autogen.sh | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+commit 1517f56a89410d0229ee2302dc0f3383b49888bd
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Jun 17 22:55:23 2019 -0600
+
+    add missing style names
+
+ adwm/styles/Squared-blue/stylerc  | 6 ++++++
+ adwm/styles/Squared-cadet/stylerc | 6 ++++++
+ adwm/styles/Squared-green/stylerc | 6 ++++++
+ adwm/styles/Squared-grey/stylerc  | 6 ++++++
+ 4 files changed, 24 insertions(+)
+
+commit 795eca8444db7238eb121932ca058406ff5ee931
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Fri Jan 18 10:40:54 2019 -0700
+
+    reformat TODO
+
+ TODO | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 60913879420882fce76399b8cd8c309d7053e8a8
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Nov 4 20:50:29 2017 -0600
+
+    new focused titlebar
+
+ adwm/styles/Squared-blue/stylerc  | 8 ++++++++
+ adwm/styles/Squared-cadet/stylerc | 8 ++++++++
+ adwm/styles/Squared-green/stylerc | 8 ++++++++
+ adwm/styles/Squared-grey/stylerc  | 8 ++++++++
+ 4 files changed, 32 insertions(+)
+
+commit 2f63e21df7dc8724ae7f55f3758618e8a98dbb70
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Oct 2 08:12:41 2017 -0600
+
+    reference new pixmap from adwm stylerc
+
+ adwm/styles/Squared-blue/stylerc  | 75 +++++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-cadet/stylerc | 75 +++++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-green/stylerc | 75 +++++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-grey/stylerc  | 75 +++++++++++++++++++++++++++++++++++
+ 4 files changed, 300 insertions(+)
+
+commit 3412755171c025179a37cd9dfe61afd40597772b
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Oct 2 08:12:14 2017 -0600
+
+    install new pixmaps
+
+ Makefile.am | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 52 insertions(+), 4 deletions(-)
+
+commit f4939143eede71c625fac6d5470210725cd9e3ed
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Oct 2 08:07:32 2017 -0600
+
+    add and correct adwm pixmaps
+
+ .../Squared-blue/pixmaps/lback_focused.xpm       | 20 ++++++++++++++++++
+ .../Squared-blue/pixmaps/lback_hovered.xpm       | 20 ++++++++++++++++++
+ .../Squared-blue/pixmaps/lback_pressed.xpm       | 20 ++++++++++++++++++
+ .../pixmaps/lback_unfocus.xpm}                   |  4 ++--
+ .../Squared-blue/pixmaps/lhalf_hovered.xpm       |  2 +-
+ .../Squared-blue/pixmaps/rback_focused.xpm       | 20 ++++++++++++++++++
+ .../Squared-blue/pixmaps/rback_hovered.xpm       | 20 ++++++++++++++++++
+ .../Squared-blue/pixmaps/rback_pressed.xpm       | 20 ++++++++++++++++++
+ .../pixmaps/rback_unfocus.xpm}                   |  4 ++--
+ .../Squared-blue/pixmaps/rhalf_hovered.xpm       |  2 +-
+ .../Squared-blue/pixmaps/xkill_focused.xpm       | 22 ++++++++++++++++++++
+ .../Squared-blue/pixmaps/xkill_hovered.xpm       | 22 ++++++++++++++++++++
+ .../Squared-blue/pixmaps/xkill_pressed.xpm       | 22 ++++++++++++++++++++
+ .../Squared-blue/pixmaps/xkill_unfocus.xpm       | 22 ++++++++++++++++++++
+ .../Squared-cadet/pixmaps/lback_focused.xpm      | 20 ++++++++++++++++++
+ .../Squared-cadet/pixmaps/lback_hovered.xpm      | 20 ++++++++++++++++++
+ .../Squared-cadet/pixmaps/lback_pressed.xpm      | 20 ++++++++++++++++++
+ .../{lhalf_unfocus.xpm => lback_unfocus.xpm}     |  2 +-
+ .../Squared-cadet/pixmaps/lhalf_focused.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/lhalf_hovered.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/lhalf_pressed.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/lhalf_unfocus.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/rback_focused.xpm      | 20 ++++++++++++++++++
+ .../Squared-cadet/pixmaps/rback_hovered.xpm      | 20 ++++++++++++++++++
+ .../Squared-cadet/pixmaps/rback_pressed.xpm      | 20 ++++++++++++++++++
+ .../{lhalf_unfocus.xpm => rback_unfocus.xpm}     |  2 +-
+ .../Squared-cadet/pixmaps/rhalf_focused.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/rhalf_hovered.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/rhalf_pressed.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/rhalf_unfocus.xpm      |  2 +-
+ .../Squared-cadet/pixmaps/xkill_focused.xpm      | 22 ++++++++++++++++++++
+ .../Squared-cadet/pixmaps/xkill_hovered.xpm      | 22 ++++++++++++++++++++
+ .../Squared-cadet/pixmaps/xkill_pressed.xpm      | 22 ++++++++++++++++++++
+ .../Squared-cadet/pixmaps/xkill_unfocus.xpm      | 22 ++++++++++++++++++++
+ .../Squared-green/pixmaps/lback_focused.xpm      | 20 ++++++++++++++++++
+ .../Squared-green/pixmaps/lback_hovered.xpm      | 20 ++++++++++++++++++
+ .../Squared-green/pixmaps/lback_pressed.xpm      | 20 ++++++++++++++++++
+ .../{lhalf_unfocus.xpm => lback_unfocus.xpm}     |  2 +-
+ .../Squared-green/pixmaps/lhalf_focused.xpm      |  2 +-
+ .../Squared-green/pixmaps/lhalf_hovered.xpm      |  2 +-
+ .../Squared-green/pixmaps/lhalf_unfocus.xpm      |  2 +-
+ .../Squared-green/pixmaps/rback_focused.xpm      | 20 ++++++++++++++++++
+ .../Squared-green/pixmaps/rback_hovered.xpm      | 20 ++++++++++++++++++
+ .../Squared-green/pixmaps/rback_pressed.xpm      | 20 ++++++++++++++++++
+ .../{lhalf_unfocus.xpm => rback_unfocus.xpm}     |  2 +-
+ .../Squared-green/pixmaps/rhalf_focused.xpm      |  2 +-
+ .../Squared-green/pixmaps/rhalf_hovered.xpm      |  2 +-
+ .../Squared-green/pixmaps/rhalf_unfocus.xpm      |  2 +-
+ .../Squared-green/pixmaps/xkill_focused.xpm      | 22 ++++++++++++++++++++
+ .../Squared-green/pixmaps/xkill_hovered.xpm      | 22 ++++++++++++++++++++
+ .../Squared-green/pixmaps/xkill_pressed.xpm      | 22 ++++++++++++++++++++
+ .../Squared-green/pixmaps/xkill_unfocus.xpm      | 22 ++++++++++++++++++++
+ .../Squared-grey/pixmaps/lback_focused.xpm       | 20 ++++++++++++++++++
+ .../Squared-grey/pixmaps/lback_hovered.xpm       | 20 ++++++++++++++++++
+ .../Squared-grey/pixmaps/lback_pressed.xpm       | 20 ++++++++++++++++++
+ .../pixmaps/lback_unfocus.xpm}                   |  6 +++---
+ .../Squared-grey/pixmaps/lhalf_focused.xpm       |  2 +-
+ .../Squared-grey/pixmaps/lhalf_hovered.xpm       |  2 +-
+ .../Squared-grey/pixmaps/rback_focused.xpm       | 20 ++++++++++++++++++
+ .../Squared-grey/pixmaps/rback_hovered.xpm       | 20 ++++++++++++++++++
+ .../Squared-grey/pixmaps/rback_pressed.xpm       | 20 ++++++++++++++++++
+ .../pixmaps/rback_unfocus.xpm}                   |  6 +++---
+ .../Squared-grey/pixmaps/rhalf_focused.xpm       |  2 +-
+ .../Squared-grey/pixmaps/rhalf_hovered.xpm       |  2 +-
+ .../Squared-grey/pixmaps/xkill_focused.xpm       | 22 ++++++++++++++++++++
+ .../Squared-grey/pixmaps/xkill_hovered.xpm       | 22 ++++++++++++++++++++
+ .../Squared-grey/pixmaps/xkill_pressed.xpm       | 22 ++++++++++++++++++++
+ .../Squared-grey/pixmaps/xkill_unfocus.xpm       | 22 ++++++++++++++++++++
+ 68 files changed, 866 insertions(+), 34 deletions(-)
+
+commit 0b527391509f7416794a7f33512aba728647c0f1
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Oct 2 08:06:23 2017 -0600
+
+    update changes
+
+ ChangeLog | 548 ++++++++++------------------------------------------------
+ NEWS      |  20 ++-
+ 2 files changed, 108 insertions(+), 460 deletions(-)
+
+commit 3a5065db7d36537f1f782c1dfc860b16c33461cf
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Oct 2 08:04:06 2017 -0600
+
+    faster build
+
+ configure.sh | 1 +
+ dist.sh      | 2 +-
+ rebuild.sh   | 2 +-
+ 3 files changed, 3 insertions(+), 2 deletions(-)
 
 commit 93f7212df4c4c8e977fabd07ce40a28a38e7f7d5
 Author: Brian Bidulock <bidulock@openss7.org>
@@ -4998,3 +5239,460 @@ Date:   Wed Sep 25 22:18:50 2013 -0600
  .../Squared-grey/pixmaps/rhalf_unfocus.xpm       |   22 +
  fluxbox/styles/Squared-grey/pixmaps/select.xpm   |   21 +
  fluxbox/styles/Squared-grey/pixmaps/shade.xpm    |   22 +
+ .../Squared-grey/pixmaps/shade_pressed.xpm       |   22 +
+ .../Squared-grey/pixmaps/shade_unfocus.xpm       |   22 +
+ fluxbox/styles/Squared-grey/pixmaps/stick.xpm    |   81 +
+ .../Squared-grey/pixmaps/stick_pressed.xpm       |   81 +
+ .../Squared-grey/pixmaps/stick_unfocus.xpm       |   81 +
+ fluxbox/styles/Squared-grey/pixmaps/stuck.xpm    |   82 +
+ .../Squared-grey/pixmaps/stuck_pressed.xpm       |   82 +
+ .../Squared-grey/pixmaps/stuck_unfocus.xpm       |   82 +
+ .../Squared-grey/pixmaps/toolbar_focused.xpm     |   25 +
+ .../Squared-grey/pixmaps/toolbar_unfocused.xpm   |   25 +
+ fluxbox/styles/Squared-grey/pixmaps/unselect.xpm |   18 +
+ fluxbox/styles/Squared-grey/pixmaps/unshade.xpm  |   22 +
+ .../Squared-grey/pixmaps/unshade_pressed.xpm     |   22 +
+ .../Squared-grey/pixmaps/unshade_unfocus.xpm     |   22 +
+ fluxbox/styles/Squared-grey/theme.cfg            |  257 +++
+ gtk/themes/Squared-blue/gtk-2.0/gtkrc            |  213 +++
+ gtk/themes/Squared-cadet/gtk-2.0/gtkrc           |  213 +++
+ gtk/themes/Squared-green/gtk-2.0/gtkrc           |  213 +++
+ gtk/themes/Squared-grey/gtk-2.0/gtkrc            |  129 ++
+ icewm/themes/Squared-blue/Unexicon               |    1 +
+ icewm/themes/Squared-blue/closeA.xpm             |   45 +
+ icewm/themes/Squared-blue/closeI.xpm             |   44 +
+ icewm/themes/Squared-blue/default.theme          |  368 ++++
+ icewm/themes/Squared-blue/depthA.xpm             |   45 +
+ icewm/themes/Squared-blue/depthI.xpm             |   44 +
+ icewm/themes/Squared-blue/hideA.xpm              |   45 +
+ icewm/themes/Squared-blue/hideI.xpm              |   44 +
+ icewm/themes/Squared-blue/maximizeA.xpm          |   45 +
+ icewm/themes/Squared-blue/maximizeI.xpm          |   44 +
+ icewm/themes/Squared-blue/menuButtonA.xpm        |   45 +
+ icewm/themes/Squared-blue/menuButtonI.xpm        |   44 +
+ icewm/themes/Squared-blue/minimizeA.xpm          |   45 +
+ icewm/themes/Squared-blue/minimizeI.xpm          |   44 +
+ icewm/themes/Squared-blue/restoreA.xpm           |   45 +
+ icewm/themes/Squared-blue/restoreI.xpm           |   44 +
+ icewm/themes/Squared-blue/rolldownA.xpm          |   45 +
+ icewm/themes/Squared-blue/rolldownI.xpm          |   44 +
+ icewm/themes/Squared-blue/rollupA.xpm            |   45 +
+ icewm/themes/Squared-blue/rollupI.xpm            |   44 +
+ icewm/themes/Squared-blue/taskbar/desktop.xpm    |   21 +
+ icewm/themes/Squared-blue/taskbar/start.xpm      |  117 ++
+ icewm/themes/Squared-blue/taskbar/windows.xpm    |   21 +
+ icewm/themes/Squared-cadet/closeA.xpm            |   45 +
+ icewm/themes/Squared-cadet/closeI.xpm            |   44 +
+ icewm/themes/Squared-cadet/default.theme         |  249 +++
+ icewm/themes/Squared-cadet/depthA.xpm            |   45 +
+ icewm/themes/Squared-cadet/depthI.xpm            |   44 +
+ icewm/themes/Squared-cadet/hideA.xpm             |   45 +
+ icewm/themes/Squared-cadet/hideI.xpm             |   44 +
+ icewm/themes/Squared-cadet/maximizeA.xpm         |   45 +
+ icewm/themes/Squared-cadet/maximizeI.xpm         |   44 +
+ icewm/themes/Squared-cadet/menuButtonA.xpm       |   45 +
+ icewm/themes/Squared-cadet/menuButtonI.xpm       |   44 +
+ icewm/themes/Squared-cadet/minimizeA.xpm         |   45 +
+ icewm/themes/Squared-cadet/minimizeI.xpm         |   44 +
+ icewm/themes/Squared-cadet/restoreA.xpm          |   45 +
+ icewm/themes/Squared-cadet/restoreI.xpm          |   44 +
+ icewm/themes/Squared-cadet/rolldownA.xpm         |   45 +
+ icewm/themes/Squared-cadet/rolldownI.xpm         |   44 +
+ icewm/themes/Squared-cadet/rollupA.xpm           |   45 +
+ icewm/themes/Squared-cadet/rollupI.xpm           |   44 +
+ icewm/themes/Squared-cadet/taskbar/desktop.xpm   |   21 +
+ icewm/themes/Squared-cadet/taskbar/start.xpm     |  117 ++
+ icewm/themes/Squared-cadet/taskbar/windows.xpm   |   21 +
+ icewm/themes/Squared-green/closeA.xpm            |   45 +
+ icewm/themes/Squared-green/closeI.xpm            |   44 +
+ icewm/themes/Squared-green/default.theme         |  249 +++
+ icewm/themes/Squared-green/depthA.xpm            |   45 +
+ icewm/themes/Squared-green/depthI.xpm            |   44 +
+ icewm/themes/Squared-green/hideA.xpm             |   45 +
+ icewm/themes/Squared-green/hideI.xpm             |   44 +
+ icewm/themes/Squared-green/maximizeA.xpm         |   45 +
+ icewm/themes/Squared-green/maximizeI.xpm         |   44 +
+ icewm/themes/Squared-green/menuButtonA.xpm       |   45 +
+ icewm/themes/Squared-green/menuButtonI.xpm       |   44 +
+ icewm/themes/Squared-green/minimizeA.xpm         |   45 +
+ icewm/themes/Squared-green/minimizeI.xpm         |   44 +
+ icewm/themes/Squared-green/restoreA.xpm          |   45 +
+ icewm/themes/Squared-green/restoreI.xpm          |   44 +
+ icewm/themes/Squared-green/rolldownA.xpm         |   45 +
+ icewm/themes/Squared-green/rolldownI.xpm         |   44 +
+ icewm/themes/Squared-green/rollupA.xpm           |   45 +
+ icewm/themes/Squared-green/rollupI.xpm           |   44 +
+ icewm/themes/Squared-green/taskbar/desktop.xpm   |   21 +
+ icewm/themes/Squared-green/taskbar/start.xpm     |  117 ++
+ icewm/themes/Squared-green/taskbar/windows.xpm   |   21 +
+ icewm/themes/Squared-grey/closeA.xpm             |   45 +
+ icewm/themes/Squared-grey/closeI.xpm             |   44 +
+ icewm/themes/Squared-grey/default.theme          |  249 +++
+ icewm/themes/Squared-grey/depthA.xpm             |   45 +
+ icewm/themes/Squared-grey/depthI.xpm             |   44 +
+ icewm/themes/Squared-grey/hideA.xpm              |   45 +
+ icewm/themes/Squared-grey/hideI.xpm              |   44 +
+ icewm/themes/Squared-grey/maximizeA.xpm          |   45 +
+ icewm/themes/Squared-grey/maximizeI.xpm          |   44 +
+ icewm/themes/Squared-grey/menuButtonA.xpm        |   45 +
+ icewm/themes/Squared-grey/menuButtonI.xpm        |   44 +
+ icewm/themes/Squared-grey/minimizeA.xpm          |   45 +
+ icewm/themes/Squared-grey/minimizeI.xpm          |   44 +
+ icewm/themes/Squared-grey/restoreA.xpm           |   45 +
+ icewm/themes/Squared-grey/restoreI.xpm           |   44 +
+ icewm/themes/Squared-grey/rolldownA.xpm          |   45 +
+ icewm/themes/Squared-grey/rolldownI.xpm          |   44 +
+ icewm/themes/Squared-grey/rollupA.xpm            |   45 +
+ icewm/themes/Squared-grey/rollupI.xpm            |   44 +
+ icewm/themes/Squared-grey/taskbar/desktop.xpm    |   21 +
+ icewm/themes/Squared-grey/taskbar/start.xpm      |  117 ++
+ icewm/themes/Squared-grey/taskbar/windows.xpm    |   21 +
+ jwm/icons/desktop.xpm                            |   21 +
+ jwm/icons/window-above.xpm                       |   31 +
+ jwm/icons/window-below.xpm                       |   31 +
+ jwm/icons/window-border.xpm                      |   31 +
+ jwm/icons/window-close.xpm                       |   31 +
+ jwm/icons/window-command.xpm                     |   32 +
+ jwm/icons/window-focus.xpm                       |   31 +
+ jwm/icons/window-kill.xpm                        |   31 +
+ jwm/icons/window-lower.xpm                       |   31 +
+ jwm/icons/window-maximize-b.xpm                  |   31 +
+ jwm/icons/window-maximize-h.xpm                  |   31 +
+ jwm/icons/window-maximize-v.xpm                  |   31 +
+ jwm/icons/window-maximize.xpm                    |   31 +
+ jwm/icons/window-menu.xpm                        |   31 +
+ jwm/icons/window-minimize.xpm                    |   31 +
+ jwm/icons/window-move.xpm                        |   31 +
+ jwm/icons/window-raise.xpm                       |   31 +
+ jwm/icons/window-resize.xpm                      |   31 +
+ jwm/icons/window-sendto.xpm                      |   31 +
+ jwm/icons/window-shade.xpm                       |   31 +
+ jwm/icons/window-snap.xpm                        |   31 +
+ jwm/icons/window-stick.xpm                       |   31 +
+ jwm/icons/window-titlebar.xpm                    |   31 +
+ jwm/icons/window-unshade.xpm                     |   31 +
+ jwm/icons/windows.xpm                            |   21 +
+ jwm/setstyle                                     |   13 +
+ jwm/styles/Squared-blue                          |  107 ++
+ jwm/styles/Squared-cadet                         |  107 ++
+ jwm/styles/Squared-green                         |  107 ++
+ jwm/styles/Squared-grey                          |  107 ++
+ openbox/themes/Squared-blue/openbox-3/bullet.xbm |    4 +
+ openbox/themes/Squared-blue/openbox-3/bullet.xpm |   15 +
+ openbox/themes/Squared-blue/openbox-3/close.xbm  |    6 +
+ openbox/themes/Squared-blue/openbox-3/close.xpm  |   20 +
+ .../Squared-blue/openbox-3/close_disabled.xbm    |    6 +
+ .../Squared-blue/openbox-3/close_disabled.xpm    |   20 +
+ .../Squared-blue/openbox-3/close_hover.xbm       |    6 +
+ .../Squared-blue/openbox-3/close_hover.xpm       |   20 +
+ .../Squared-blue/openbox-3/close_pressed.xbm     |    6 +
+ .../Squared-blue/openbox-3/close_pressed.xpm     |   20 +
+ openbox/themes/Squared-blue/openbox-3/desk.xbm   |    6 +
+ openbox/themes/Squared-blue/openbox-3/desk.xpm   |   20 +
+ .../Squared-blue/openbox-3/desk_disabled.xbm     |    6 +
+ .../Squared-blue/openbox-3/desk_disabled.xpm     |   20 +
+ .../themes/Squared-blue/openbox-3/desk_hover.xbm |    6 +
+ .../themes/Squared-blue/openbox-3/desk_hover.xpm |   20 +
+ .../Squared-blue/openbox-3/desk_pressed.xbm      |    6 +
+ .../Squared-blue/openbox-3/desk_pressed.xpm      |   20 +
+ .../Squared-blue/openbox-3/desk_toggled.xbm      |    6 +
+ .../Squared-blue/openbox-3/desk_toggled.xpm      |   20 +
+ .../openbox-3/desk_toggled_hover.xbm             |    6 +
+ .../openbox-3/desk_toggled_hover.xpm             |   20 +
+ .../openbox-3/desk_toggled_pressed.xbm           |    6 +
+ .../openbox-3/desk_toggled_pressed.xpm           |   20 +
+ .../themes/Squared-blue/openbox-3/iconify.xbm    |    6 +
+ .../themes/Squared-blue/openbox-3/iconify.xpm    |   20 +
+ .../Squared-blue/openbox-3/iconify_disabled.xbm  |    6 +
+ .../Squared-blue/openbox-3/iconify_disabled.xpm  |   20 +
+ .../Squared-blue/openbox-3/iconify_hover.xbm     |    6 +
+ .../Squared-blue/openbox-3/iconify_hover.xpm     |   20 +
+ .../Squared-blue/openbox-3/iconify_pressed.xbm   |    6 +
+ .../Squared-blue/openbox-3/iconify_pressed.xpm   |   20 +
+ openbox/themes/Squared-blue/openbox-3/max.xbm    |    6 +
+ openbox/themes/Squared-blue/openbox-3/max.xpm    |   20 +
+ .../Squared-blue/openbox-3/max_disabled.xbm      |    6 +
+ .../Squared-blue/openbox-3/max_disabled.xpm      |   20 +
+ .../themes/Squared-blue/openbox-3/max_hover.xbm  |    6 +
+ .../themes/Squared-blue/openbox-3/max_hover.xpm  |   20 +
+ .../Squared-blue/openbox-3/max_pressed.xbm       |    6 +
+ .../Squared-blue/openbox-3/max_pressed.xpm       |   20 +
+ .../Squared-blue/openbox-3/max_toggled.xbm       |    6 +
+ .../Squared-blue/openbox-3/max_toggled.xpm       |   20 +
+ .../Squared-blue/openbox-3/max_toggled_hover.xbm |    6 +
+ .../Squared-blue/openbox-3/max_toggled_hover.xpm |   20 +
+ .../openbox-3/max_toggled_pressed.xbm            |    6 +
+ .../openbox-3/max_toggled_pressed.xpm            |   20 +
+ openbox/themes/Squared-blue/openbox-3/shade.xbm  |    6 +
+ openbox/themes/Squared-blue/openbox-3/shade.xpm  |   20 +
+ .../Squared-blue/openbox-3/shade_disabled.xbm    |    6 +
+ .../Squared-blue/openbox-3/shade_disabled.xpm    |   20 +
+ .../Squared-blue/openbox-3/shade_hover.xbm       |    6 +
+ .../Squared-blue/openbox-3/shade_hover.xpm       |   20 +
+ .../Squared-blue/openbox-3/shade_pressed.xbm     |    6 +
+ .../Squared-blue/openbox-3/shade_pressed.xpm     |   20 +
+ .../Squared-blue/openbox-3/shade_toggled.xbm     |    6 +
+ .../Squared-blue/openbox-3/shade_toggled.xpm     |   20 +
+ .../openbox-3/shade_toggled_hover.xbm            |    6 +
+ .../openbox-3/shade_toggled_hover.xpm            |   20 +
+ .../openbox-3/shade_toggled_pressed.xbm          |    6 +
+ .../openbox-3/shade_toggled_pressed.xpm          |   20 +
+ openbox/themes/Squared-blue/openbox-3/themerc    |  231 +++
+ .../themes/Squared-cadet/openbox-3/bullet.xbm    |    4 +
+ openbox/themes/Squared-cadet/openbox-3/close.xbm |    6 +
+ .../Squared-cadet/openbox-3/close_disabled.xbm   |    6 +
+ .../Squared-cadet/openbox-3/close_hover.xbm      |    6 +
+ .../Squared-cadet/openbox-3/close_pressed.xbm    |    6 +
+ openbox/themes/Squared-cadet/openbox-3/desk.xbm  |    6 +
+ .../Squared-cadet/openbox-3/desk_disabled.xbm    |    6 +
+ .../Squared-cadet/openbox-3/desk_hover.xbm       |    6 +
+ .../Squared-cadet/openbox-3/desk_pressed.xbm     |    6 +
+ .../Squared-cadet/openbox-3/desk_toggled.xbm     |    6 +
+ .../openbox-3/desk_toggled_hover.xbm             |    6 +
+ .../openbox-3/desk_toggled_pressed.xbm           |    6 +
+ .../themes/Squared-cadet/openbox-3/iconify.xbm   |    6 +
+ .../Squared-cadet/openbox-3/iconify_disabled.xbm |    6 +
+ .../Squared-cadet/openbox-3/iconify_hover.xbm    |    6 +
+ .../Squared-cadet/openbox-3/iconify_pressed.xbm  |    6 +
+ openbox/themes/Squared-cadet/openbox-3/max.xbm   |    6 +
+ .../Squared-cadet/openbox-3/max_disabled.xbm     |    6 +
+ .../themes/Squared-cadet/openbox-3/max_hover.xbm |    6 +
+ .../Squared-cadet/openbox-3/max_pressed.xbm      |    6 +
+ .../Squared-cadet/openbox-3/max_toggled.xbm      |    6 +
+ .../openbox-3/max_toggled_hover.xbm              |    6 +
+ .../openbox-3/max_toggled_pressed.xbm            |    6 +
+ openbox/themes/Squared-cadet/openbox-3/shade.xbm |    6 +
+ .../Squared-cadet/openbox-3/shade_disabled.xbm   |    6 +
+ .../Squared-cadet/openbox-3/shade_hover.xbm      |    6 +
+ .../Squared-cadet/openbox-3/shade_pressed.xbm    |    6 +
+ .../Squared-cadet/openbox-3/shade_toggled.xbm    |    6 +
+ .../openbox-3/shade_toggled_hover.xbm            |    6 +
+ .../openbox-3/shade_toggled_pressed.xbm          |    6 +
+ openbox/themes/Squared-cadet/openbox-3/themerc   |  231 +++
+ .../themes/Squared-green/openbox-3/bullet.xbm    |    4 +
+ openbox/themes/Squared-green/openbox-3/close.xbm |    6 +
+ .../Squared-green/openbox-3/close_disabled.xbm   |    6 +
+ .../Squared-green/openbox-3/close_hover.xbm      |    6 +
+ .../Squared-green/openbox-3/close_pressed.xbm    |    6 +
+ openbox/themes/Squared-green/openbox-3/desk.xbm  |    6 +
+ .../Squared-green/openbox-3/desk_disabled.xbm    |    6 +
+ .../Squared-green/openbox-3/desk_hover.xbm       |    6 +
+ .../Squared-green/openbox-3/desk_pressed.xbm     |    6 +
+ .../Squared-green/openbox-3/desk_toggled.xbm     |    6 +
+ .../openbox-3/desk_toggled_hover.xbm             |    6 +
+ .../openbox-3/desk_toggled_pressed.xbm           |    6 +
+ .../themes/Squared-green/openbox-3/iconify.xbm   |    6 +
+ .../Squared-green/openbox-3/iconify_disabled.xbm |    6 +
+ .../Squared-green/openbox-3/iconify_hover.xbm    |    6 +
+ .../Squared-green/openbox-3/iconify_pressed.xbm  |    6 +
+ openbox/themes/Squared-green/openbox-3/max.xbm   |    6 +
+ .../Squared-green/openbox-3/max_disabled.xbm     |    6 +
+ .../themes/Squared-green/openbox-3/max_hover.xbm |    6 +
+ .../Squared-green/openbox-3/max_pressed.xbm      |    6 +
+ .../Squared-green/openbox-3/max_toggled.xbm      |    6 +
+ .../openbox-3/max_toggled_hover.xbm              |    6 +
+ .../openbox-3/max_toggled_pressed.xbm            |    6 +
+ openbox/themes/Squared-green/openbox-3/shade.xbm |    6 +
+ .../Squared-green/openbox-3/shade_disabled.xbm   |    6 +
+ .../Squared-green/openbox-3/shade_hover.xbm      |    6 +
+ .../Squared-green/openbox-3/shade_pressed.xbm    |    6 +
+ .../Squared-green/openbox-3/shade_toggled.xbm    |    6 +
+ .../openbox-3/shade_toggled_hover.xbm            |    6 +
+ .../openbox-3/shade_toggled_pressed.xbm          |    6 +
+ openbox/themes/Squared-green/openbox-3/themerc   |  231 +++
+ openbox/themes/Squared-grey/openbox-3/bullet.xbm |    4 +
+ openbox/themes/Squared-grey/openbox-3/close.xbm  |    6 +
+ .../Squared-grey/openbox-3/close_disabled.xbm    |    6 +
+ .../Squared-grey/openbox-3/close_hover.xbm       |    6 +
+ .../Squared-grey/openbox-3/close_pressed.xbm     |    6 +
+ openbox/themes/Squared-grey/openbox-3/desk.xbm   |    6 +
+ .../Squared-grey/openbox-3/desk_disabled.xbm     |    6 +
+ .../themes/Squared-grey/openbox-3/desk_hover.xbm |    6 +
+ .../Squared-grey/openbox-3/desk_pressed.xbm      |    6 +
+ .../Squared-grey/openbox-3/desk_toggled.xbm      |    6 +
+ .../openbox-3/desk_toggled_hover.xbm             |    6 +
+ .../openbox-3/desk_toggled_pressed.xbm           |    6 +
+ .../themes/Squared-grey/openbox-3/iconify.xbm    |    6 +
+ .../Squared-grey/openbox-3/iconify_disabled.xbm  |    6 +
+ .../Squared-grey/openbox-3/iconify_hover.xbm     |    6 +
+ .../Squared-grey/openbox-3/iconify_pressed.xbm   |    6 +
+ openbox/themes/Squared-grey/openbox-3/max.xbm    |    6 +
+ .../Squared-grey/openbox-3/max_disabled.xbm      |    6 +
+ .../themes/Squared-grey/openbox-3/max_hover.xbm  |    6 +
+ .../Squared-grey/openbox-3/max_pressed.xbm       |    6 +
+ .../Squared-grey/openbox-3/max_toggled.xbm       |    6 +
+ .../Squared-grey/openbox-3/max_toggled_hover.xbm |    6 +
+ .../openbox-3/max_toggled_pressed.xbm            |    6 +
+ openbox/themes/Squared-grey/openbox-3/shade.xbm  |    6 +
+ .../Squared-grey/openbox-3/shade_disabled.xbm    |    6 +
+ .../Squared-grey/openbox-3/shade_hover.xbm       |    6 +
+ .../Squared-grey/openbox-3/shade_pressed.xbm     |    6 +
+ .../Squared-grey/openbox-3/shade_toggled.xbm     |    6 +
+ .../openbox-3/shade_toggled_hover.xbm            |    6 +
+ .../openbox-3/shade_toggled_pressed.xbm          |    6 +
+ openbox/themes/Squared-grey/openbox-3/themerc    |  231 +++
+ pekwm/icons/window-above.xpm                     |   31 +
+ pekwm/icons/window-below.xpm                     |   31 +
+ pekwm/icons/window-border.xpm                    |   31 +
+ pekwm/icons/window-close.xpm                     |   31 +
+ pekwm/icons/window-command.xpm                   |   32 +
+ pekwm/icons/window-focus.xpm                     |   31 +
+ pekwm/icons/window-kill.xpm                      |   31 +
+ pekwm/icons/window-lower.xpm                     |   31 +
+ pekwm/icons/window-maximize-b.xpm                |   31 +
+ pekwm/icons/window-maximize-h.xpm                |   31 +
+ pekwm/icons/window-maximize-v.xpm                |   31 +
+ pekwm/icons/window-maximize.xpm                  |   31 +
+ pekwm/icons/window-menu.xpm                      |   31 +
+ pekwm/icons/window-minimize.xpm                  |   31 +
+ pekwm/icons/window-move.xpm                      |   31 +
+ pekwm/icons/window-raise.xpm                     |   31 +
+ pekwm/icons/window-resize.xpm                    |   31 +
+ pekwm/icons/window-sendto.xpm                    |   31 +
+ pekwm/icons/window-shade.xpm                     |   31 +
+ pekwm/icons/window-snap.xpm                      |   31 +
+ pekwm/icons/window-stick.xpm                     |   31 +
+ pekwm/icons/window-titlebar.xpm                  |   31 +
+ pekwm/icons/window-unshade.xpm                   |   31 +
+ pekwm/themes/Squared-blue/arrow_focused.xpm      |   16 +
+ pekwm/themes/Squared-blue/arrow_selected.xpm     |   16 +
+ pekwm/themes/Squared-blue/arrow_unfocus.xpm      |   16 +
+ pekwm/themes/Squared-blue/border_b.xpm           |    9 +
+ pekwm/themes/Squared-blue/border_bl.xpm          |   16 +
+ pekwm/themes/Squared-blue/border_br.xpm          |   16 +
+ pekwm/themes/Squared-blue/border_lr.xpm          |    8 +
+ pekwm/themes/Squared-blue/close_focused.xpm      |   30 +
+ pekwm/themes/Squared-blue/close_hovered.xpm      |   30 +
+ pekwm/themes/Squared-blue/close_pressed.xpm      |   30 +
+ pekwm/themes/Squared-blue/close_unfocus.xpm      |   30 +
+ pekwm/themes/Squared-blue/maximize_focused.xpm   |   25 +
+ pekwm/themes/Squared-blue/maximize_hovered.xpm   |   25 +
+ pekwm/themes/Squared-blue/maximize_pressed.xpm   |   25 +
+ pekwm/themes/Squared-blue/maximize_unfocus.xpm   |   24 +
+ pekwm/themes/Squared-blue/menu_focused.xpm       |   25 +
+ pekwm/themes/Squared-blue/menu_hovered.xpm       |   25 +
+ pekwm/themes/Squared-blue/menu_pressed.xpm       |   25 +
+ pekwm/themes/Squared-blue/menu_unfocus.xpm       |   25 +
+ pekwm/themes/Squared-blue/minimize_focused.xpm   |   25 +
+ pekwm/themes/Squared-blue/minimize_hovered.xpm   |   25 +
+ pekwm/themes/Squared-blue/minimize_pressed.xpm   |   25 +
+ pekwm/themes/Squared-blue/minimize_unfocus.xpm   |   25 +
+ pekwm/themes/Squared-blue/separator.xpm          |   19 +
+ pekwm/themes/Squared-blue/shade_focused.xpm      |   25 +
+ pekwm/themes/Squared-blue/shade_hovered.xpm      |   25 +
+ pekwm/themes/Squared-blue/shade_pressed.xpm      |   25 +
+ pekwm/themes/Squared-blue/shade_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-blue/stick_focused.xpm      |   25 +
+ pekwm/themes/Squared-blue/stick_hovered.xpm      |   25 +
+ pekwm/themes/Squared-blue/stick_pressed.xpm      |   25 +
+ pekwm/themes/Squared-blue/stick_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-blue/tab_separator.xpm      |   25 +
+ pekwm/themes/Squared-blue/theme                  |  358 ++++
+ pekwm/themes/Squared-cadet/arrow_focused.xpm     |   16 +
+ pekwm/themes/Squared-cadet/arrow_selected.xpm    |   16 +
+ pekwm/themes/Squared-cadet/arrow_unfocus.xpm     |   16 +
+ pekwm/themes/Squared-cadet/border_b.xpm          |    9 +
+ pekwm/themes/Squared-cadet/border_bl.xpm         |   16 +
+ pekwm/themes/Squared-cadet/border_br.xpm         |   16 +
+ pekwm/themes/Squared-cadet/border_lr.xpm         |    8 +
+ pekwm/themes/Squared-cadet/close_focused.xpm     |   30 +
+ pekwm/themes/Squared-cadet/close_hovered.xpm     |   30 +
+ pekwm/themes/Squared-cadet/close_pressed.xpm     |   30 +
+ pekwm/themes/Squared-cadet/close_unfocus.xpm     |   30 +
+ pekwm/themes/Squared-cadet/maximize_focused.xpm  |   25 +
+ pekwm/themes/Squared-cadet/maximize_hovered.xpm  |   25 +
+ pekwm/themes/Squared-cadet/maximize_pressed.xpm  |   25 +
+ pekwm/themes/Squared-cadet/maximize_unfocus.xpm  |   24 +
+ pekwm/themes/Squared-cadet/menu_focused.xpm      |   25 +
+ pekwm/themes/Squared-cadet/menu_hovered.xpm      |   25 +
+ pekwm/themes/Squared-cadet/menu_pressed.xpm      |   25 +
+ pekwm/themes/Squared-cadet/menu_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-cadet/minimize_focused.xpm  |   25 +
+ pekwm/themes/Squared-cadet/minimize_hovered.xpm  |   25 +
+ pekwm/themes/Squared-cadet/minimize_pressed.xpm  |   25 +
+ pekwm/themes/Squared-cadet/minimize_unfocus.xpm  |   25 +
+ pekwm/themes/Squared-cadet/separator.xpm         |   19 +
+ pekwm/themes/Squared-cadet/shade_focused.xpm     |   25 +
+ pekwm/themes/Squared-cadet/shade_hovered.xpm     |   25 +
+ pekwm/themes/Squared-cadet/shade_pressed.xpm     |   25 +
+ pekwm/themes/Squared-cadet/shade_unfocus.xpm     |   25 +
+ pekwm/themes/Squared-cadet/stick_focused.xpm     |   25 +
+ pekwm/themes/Squared-cadet/stick_hovered.xpm     |   25 +
+ pekwm/themes/Squared-cadet/stick_pressed.xpm     |   25 +
+ pekwm/themes/Squared-cadet/stick_unfocus.xpm     |   25 +
+ pekwm/themes/Squared-cadet/tab_separator.xpm     |   25 +
+ pekwm/themes/Squared-cadet/theme                 |  358 ++++
+ pekwm/themes/Squared-green/arrow_focused.xpm     |   16 +
+ pekwm/themes/Squared-green/arrow_selected.xpm    |   16 +
+ pekwm/themes/Squared-green/arrow_unfocus.xpm     |   16 +
+ pekwm/themes/Squared-green/border_b.xpm          |    9 +
+ pekwm/themes/Squared-green/border_bl.xpm         |   16 +
+ pekwm/themes/Squared-green/border_br.xpm         |   16 +
+ pekwm/themes/Squared-green/border_lr.xpm         |    8 +
+ pekwm/themes/Squared-green/close_focused.xpm     |   30 +
+ pekwm/themes/Squared-green/close_hovered.xpm     |   30 +
+ pekwm/themes/Squared-green/close_pressed.xpm     |   30 +
+ pekwm/themes/Squared-green/close_unfocus.xpm     |   30 +
+ pekwm/themes/Squared-green/maximize_focused.xpm  |   25 +
+ pekwm/themes/Squared-green/maximize_hovered.xpm  |   25 +
+ pekwm/themes/Squared-green/maximize_pressed.xpm  |   25 +
+ pekwm/themes/Squared-green/maximize_unfocus.xpm  |   24 +
+ pekwm/themes/Squared-green/menu_focused.xpm      |   25 +
+ pekwm/themes/Squared-green/menu_hovered.xpm      |   25 +
+ pekwm/themes/Squared-green/menu_pressed.xpm      |   25 +
+ pekwm/themes/Squared-green/menu_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-green/minimize_focused.xpm  |   25 +
+ pekwm/themes/Squared-green/minimize_hovered.xpm  |   25 +
+ pekwm/themes/Squared-green/minimize_pressed.xpm  |   25 +
+ pekwm/themes/Squared-green/minimize_unfocus.xpm  |   25 +
+ pekwm/themes/Squared-green/separator.xpm         |   19 +
+ pekwm/themes/Squared-green/shade_focused.xpm     |   25 +
+ pekwm/themes/Squared-green/shade_hovered.xpm     |   25 +
+ pekwm/themes/Squared-green/shade_pressed.xpm     |   25 +
+ pekwm/themes/Squared-green/shade_unfocus.xpm     |   25 +
+ pekwm/themes/Squared-green/stick_focused.xpm     |   25 +
+ pekwm/themes/Squared-green/stick_hovered.xpm     |   25 +
+ pekwm/themes/Squared-green/stick_pressed.xpm     |   25 +
+ pekwm/themes/Squared-green/stick_unfocus.xpm     |   25 +
+ pekwm/themes/Squared-green/tab_separator.xpm     |   25 +
+ pekwm/themes/Squared-green/theme                 |  358 ++++
+ pekwm/themes/Squared-grey/arrow_focused.xpm      |   16 +
+ pekwm/themes/Squared-grey/arrow_selected.xpm     |   16 +
+ pekwm/themes/Squared-grey/arrow_unfocus.xpm      |   16 +
+ pekwm/themes/Squared-grey/border_b.xpm           |    9 +
+ pekwm/themes/Squared-grey/border_bl.xpm          |   16 +
+ pekwm/themes/Squared-grey/border_br.xpm          |   16 +
+ pekwm/themes/Squared-grey/border_lr.xpm          |    8 +
+ pekwm/themes/Squared-grey/close_focused.xpm      |   30 +
+ pekwm/themes/Squared-grey/close_hovered.xpm      |   30 +
+ pekwm/themes/Squared-grey/close_pressed.xpm      |   30 +
+ pekwm/themes/Squared-grey/close_unfocus.xpm      |   30 +
+ pekwm/themes/Squared-grey/maximize_focused.xpm   |   25 +
+ pekwm/themes/Squared-grey/maximize_hovered.xpm   |   25 +
+ pekwm/themes/Squared-grey/maximize_pressed.xpm   |   25 +
+ pekwm/themes/Squared-grey/maximize_unfocus.xpm   |   24 +
+ pekwm/themes/Squared-grey/menu_focused.xpm       |   25 +
+ pekwm/themes/Squared-grey/menu_hovered.xpm       |   25 +
+ pekwm/themes/Squared-grey/menu_pressed.xpm       |   25 +
+ pekwm/themes/Squared-grey/menu_unfocus.xpm       |   25 +
+ pekwm/themes/Squared-grey/minimize_focused.xpm   |   25 +
+ pekwm/themes/Squared-grey/minimize_hovered.xpm   |   25 +
+ pekwm/themes/Squared-grey/minimize_pressed.xpm   |   25 +
+ pekwm/themes/Squared-grey/minimize_unfocus.xpm   |   25 +
+ pekwm/themes/Squared-grey/separator.xpm          |   19 +
+ pekwm/themes/Squared-grey/shade_focused.xpm      |   25 +
+ pekwm/themes/Squared-grey/shade_hovered.xpm      |   25 +
+ pekwm/themes/Squared-grey/shade_pressed.xpm      |   25 +
+ pekwm/themes/Squared-grey/shade_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-grey/stick_focused.xpm      |   25 +
+ pekwm/themes/Squared-grey/stick_hovered.xpm      |   25 +
+ pekwm/themes/Squared-grey/stick_pressed.xpm      |   25 +
+ pekwm/themes/Squared-grey/stick_unfocus.xpm      |   25 +
+ pekwm/themes/Squared-grey/tab_separator.xpm      |   25 +
+ pekwm/themes/Squared-grey/theme                  |  358 ++++
+ scripts/compile                                  |  347 ++++
+ scripts/config.guess                             | 1558 +++++++++++++++
+ scripts/config.sub                               | 1788 ++++++++++++++++++
+ scripts/install-sh                               |  527 ++++++
+ scripts/missing                                  |  215 +++
+ 627 files changed, 27105 insertions(+)
