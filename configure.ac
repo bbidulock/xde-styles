@@ -5,24 +5,32 @@ AC_PREREQ([2.69])
 AC_INIT([xde-styles],[1.2],[http://github.com/bbidulock/xde-styles],[xde-styles],[http://github.com/bbidulock/xde-styles/issues])
 AC_REVISION([1.2])
 
+# set better defaults
+AC_PREFIX_DEFAULT([/usr])
+if test "$prefix" = /usr -o "$prefix" = NONE; then
+	test "$sysconfdir" = '${prefix}/etc' && sysconfdir=/etc
+	test "$sharedstatedir" = '${prefix}/com' && sharedstatedir=/var
+	test "$localstatedir" = '${prefix}/var' && localstatedir=/var
+fi
+
 AC_CONFIG_SRCDIR([blackbox/styles/Squared-blue])
 AC_CONFIG_HEADERS([autoconf.h])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([scripts])
-AC_USE_SYSTEM_EXTENSIONS
-AC_CANONICAL_TARGET
 
 DATE='2016-07-09'
 AC_SUBST([DATE])
+
+MDOCDATE='July 9, 2016'
+AC_SUBST([MDOCDATE])
 
 BRANCH='master'
 AC_SUBST([BRANCH])
 
 # Initialize Automake
-AM_INIT_AUTOMAKE([gnits 1.14 dist-xz no-dist-gzip std-options -Wall color-tests silent-rules tar-pax])
+AM_INIT_AUTOMAKE([1.16 dist-lzip no-dist-gzip std-options -Wall color-tests silent-rules tar-pax])
 AM_MAINTAINER_MODE
 AM_SILENT_RULES([yes])
-AC_PREFIX_DEFAULT([/usr])
 
 # Checks for programs.
 AC_PROG_SED
@@ -40,7 +48,7 @@ AC_ARG_VAR([MARKDOWN],[markdown command. @<:@default=markdown@:>@])
 AC_CHECK_PROGS([MARKDOWN],[markdown],[${am_missing_run}markdown],[$PATH])
 
 AC_ARG_VAR([ASCIIDOC],[asciidoc command. @<:@default=asciidoctor@:>@])
-AC_CHECK_PROGS([ASCIIDOC],[asciidoctor asciidoc],[${am_missing_run}asciidoctor],[$PATH])
+AC_CHECK_PROGS([ASCIIDOC],[asciidoc asciidoctor],[${am_missing_run}asciidoc],[$PATH])
 
 AC_ARG_VAR([ASCIIDOC_BACKEND],[asciidoc backend @<:@default=NONE@:>@])
 if test -z "$ASCIIDOC_BACKEND"; then
@@ -51,8 +59,8 @@ if test -z "$ASCIIDOC_BACKEND"; then
 	esac
 fi
 
-AC_ARG_VAR([ASCIIMAN],[asciidoc to manpage converter. @<:@default=asciidoctor@:>@])
-AC_CHECK_PROGS([ASCIIMAN],[asciidoctor a2x],[${am_missing_run}asciidoctor],[$PATH])
+AC_ARG_VAR([ASCIIMAN],[asciidoc to manpage converter. @<:@default=a2x@:>@])
+AC_CHECK_PROGS([ASCIIMAN],[a2x asciidoctor],[${am_missing_run}a2x],[$PATH])
 
 AC_ARG_VAR([ASCIIMAN_FORMAT],[asciidoc manpage option @<:@default=NONE@:>@])
 if test -z "$ASCIIMAN_FORMAT"; then
@@ -70,12 +78,10 @@ if test "$LINKS" = "links"; then
 fi
 
 test "x$prefix" = xNONE && prefix="$ac_default_prefix"
-
 sharedir="$datadir"
 eval "sharedir=\"$sharedir\""
 eval "sharedir=\"$sharedir\""
 eval "sharedir=\"$sharedir\""
-
 AC_SUBST([sharedir])
 
 AC_CONFIG_FILES([Makefile
