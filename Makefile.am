@@ -90,12 +90,16 @@ AM_INSTALLCHECK_STD_OPTIONS_EXEMPT =
 
 nobase_dist_share_DATA += \
 	adwm/styles/Squared-blue/keysrc \
+	adwm/styles/Squared-blue/buttonrc \
 	adwm/styles/Squared-blue/stylerc \
 	adwm/styles/Squared-cadet/keysrc \
+	adwm/styles/Squared-cadet/buttonrc \
 	adwm/styles/Squared-cadet/stylerc \
 	adwm/styles/Squared-green/keysrc \
+	adwm/styles/Squared-green/buttonrc \
 	adwm/styles/Squared-green/stylerc \
 	adwm/styles/Squared-grey/keysrc \
+	adwm/styles/Squared-grey/buttonrc \
 	adwm/styles/Squared-grey/stylerc
 
 nobase_dist_share_DATA += \
