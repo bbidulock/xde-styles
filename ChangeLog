@@ -1,5 +1,75 @@
 # created with git log --stat=76 -M -C -500|fmt -sct -w80
 
+commit e253f2b3fef81c813729cd51836bf668c450847d
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Feb 8 22:50:52 2020 -0700
+
+    update release notes
+
+ RELEASE.md | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+commit d04a5dff47ad3e3090c5cb19c0a813f5778882fd
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Feb 8 22:45:08 2020 -0700
+
+    simplify cscope and MDOCDATE
+
+ autogen.sh   | 8 ++++++--
+ configure.sh | 7 ++-----
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+commit 326dc70ed19a7aeb9eee724cf5660d62f734bb76
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon Dec 2 00:17:09 2019 -0700
+
+    update keysrc and buttonrc files
+
+ Makefile.am                        |   4 ++
+ adwm/styles/Squared-blue/buttonrc  | 106 +++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-blue/keysrc    |  14 ++++-
+ adwm/styles/Squared-cadet/buttonrc | 106 +++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-cadet/keysrc   |  14 ++++-
+ adwm/styles/Squared-green/buttonrc | 106 +++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-green/keysrc   |  14 ++++-
+ adwm/styles/Squared-grey/buttonrc  | 106 +++++++++++++++++++++++++++++++++
+ adwm/styles/Squared-grey/keysrc    |  14 ++++-
+ 9 files changed, 472 insertions(+), 12 deletions(-)
+
+commit f6bdf8adc08aaa6d39cc82f0c42ae712e3bc09fd
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Wed Oct 23 14:54:42 2019 -0600
+
+    save a little space on titlebar
+
+ adwm/styles/Squared-blue/stylerc  | 2 +-
+ adwm/styles/Squared-cadet/stylerc | 2 +-
+ adwm/styles/Squared-green/stylerc | 2 +-
+ adwm/styles/Squared-grey/stylerc  | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 49bdf48d46680ad794ae67fd9314c13b33e1e038
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Wed Oct 23 14:43:58 2019 -0600
+
+    add client pixmap to titlebar layout
+
+ adwm/styles/Squared-blue/stylerc  | 2 +-
+ adwm/styles/Squared-cadet/stylerc | 2 +-
+ adwm/styles/Squared-green/stylerc | 2 +-
+ adwm/styles/Squared-grey/stylerc  | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+commit b5e6d68729434680508db85ebf8d0004518c3acc
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Wed Oct 23 14:43:51 2019 -0600
+
+    post-release update
+
+ ChangeLog | 14 ++++++++++++++
+ NEWS      |  3 ++-
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+
 commit da74d087b4621827917a89f9574c41c19a7bf9bb
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Thu Sep 5 14:26:04 2019 -0600
