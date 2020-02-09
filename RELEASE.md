@@ -1,18 +1,18 @@
-[xde-styles -- release notes.  2019-09-05]: #
+[xde-styles -- release notes.  2020-02-09]: #
 
-Maintenance Release 1.3
+Maintenance Release 1.4
 =======================
 
-This is the third release of the xde-styles package that provides a set
+This is the fourth release of the xde-styles package that provides a set
 of styles for the XDE (_X Desktop Environment_) which provides a small
 and consistent set of window manager styles across a wide range of
 light-weight window managers.  The purpose is to provide a consistent
 visual appearance for the _X Desktop Environment_ across all supported
 window managers.
 
-This release is a maintenance release whose only purpose is to update
-the build system, generate better NEWS files, handle annotated tags, and
-converts the release archives to lzip compression.
+This release is a maintenance release whose purpose is to update the
+build system and provides some improvements to the titlebar, keys and
+buttons for [ADWM](https://github.com/bbidulock/adwm).
 
 Included in the release is an autoconf tarball for building the package
 from source.  See the [NEWS](NEWS) and [TODO](TODO) file in the release
