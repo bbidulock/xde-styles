@@ -204,6 +204,22 @@ style "default"
 	{
 		{ "window-unstick.png", *, *, * }
 	}
+	stock["wnck-stock-maximus-l"] =
+	{
+		{ "window-maximus-l.png", *, *, * }
+	}
+	stock["wnck-stock-maximus-r"] =
+	{
+		{ "window-maximus-r.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximus-l"] =
+	{
+		{ "window-unmaximus-l.png", *, *, * }
+	}
+	stock["wnck-stock-unmaximus-r"] =
+	{
+		{ "window-unmaximus-r.png", *, *, * }
+	}
 }
 
 style "menuitem"

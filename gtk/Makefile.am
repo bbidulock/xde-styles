@@ -14,6 +14,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-cadet/gtk-2.0/window-maximize-h.png \
 	themes/Squared-cadet/gtk-2.0/window-maximize.png \
 	themes/Squared-cadet/gtk-2.0/window-maximize-v.png \
+	themes/Squared-cadet/gtk-2.0/window-maximus-l.png \
+	themes/Squared-cadet/gtk-2.0/window-maximus-r.png \
 	themes/Squared-cadet/gtk-2.0/window-menu.png \
 	themes/Squared-cadet/gtk-2.0/window-minimize.png \
 	themes/Squared-cadet/gtk-2.0/window-move.png \
@@ -35,6 +37,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-cadet/gtk-2.0/window-unmaximize-h.png \
 	themes/Squared-cadet/gtk-2.0/window-unmaximize.png \
 	themes/Squared-cadet/gtk-2.0/window-unmaximize-v.png \
+	themes/Squared-cadet/gtk-2.0/window-unmaximus-l.png \
+	themes/Squared-cadet/gtk-2.0/window-unmaximus-r.png \
 	themes/Squared-cadet/gtk-2.0/window-unminimize.png \
 	themes/Squared-cadet/gtk-2.0/window-unshade.png \
 	themes/Squared-cadet/gtk-2.0/window-unstick.png \
@@ -52,6 +56,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-grey/gtk-2.0/window-maximize-h.png \
 	themes/Squared-grey/gtk-2.0/window-maximize.png \
 	themes/Squared-grey/gtk-2.0/window-maximize-v.png \
+	themes/Squared-grey/gtk-2.0/window-maximus-l.png \
+	themes/Squared-grey/gtk-2.0/window-maximus-r.png \
 	themes/Squared-grey/gtk-2.0/window-menu.png \
 	themes/Squared-grey/gtk-2.0/window-minimize.png \
 	themes/Squared-grey/gtk-2.0/window-move.png \
@@ -73,6 +79,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-grey/gtk-2.0/window-unmaximize-h.png \
 	themes/Squared-grey/gtk-2.0/window-unmaximize.png \
 	themes/Squared-grey/gtk-2.0/window-unmaximize-v.png \
+	themes/Squared-grey/gtk-2.0/window-unmaximus-l.png \
+	themes/Squared-grey/gtk-2.0/window-unmaximus-r.png \
 	themes/Squared-grey/gtk-2.0/window-unminimize.png \
 	themes/Squared-grey/gtk-2.0/window-unshade.png \
 	themes/Squared-grey/gtk-2.0/window-unstick.png \
@@ -90,6 +98,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-green/gtk-2.0/window-maximize-h.png \
 	themes/Squared-green/gtk-2.0/window-maximize.png \
 	themes/Squared-green/gtk-2.0/window-maximize-v.png \
+	themes/Squared-green/gtk-2.0/window-maximus-l.png \
+	themes/Squared-green/gtk-2.0/window-maximus-r.png \
 	themes/Squared-green/gtk-2.0/window-menu.png \
 	themes/Squared-green/gtk-2.0/window-minimize.png \
 	themes/Squared-green/gtk-2.0/window-move.png \
@@ -111,6 +121,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-green/gtk-2.0/window-unmaximize-h.png \
 	themes/Squared-green/gtk-2.0/window-unmaximize.png \
 	themes/Squared-green/gtk-2.0/window-unmaximize-v.png \
+	themes/Squared-green/gtk-2.0/window-unmaximus-l.png \
+	themes/Squared-green/gtk-2.0/window-unmaximus-r.png \
 	themes/Squared-green/gtk-2.0/window-unminimize.png \
 	themes/Squared-green/gtk-2.0/window-unshade.png \
 	themes/Squared-green/gtk-2.0/window-unstick.png \
@@ -128,6 +140,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-blue/gtk-2.0/window-maximize-h.png \
 	themes/Squared-blue/gtk-2.0/window-maximize.png \
 	themes/Squared-blue/gtk-2.0/window-maximize-v.png \
+	themes/Squared-blue/gtk-2.0/window-maximus-l.png \
+	themes/Squared-blue/gtk-2.0/window-maximus-r.png \
 	themes/Squared-blue/gtk-2.0/window-menu.png \
 	themes/Squared-blue/gtk-2.0/window-minimize.png \
 	themes/Squared-blue/gtk-2.0/window-move.png \
@@ -149,6 +163,8 @@ nobase_dist_data_DATA = \
 	themes/Squared-blue/gtk-2.0/window-unmaximize-h.png \
 	themes/Squared-blue/gtk-2.0/window-unmaximize.png \
 	themes/Squared-blue/gtk-2.0/window-unmaximize-v.png \
+	themes/Squared-blue/gtk-2.0/window-unmaximus-l.png \
+	themes/Squared-blue/gtk-2.0/window-unmaximus-r.png \
 	themes/Squared-blue/gtk-2.0/window-unminimize.png \
 	themes/Squared-blue/gtk-2.0/window-unshade.png \
 	themes/Squared-blue/gtk-2.0/window-unstick.png
