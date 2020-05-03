@@ -1,5 +1,73 @@
 # created with git log --stat=76 -M -C -500|fmt -sct -w80
 
+commit 75e3a26256b318578d98323b0165989136a482d8
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 03:50:54 2020 -0600
+
+    add stock images for maximus left and right
+
+ gtk/Makefile.am                                  |  16 ++++++++++
+ gtk/themes/Squared-blue/gtk-2.0/gtkrc            |  16 ++++++++++
+ .../Squared-blue/gtk-2.0/window-maximus-l.png    | Bin 0 -> 352 bytes
+ .../Squared-blue/gtk-2.0/window-maximus-l.xpm    |  32 +++++++++++++++++++
+ .../Squared-blue/gtk-2.0/window-maximus-r.png    | Bin 0 -> 354 bytes
+ .../Squared-blue/gtk-2.0/window-maximus-r.xpm    |  32 +++++++++++++++++++
+ .../Squared-blue/gtk-2.0/window-unmaximus-l.png  | Bin 0 -> 358 bytes
+ .../Squared-blue/gtk-2.0/window-unmaximus-l.xpm  |  32 +++++++++++++++++++
+ .../Squared-blue/gtk-2.0/window-unmaximus-r.png  | Bin 0 -> 358 bytes
+ .../Squared-blue/gtk-2.0/window-unmaximus-r.xpm  |  32 +++++++++++++++++++
+ gtk/themes/Squared-cadet/gtk-2.0/gtkrc           |  16 ++++++++++
+ .../Squared-cadet/gtk-2.0/window-maximus-l.png   | Bin 0 -> 352 bytes
+ .../Squared-cadet/gtk-2.0/window-maximus-l.xpm   |  32 +++++++++++++++++++
+ .../Squared-cadet/gtk-2.0/window-maximus-r.png   | Bin 0 -> 354 bytes
+ .../Squared-cadet/gtk-2.0/window-maximus-r.xpm   |  32 +++++++++++++++++++
+ .../Squared-cadet/gtk-2.0/window-unmaximus-l.png | Bin 0 -> 358 bytes
+ .../Squared-cadet/gtk-2.0/window-unmaximus-l.xpm |  32 +++++++++++++++++++
+ .../Squared-cadet/gtk-2.0/window-unmaximus-r.png | Bin 0 -> 358 bytes
+ .../Squared-cadet/gtk-2.0/window-unmaximus-r.xpm |  32 +++++++++++++++++++
+ gtk/themes/Squared-green/gtk-2.0/gtkrc           |  16 ++++++++++
+ .../Squared-green/gtk-2.0/window-maximus-l.png   | Bin 0 -> 352 bytes
+ .../Squared-green/gtk-2.0/window-maximus-l.xpm   |  32 +++++++++++++++++++
+ .../Squared-green/gtk-2.0/window-maximus-r.png   | Bin 0 -> 354 bytes
+ .../Squared-green/gtk-2.0/window-maximus-r.xpm   |  32 +++++++++++++++++++
+ .../Squared-green/gtk-2.0/window-unmaximus-l.png | Bin 0 -> 358 bytes
+ .../Squared-green/gtk-2.0/window-unmaximus-l.xpm |  32 +++++++++++++++++++
+ .../Squared-green/gtk-2.0/window-unmaximus-r.png | Bin 0 -> 358 bytes
+ .../Squared-green/gtk-2.0/window-unmaximus-r.xpm |  32 +++++++++++++++++++
+ gtk/themes/Squared-grey/gtk-2.0/gtkrc            |  16 ++++++++++
+ .../Squared-grey/gtk-2.0/window-maximus-l.png    | Bin 0 -> 363 bytes
+ .../Squared-grey/gtk-2.0/window-maximus-l.xpm    |  32 +++++++++++++++++++
+ .../Squared-grey/gtk-2.0/window-maximus-r.png    | Bin 0 -> 353 bytes
+ .../Squared-grey/gtk-2.0/window-maximus-r.xpm    |  32 +++++++++++++++++++
+ .../Squared-grey/gtk-2.0/window-unmaximus-l.png  | Bin 0 -> 375 bytes
+ .../Squared-grey/gtk-2.0/window-unmaximus-l.xpm  |  32 +++++++++++++++++++
+ .../Squared-grey/gtk-2.0/window-unmaximus-r.png  | Bin 0 -> 376 bytes
+ .../Squared-grey/gtk-2.0/window-unmaximus-r.xpm  |  32 +++++++++++++++++++
+ 37 files changed, 592 insertions(+)
+
+commit 40397fb546ef59e7d48640ff0a9f6f0be61acc47
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Tue Feb 11 08:32:25 2020 -0700
+
+    whoops
+
+ autogen.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ceb623ddbc0506e68cc4f28d1064ba9d300f1721
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Feb 8 22:52:21 2020 -0700
+
+    update release files
+
+ AUTHORS      |  2 +-
+ ChangeLog    | 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ NEWS         | 36 ++++++++++++++++++++++++++++-
+ README       | 20 ++++++++--------
+ README.md    | 20 ++++++++--------
+ configure.ac | 10 ++++----
+ 6 files changed, 131 insertions(+), 27 deletions(-)
+
 commit e253f2b3fef81c813729cd51836bf668c450847d
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Sat Feb 8 22:50:52 2020 -0700
