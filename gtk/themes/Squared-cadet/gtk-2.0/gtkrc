@@ -203,21 +203,21 @@ style "default"
 	{
 		{ "window-unstick.png", *, *, * }
 	}
-	stock["wnck-stock-maximus-l"] =
+	stock["wnck-stock-maximize-l"] =
 	{
-		{ "window-maximus-l.png", *, *, * }
+		{ "window-maximize-l.png", *, *, * }
 	}
-	stock["wnck-stock-maximus-r"] =
+	stock["wnck-stock-maximize-r"] =
 	{
-		{ "window-maximus-r.png", *, *, * }
+		{ "window-maximize-r.png", *, *, * }
 	}
-	stock["wnck-stock-unmaximus-l"] =
+	stock["wnck-stock-unmaximize-l"] =
 	{
-		{ "window-unmaximus-l.png", *, *, * }
+		{ "window-unmaximize-l.png", *, *, * }
 	}
-	stock["wnck-stock-unmaximus-r"] =
+	stock["wnck-stock-unmaximize-r"] =
 	{
-		{ "window-unmaximus-r.png", *, *, * }
+		{ "window-unmaximize-r.png", *, *, * }
 	}
 }
 
