@@ -1,6 +1,6 @@
-[xde-styles -- release notes.  2020-05-03]: #
+[xde-styles -- release notes.  2020-05-04]: #
 
-Maintenance Release 1.5
+Maintenance Release 1.6
 =======================
 
 This is the fifth release of the xde-styles package that provides a set
@@ -12,7 +12,8 @@ window managers.
 
 This release is a maintenance release whose purpose is to provide stock
 icons for maximus left and right for
-[libwnck+](https://github.com/bbidulock/libwnck+).
+[libwnck+](https://github.com/bbidulock/libwnck+), but changes their
+names to maximize to be consistent with changes made to that library.
 
 Included in the release is an autoconf tarball for building the package
 from source.  See the [NEWS](NEWS) and [TODO](TODO) file in the release
