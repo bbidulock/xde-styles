@@ -1,5 +1,37 @@
 xde-styles -- history of user-visible changes.  2020-05-03
 
+Release xde-styles-1.6 released 2020-05-03
+------------------------------------------
+
+git tag -n100 -l 1.6
+
+1.6             Maintenance Release 1.6
+
+    This is the fifth release of the xde-styles package that provides a set
+    of styles for the XDE (X Desktop Environment) which provides a small
+    and consistent set of window manager styles across a wide range of
+    light-weight window managers. The purpose is to provide a consistent
+    visual appearance for the X Desktop Environment across all supported
+    window managers.
+
+    This release is a maintenance release whose purpose is to provide stock
+    icons for maximus left and right for libwnck+, but changes their names
+    to maximize to be consistent with changes made to that library.
+
+    Included in the release is an autoconf tarball for building the package
+    from source. See the NEWS and TODO file in the release for more
+    information. Please report problems to the issues list on github.
+    GitHub.
+
+git shortlog -e -n -w80,6,8 1.5...1.6
+
+Brian Bidulock <bidulock@openss7.org> (4):
+      post release update
+      renamed gtk stock maximus items to maximize
+      update release notes
+      change maximus to maximize in Makefile too
+
+
 Release xde-styles-1.5 released 2020-05-03
 ------------------------------------------
 

@@ -1,5 +1,87 @@
 # created with git log --stat=76 -M -C -500|fmt -sct -w80
 
+commit e2be9fafc15ccce0f1ac826ceaf6eb3be267583f
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 23:26:10 2020 -0600
+
+    change maximus to maximize in Makefile too
+
+ gtk/Makefile.am | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+
+commit 7a9e2def83d2dddc47b4f87b60bbf8e6c4ad41ac
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 23:18:35 2020 -0600
+
+    update release notes
+
+ RELEASE.md | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit e8633a1e7e681c123c0fd02a565bb9e8a24092fb
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 23:16:20 2020 -0600
+
+    renamed gtk stock maximus items to maximize
+
+ gtk/themes/Squared-blue/gtk-2.0/gtkrc               |  16 ++++++++--------
+ .../{window-maximus-l.png => window-maximize-l.png} | Bin 352 -> 352 bytes
+ .../{window-maximus-l.xpm => window-maximize-l.xpm} |   2 +-
+ .../Squared-blue/gtk-2.0/window-maximize-r.png      | Bin 0 -> 354 bytes
+ .../{window-maximus-r.xpm => window-maximize-r.xpm} |   2 +-
+ .../Squared-blue/gtk-2.0/window-maximus-r.png       | Bin 354 -> 0 bytes
+ .../Squared-blue/gtk-2.0/window-unmaximize-l.png    | Bin 0 -> 358 bytes
+ ...ndow-unmaximus-l.xpm => window-unmaximize-l.xpm} |   2 +-
+ ...ndow-unmaximus-r.png => window-unmaximize-r.png} | Bin 358 -> 358 bytes
+ ...ndow-unmaximus-r.xpm => window-unmaximize-r.xpm} |   2 +-
+ .../Squared-blue/gtk-2.0/window-unmaximus-l.png     | Bin 358 -> 0 bytes
+ gtk/themes/Squared-cadet/gtk-2.0/gtkrc              |  16 ++++++++--------
+ .../{window-maximus-l.png => window-maximize-l.png} | Bin 352 -> 352 bytes
+ .../{window-maximus-l.xpm => window-maximize-l.xpm} |   2 +-
+ .../Squared-cadet/gtk-2.0/window-maximize-r.png     | Bin 0 -> 354 bytes
+ .../{window-maximus-r.xpm => window-maximize-r.xpm} |   2 +-
+ .../Squared-cadet/gtk-2.0/window-maximus-r.png      | Bin 354 -> 0 bytes
+ .../Squared-cadet/gtk-2.0/window-unmaximize-l.png   | Bin 0 -> 358 bytes
+ ...ndow-unmaximus-l.xpm => window-unmaximize-l.xpm} |   2 +-
+ ...ndow-unmaximus-r.png => window-unmaximize-r.png} | Bin 358 -> 358 bytes
+ ...ndow-unmaximus-r.xpm => window-unmaximize-r.xpm} |   2 +-
+ .../Squared-cadet/gtk-2.0/window-unmaximus-l.png    | Bin 358 -> 0 bytes
+ gtk/themes/Squared-green/gtk-2.0/gtkrc              |  16 ++++++++--------
+ .../{window-maximus-l.png => window-maximize-l.png} | Bin 352 -> 352 bytes
+ .../{window-maximus-l.xpm => window-maximize-l.xpm} |   2 +-
+ .../Squared-green/gtk-2.0/window-maximize-r.png     | Bin 0 -> 354 bytes
+ .../{window-maximus-r.xpm => window-maximize-r.xpm} |   2 +-
+ .../Squared-green/gtk-2.0/window-maximus-r.png      | Bin 354 -> 0 bytes
+ .../Squared-green/gtk-2.0/window-unmaximize-l.png   | Bin 0 -> 358 bytes
+ ...ndow-unmaximus-l.xpm => window-unmaximize-l.xpm} |   2 +-
+ ...ndow-unmaximus-r.png => window-unmaximize-r.png} | Bin 358 -> 358 bytes
+ ...ndow-unmaximus-r.xpm => window-unmaximize-r.xpm} |   2 +-
+ .../Squared-green/gtk-2.0/window-unmaximus-l.png    | Bin 358 -> 0 bytes
+ gtk/themes/Squared-grey/gtk-2.0/gtkrc               |  16 ++++++++--------
+ .../Squared-grey/gtk-2.0/window-maximize-l.png      | Bin 0 -> 363 bytes
+ .../{window-maximus-l.xpm => window-maximize-l.xpm} |   2 +-
+ .../Squared-grey/gtk-2.0/window-maximize-r.png      | Bin 0 -> 353 bytes
+ .../{window-maximus-r.xpm => window-maximize-r.xpm} |   2 +-
+ .../Squared-grey/gtk-2.0/window-maximus-l.png       | Bin 363 -> 0 bytes
+ .../Squared-grey/gtk-2.0/window-maximus-r.png       | Bin 353 -> 0 bytes
+ .../Squared-grey/gtk-2.0/window-unmaximize-l.png    | Bin 0 -> 375 bytes
+ ...ndow-unmaximus-l.xpm => window-unmaximize-l.xpm} |   2 +-
+ .../Squared-grey/gtk-2.0/window-unmaximize-r.png    | Bin 0 -> 376 bytes
+ ...ndow-unmaximus-r.xpm => window-unmaximize-r.xpm} |   2 +-
+ .../Squared-grey/gtk-2.0/window-unmaximus-l.png     | Bin 375 -> 0 bytes
+ .../Squared-grey/gtk-2.0/window-unmaximus-r.png     | Bin 376 -> 0 bytes
+ 46 files changed, 48 insertions(+), 48 deletions(-)
+
+commit d93c02a037eab2c79753303ac0caa78cbc973cdc
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 04:03:15 2020 -0600
+
+    post release update
+
+ ChangeLog | 15 +++++++++++++++
+ NEWS      |  3 ++-
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+
 commit 9583105d047017e6183d2ad43391588c4193a543
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Sun May 3 03:59:59 2020 -0600
