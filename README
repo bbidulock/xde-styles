@@ -1,9 +1,9 @@
-[xde-styles -- read me first file.  2020-05-04]: #
+[xde-styles -- read me first file.  2020-06-12]: #
 
 xde-styles
 ===============
 
-Package `xde-styles-1.7` was released under GPLv3 license 2020-05-04.
+Package `xde-styles-1.7` was released under GPLv3 license 2020-06-12.
 
 This is a set of styles for the XDE (_X Desktop Environment_) which
 provides a small and consistent set of window manager styles across a
@@ -15,7 +15,7 @@ supported window managers.
 Release
 -------
 
-This is the `xde-styles-1.7` package, released 2020-05-04.  This
+This is the `xde-styles-1.7` package, released 2020-06-12.  This
 release, and the latest version, can be obtained from [GitHub][1], using
 a command such as:
 
