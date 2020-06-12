@@ -1,5 +1,27 @@
 # created with git log --stat=76 -M -C -500|fmt -sct -w80
 
+commit 007be756bd5d8139d475d5ffe91b075f63580bf3
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Mon May 4 20:20:04 2020 -0600
+
+    correct adwm key conflict
+
+ adwm/styles/Squared-blue/keysrc  | 12 ++++++------
+ adwm/styles/Squared-cadet/keysrc | 12 ++++++------
+ adwm/styles/Squared-green/keysrc | 12 ++++++------
+ adwm/styles/Squared-grey/keysrc  | 12 ++++++------
+ 4 files changed, 24 insertions(+), 24 deletions(-)
+
+commit d014c0cbe4c8c4a467dd668b206aca9b57786d2d
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sun May 3 23:43:20 2020 -0600
+
+    post release update
+
+ ChangeLog | 13 +++++++++++++
+ NEWS      |  3 ++-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
 commit 089d3f8414a4664ceacd2fbc13a53a26aa9311e0
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Sun May 3 23:35:39 2020 -0600
