@@ -1198,7 +1198,7 @@ install-data-twm:
 	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/twm/styles
 	rm -f $(DESTDIR)$(sharedir)/twm/stylerc
-	$(LN_S) styles/Default/stylerc $(DESTDIR)$(sharedir)/twm/stylerc
+	$(LN_S) styles/Classic/stylerc $(DESTDIR)$(sharedir)/twm/stylerc
 	rm -f $(DESTDIR)$(sharedir)/twm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/twm/styles/Default
 
@@ -1294,7 +1294,7 @@ install-data-ctwm:
 	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/ctwm/styles
 	rm -f $(DESTDIR)$(sharedir)/ctwm/stylerc
-	$(LN_S) styles/Default/stylerc $(DESTDIR)$(sharedir)/ctwm/stylerc
+	$(LN_S) styles/Classic/stylerc $(DESTDIR)$(sharedir)/ctwm/stylerc
 	rm -f $(DESTDIR)$(sharedir)/ctwm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/ctwm/styles/Default
 
@@ -1390,7 +1390,7 @@ install-data-vtwm:
 	@$(NORMAL_INSTALL)
 	$(MKDIR_P) $(DESTDIR)$(sharedir)/vtwm/styles
 	rm -f $(DESTDIR)$(sharedir)/vtwm/stylerc
-	$(LN_S) styles/Default/stylerc $(DESTDIR)$(sharedir)/vtwm/stylerc
+	$(LN_S) styles/Classic/stylerc $(DESTDIR)$(sharedir)/vtwm/stylerc
 	rm -f $(DESTDIR)$(sharedir)/vtwm/styles/Default
 	$(LN_S) Classic $(DESTDIR)$(sharedir)/vtwm/styles/Default
 
