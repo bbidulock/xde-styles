@@ -24,7 +24,7 @@ git tag -n100 -l 1.8
 
 git shortlog -e -n -w80,6,8 1.7...1.8
 
-Brian Bidulock <bidulock@openss7.org> (10):
+Brian Bidulock <bidulock@openss7.org> (11):
       post release update
       keybindings for audio microphone control
       update build flags
@@ -35,6 +35,7 @@ Brian Bidulock <bidulock@openss7.org> (10):
       try to shut up archlinux namcap
       try to shut up archlinux namcap some more
       reverse scroll wheel on root
+      update release files
 
 
 Release xde-styles-1.7 released 2020-06-12
