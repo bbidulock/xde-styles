@@ -1,5 +1,110 @@
 # created with git log --stat=76 -M -C -500|fmt -sct -w80
 
+commit 458b75f0ebb6e34d6332ac57c69e43525195e2d3
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Fri Jan 28 02:39:55 2022 -0700
+
+    reverse scroll wheel on root
+
+ adwm/styles/Squared-blue/buttonrc  | 4 ++--
+ adwm/styles/Squared-cadet/buttonrc | 4 ++--
+ adwm/styles/Squared-green/buttonrc | 4 ++--
+ adwm/styles/Squared-grey/buttonrc  | 4 ++--
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+
+commit e26ac58bd2e42c1b6295e87f07962473c95644a7
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:58:58 2022 -0700
+
+    try to shut up archlinux namcap some more
+
+ Makefile.am | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 576430cfbd57e0b3192f089d89c198f374a52bdc
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:56:24 2022 -0700
+
+    try to shut up archlinux namcap
+
+ Makefile.am | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 825b06ababd383842a5c3ba3d4598f98c70bcc39
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:46:00 2022 -0700
+
+    add github.io web page
+
+ Makefile.am |  7 +++--
+ _config.yml |  4 +++
+ index.md    | 91 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ logo.svg    | 91 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 191 insertions(+), 2 deletions(-)
+
+commit 1d71d1eb60d169c4ceb29a764c682b4c26636b43
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:44:39 2022 -0700
+
+    reformat README
+
+ README       | 53 +++++++++++++++++++++++++++++------------------------
+ README.md    | 53 +++++++++++++++++++++++++++++------------------------
+ README.md.in | 53 +++++++++++++++++++++++++++++------------------------
+ 3 files changed, 87 insertions(+), 72 deletions(-)
+
+commit 2ce204f9551f0d1e50ea3ab2d57c6b9e5cfd763a
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:43:56 2022 -0700
+
+    update INSTALL file
+
+ INSTALL | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 1f41c36e9d147e03cdb54d9c9ca0c47d149f67e8
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:40:15 2022 -0700
+
+    use preferred applications
+
+ adwm/styles/Squared-blue/keysrc  | 36 ++++++++++++++++++------------------
+ adwm/styles/Squared-cadet/keysrc | 36 ++++++++++++++++++------------------
+ adwm/styles/Squared-green/keysrc | 36 ++++++++++++++++++------------------
+ adwm/styles/Squared-grey/keysrc  | 36 ++++++++++++++++++------------------
+ 4 files changed, 72 insertions(+), 72 deletions(-)
+
+commit c9e24a6256fdd1fb4f3b6b81a8aae6e0927b109b
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Thu Jan 27 21:17:38 2022 -0700
+
+    update build flags
+
+ configure.sh | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+
+commit 8e70fe2c970d6f0f3e3b6bbc4703950aa26c0a22
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Sat Dec 26 19:55:11 2020 -0700
+
+    keybindings for audio microphone control
+
+ adwm/styles/Squared-blue/keysrc  | 12 ++++++++----
+ adwm/styles/Squared-cadet/keysrc | 12 ++++++++----
+ adwm/styles/Squared-green/keysrc | 12 ++++++++----
+ adwm/styles/Squared-grey/keysrc  | 12 ++++++++----
+ 4 files changed, 32 insertions(+), 16 deletions(-)
+
+commit 25101940f0a671e8be5f1e4e5761c21dc0395db0
+Author: Brian Bidulock <bidulock@openss7.org>
+Date:   Fri Jun 12 00:45:04 2020 -0600
+
+    post release update
+
+ ChangeLog | 14 ++++++++++++++
+ NEWS      |  3 ++-
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+
 commit 8367f3245da8aabbc9ed8854c91a9ff640ce4fcc
 Author: Brian Bidulock <bidulock@openss7.org>
 Date:   Fri Jun 12 00:43:51 2020 -0600

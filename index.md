@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-[xde-styles -- read me first file.  2020-06-12]: #
+[xde-styles -- read me first file.  2022-01-28]: #
 
 xde-styles
 ===============
 
-Package `xde-styles-1.7` was released under GPLv3 license
-2020-06-12.
+Package `xde-styles-1.8` was released under GPLv3 license
+2022-01-28.
 
 This is a set of styles for the XDE (_X Desktop Environment_) which
 provides a small and consistent set of window manager styles across a
@@ -19,7 +19,7 @@ supported window managers.
 Release
 -------
 
-This is the `xde-styles-1.7` package, released 2020-06-12.
+This is the `xde-styles-1.8` package, released 2022-01-28.
 This release, and the latest version, can be obtained from [GitHub][1],
 using a command such as:
 
@@ -79,13 +79,13 @@ Report issues on GitHub [here][2].
 
 [1]: https://github.com/bbidulock/xde-styles
 [2]: https://github.com/bbidulock/xde-styles/issues
-[3]: https://github.com/bbidulock/xde-styles/blob/1.7/RELEASE
-[4]: https://github.com/bbidulock/xde-styles/blob/1.7/NEWS
-[5]: https://github.com/bbidulock/xde-styles/blob/1.7/ChangeLog
-[6]: https://github.com/bbidulock/xde-styles/blob/1.7/TODO
-[7]: https://github.com/bbidulock/xde-styles/blob/1.7/COMPLIANCE
-[8]: https://github.com/bbidulock/xde-styles/blob/1.7/INSTALL
-[9]: https://github.com/bbidulock/xde-styles/blob/1.7/LICENSE
-[10]: https://github.com/bbidulock/xde-styles/blob/1.7/COPYING
+[3]: https://github.com/bbidulock/xde-styles/blob/1.8/RELEASE
+[4]: https://github.com/bbidulock/xde-styles/blob/1.8/NEWS
+[5]: https://github.com/bbidulock/xde-styles/blob/1.8/ChangeLog
+[6]: https://github.com/bbidulock/xde-styles/blob/1.8/TODO
+[7]: https://github.com/bbidulock/xde-styles/blob/1.8/COMPLIANCE
+[8]: https://github.com/bbidulock/xde-styles/blob/1.8/INSTALL
+[9]: https://github.com/bbidulock/xde-styles/blob/1.8/LICENSE
+[10]: https://github.com/bbidulock/xde-styles/blob/1.8/COPYING
 
 [ vim: set ft=markdown sw=4 tw=72 nocin nosi fo+=tcqlorn spell: ]: #
